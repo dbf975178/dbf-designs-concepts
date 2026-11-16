@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volunteer | Zuri Taverner for Mayor</title>
+<meta name="description" content="Sign up for phone bank and canvass shifts. Training provided, first-timers welcome.">
+<meta name="theme-color" content="#1B3BFF">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="../styles.css">
+<script src="../site.js" defer></script><script src="../../../assets/shared.js" defer></script>
+</head><body data-page="volunteer">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="hdr on-blue" data-header><div class="hdr__in">
+<a class="logo" href="../" aria-label="Zuri for Mayor, home" data-i18n-attr="aria-label:aria.home"><span class="logo__mark" aria-hidden="true">Z</span><span class="logo__txt">Zuri<span class="logo__sub"> <span data-i18n="logo.sub">for Mayor</span></span></span></a>
+<nav id="nav" class="nav" data-nav aria-label="Main" data-i18n-attr="aria-label:aria.main"><ul><li><a href="../"><span data-i18n="nav.home">Home</span></a></li><li><a href="../plan/"><span data-i18n="nav.plan">Plan</span></a></li><li><a href="../neighborhoods/"><span data-i18n="nav.hoods">Neighborhoods</span></a></li><li><a href="../events/"><span data-i18n="nav.events">Events</span></a></li><li><a href="../volunteer/"><span data-i18n="nav.volunteer">Volunteer</span></a></li></ul><div class="nav__tools"><div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch between light and dark" data-i18n-attr="aria-label:aria.theme"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button></div></nav>
+<div class="hdr__act"><div class="lang lang--desk" role="group" aria-label="Language" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch between light and dark" data-i18n-attr="aria-label:aria.theme"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button><a class="btn btn--sm" href="../donate/"><span data-i18n="nav.donate">Donate</span></a>
+<button class="icon-btn burger" type="button" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Menu" data-i18n-attr="aria-label:aria.menu"><i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i></button></div>
+</div></header>
+<main id="main">
+<section class="pagehead pagehead--vol"><div class="wrap"><h1 data-i18n="vol.h1">Pick your shifts.</h1><p data-i18n="vol.p">Two hours is enough. First-timers get a buddy and a script.</p></div><span class="pagehead__shape shape-circle" aria-hidden="true"></span></section>
+<section class="sec"><div class="wrap"><div class="vol"><div id="vol-box"><form id="vol-form" data-demo-form novalidate>
+<fieldset><legend class="legend" data-i18n="vol.f1">Choose your shifts</legend>
+<div class="chips" data-filter-group="shifts" role="group" aria-label="Shift type" data-i18n-attr="aria-label:vol.type"><button class="chip-btn" type="button" data-filter="all"><span data-i18n="cat.all">All</span></button><button class="chip-btn" type="button" data-filter="phone"><span data-i18n="cat.phone">Phone bank</span></button><button class="chip-btn" type="button" data-filter="canvass"><span data-i18n="cat.canvass">Canvass</span></button></div>
+<div class="shifts" data-render="shifts"></div><p class="field-error" data-error-for="shiftpick" aria-live="polite" hidden></p>
+<p class="note" style="margin-top:6px"><span data-i18n="vol.note">Open spots are example data.</span></p></fieldset>
+<fieldset><legend class="legend" data-i18n="vol.f2">Your details</legend>
+<div class="fields-2"><div class="field"><label for="v-name"><span data-i18n="f.name">Full name</span></label><input id="v-name" name="name" autocomplete="name" required><p class="field-error" data-error-for="name" aria-live="polite" hidden></p></div>
+<div class="field"><label for="v-phone"><span data-i18n="f.phone">Mobile phone</span></label><input id="v-phone" name="phone" type="tel" autocomplete="tel" required><p class="field-error" data-error-for="phone" aria-live="polite" hidden></p></div>
+<div class="field"><label for="v-email"><span data-i18n="f.email">Email</span></label><input id="v-email" name="email" type="email" autocomplete="email" required><p class="field-error" data-error-for="email" aria-live="polite" hidden></p></div>
+<div class="field"><label for="v-zip"><span data-i18n="f.zip">ZIP code</span></label><input id="v-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" required><p class="field-error" data-error-for="zip" aria-live="polite" hidden></p></div></div>
+<div class="field" role="group" aria-labelledby="v-lang"><span class="legend" id="v-lang" style="font-size:1rem;letter-spacing:0;color:var(--text)"><span data-i18n="vol.langs">Languages you can help in</span></span><label class="check"><input type="checkbox" name="lang" value="en"><span>English</span></label><label class="check"><input type="checkbox" name="lang" value="es"><span>Español</span></label><label class="check"><input type="checkbox" name="lang" value="zh"><span>中文</span></label><label class="check"><input type="checkbox" name="lang" value="vi"><span>Tiếng Việt</span></label></div>
+<label class="check"><input type="checkbox" name="remind" checked><span><span data-i18n="vol.remind">Text me a reminder the day before.</span></span></label></fieldset>
+<button class="btn btn--lg" type="submit"><span data-i18n="vol.go">Sign up for shifts</span></button></form>
+<div class="ok" data-success hidden><h2 tabindex="-1"><span data-i18n="vol.ok.h">You are signed up.</span></h2><p><span data-i18n="vol.ok.p">This is a demo, so nothing was sent. Here is what you picked.</span></p><ul class="picked-list" id="picked-done"></ul>
+<button class="btn" type="button" data-ics-picked><i class="ph ph-calendar-plus" aria-hidden="true"></i><span data-i18n="btn.cal">Add to calendar</span></button> <button class="btn btn--ghost" type="button" data-reset-form><span data-i18n="vol.again">Pick more shifts</span></button></div></div>
+<aside class="vol__side" aria-label="Your shifts" data-i18n-attr="aria-label:vol.side"><h2 class="legend" style="font-size:1.5rem" data-i18n="vol.side.h">Your shifts</h2><p class="picked" id="picked-count" aria-live="polite"></p><ul class="picked-list" id="picked-live"></ul>
+<p class="note"><span data-i18n="vol.side.n">We will text you a link to confirm. Change or cancel any time.</span></p></aside></div></div></section>
+<section class="sec sec--tint"><div class="wrap"><div class="two"><div style="background:var(--butter);color:var(--ink)"><h3 data-i18n="vt.p.h">On a phone bank</h3><p data-i18n="vt.p.p">You get a short script, a quiet room and a buddy. Most calls go to voicemail, and that is fine.</p></div>
+<div style="background:var(--blue);color:var(--cream)"><h3 data-i18n="vt.c.h">On a canvass</h3><p data-i18n="vt.c.p">You get a walk list, water and a neighborhood captain. You knock, listen and mark what you heard.</p></div></div></div></section>
+<section class="sec"><div class="wrap"><h2 class="h2" data-i18n="vt.h">Short on time?</h2><ul class="rowlist" style="margin-top:clamp(24px,3vw,40px)">
+<li><i class="ph ph-chat-text" aria-hidden="true"></i><div><b data-i18n="vt.r1">Text three friends</b><span class="muted" data-i18n="vt.r1d">Send them the link to the neighborhood finder.</span></div></li>
+<li><i class="ph ph-translate" aria-hidden="true"></i><div><b data-i18n="vt.r2">Translate a flyer</b><span class="muted" data-i18n="vt.r2d">Bilingual volunteers wanted for Spanish, Mandarin and Vietnamese.</span></div></li>
+<li><i class="ph ph-users-three" aria-hidden="true"></i><div><b data-i18n="vt.r3">Host a house party</b><span class="muted" data-i18n="vt.r3d">Ten neighbors, one evening, one captain.</span></div></li></ul></div></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="foot__top"><p class="foot__tag"><span data-i18n="foot.tag">A city we can afford, built by the people who live in it.</span></p>
+<nav class="foot__nav" aria-label="Footer"><ul><li><a href="../"><span data-i18n="nav.home">Home</span></a></li><li><a href="../plan/"><span data-i18n="nav.plan">Plan</span></a></li><li><a href="../neighborhoods/"><span data-i18n="nav.hoods">Neighborhoods</span></a></li><li><a href="../events/"><span data-i18n="nav.events">Events</span></a></li><li><a href="../volunteer/"><span data-i18n="nav.volunteer">Volunteer</span></a></li><li><a href="../donate/"><span data-i18n="nav.donate">Donate</span></a></li></ul></nav></div>
+<div class="foot__legal"><p class="foot__paid"><span data-i18n="foot.paid">Paid for by Taverner for Mayor Committee. Not authorized by any other candidate or committee.</span></p>
+<p><span data-i18n="foot.concept">Concept design by DBF Designs. Fictional candidate for illustration. Any resemblance to real people or organizations is coincidental.</span></p>
+<p class="foot__photo"><span data-i18n="foot.photo">Photography: Pexels.</span></p>
+<p><a href="../privacy/"><span data-i18n="foot.privacy">Privacy</span></a> &nbsp; <a href="../accessibility/"><span data-i18n="foot.a11y">Accessibility</span></a></p></div></div></footer>
+
+</body></html>

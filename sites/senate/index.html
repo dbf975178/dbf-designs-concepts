@@ -1,54 +1,77 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jonah Ellery for U.S. Senate (concept)</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700..900;1,700..900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--navy:#0A2556;--blue:#2563EB;--sky:#9CC2FF;--red:#D7263D;--paper:#F4F7FF}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Source Sans 3',sans-serif;background:var(--navy);color:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:10px 16px;z-index:9}.skip:focus{left:8px}
-.hero{position:relative;height:900px;overflow:hidden;background:var(--navy)}
-.ph{position:absolute;right:0;top:0;width:66%;height:100%;overflow:hidden}
-.ph img{position:absolute;left:30%;top:0;height:100%;width:70%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.1) brightness(1.1)}
-.ph .m1{position:absolute;inset:0;background:#2F6BFF;mix-blend-mode:multiply}
-.ph .m2{position:absolute;inset:0;background:#0A2556;mix-blend-mode:lighten}
-.ph .fade{position:absolute;inset:0;background:linear-gradient(90deg,#0A2556 0,rgba(10,37,86,.78) 18%,rgba(10,37,86,0) 56%),linear-gradient(0deg,#0A2556 0,rgba(10,37,86,0) 28%)}
-.nav{position:relative;z-index:3;height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 64px}
-.logo{font:800 30px 'Playfair Display',serif;letter-spacing:-.01em}.logo small{display:block;font:600 12px 'Source Sans 3';letter-spacing:.24em;text-transform:uppercase;color:var(--sky);margin-top:2px}
-.links{display:flex;gap:34px;font-weight:600;font-size:17px;color:#DCE7FF}
-.right{display:flex;gap:10px;align-items:center}
-.lang{display:flex;border:2px solid rgba(255,255,255,.7);border-radius:6px;overflow:hidden;font-weight:700;font-size:14px}.lang b,.lang span{padding:8px 12px}.lang b{background:#fff;color:var(--navy)}
-.b{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;font-size:16px;letter-spacing:.02em}.b.r{background:var(--red)}.b.w{background:#fff;color:var(--navy)}
-.copy{position:relative;z-index:3;padding:44px 64px 0;width:820px}
-.kick{font:700 15px 'Source Sans 3';letter-spacing:.26em;text-transform:uppercase;color:var(--sky);display:flex;align-items:center;gap:14px}.kick:before{content:"";width:46px;height:3px;background:var(--red)}
-h1{font:900 124px/1.04 'Playfair Display',serif;letter-spacing:-.035em;margin:20px 0 20px}h1 i{color:var(--sky);font-weight:800;padding-bottom:6px}
-.lede{font-size:24px;line-height:1.45;color:#DCE7FF;max-width:560px}
-.form{margin-top:28px;display:flex;max-width:640px;background:#fff;border-radius:8px;padding:8px;box-shadow:0 24px 50px -20px rgba(0,0,0,.6)}
-.form input{flex:1;min-width:0;border:0;padding:0 18px;font:600 18px 'Source Sans 3';height:58px;color:var(--navy);outline:0}.form input.z{flex:none;width:110px;border-left:2px solid #E1E8F8}
-.form button{border:0;background:var(--red);color:#fff;border-radius:6px;padding:0 30px;font:700 18px 'Source Sans 3';height:58px;letter-spacing:.02em}
-.give{margin-top:14px;display:flex;gap:8px;align-items:center;font-size:15px;font-weight:600;color:#DCE7FF}.give b{border:1.5px solid rgba(255,255,255,.7);border-radius:6px;padding:6px 14px}
-.disc{margin-top:12px;font-size:13px;color:#B8CBEF}
-.tabs{position:absolute;z-index:3;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);background:rgba(8,28,66,.72);backdrop-filter:blur(10px);border-top:1px solid rgba(156,194,255,.28)}
-.tabs div{padding:28px 64px 32px 40px;border-right:1px solid rgba(156,194,255,.2)}.tabs div:first-child{padding-left:64px}.tabs small{font:700 14px 'Source Sans 3';letter-spacing:.2em;color:var(--sky)}.tabs b{display:block;font:800 34px/1.05 'Playfair Display',serif;margin:6px 0}.tabs span{font-size:17px;color:#C9D8F6}
-.lower{background:var(--paper);color:var(--navy);padding:84px 64px}.lower h2{font:900 82px/.95 'Playfair Display',serif;letter-spacing:-.03em}
-.foot{background:#06183B;color:#a9bbdf;padding:30px 64px;font-size:14px}.foot b{color:#fff;border:1.5px solid #a9bbdf;padding:8px 12px;border-radius:4px;font-weight:600;display:inline-block;margin-bottom:10px}
-@media(max-width:760px){.nav{height:72px;padding:0 20px}.links,.b.w,.lang span{display:none}.logo{font-size:24px}.b{padding:11px 18px}
-.ph{position:relative;width:100%;height:420px;order:2}.ph img{left:0;width:100%;height:100%}.ph .fade{background:linear-gradient(0deg,#0A2556 0,rgba(10,37,86,0) 40%),linear-gradient(180deg,#0A2556 0,rgba(10,37,86,0) 22%)}
-.hero{height:auto;display:flex;flex-direction:column}.copy{width:auto;padding:20px 20px 0;order:1}h1{font-size:60px;margin:18px 0 16px}.lede{font-size:19px}.form{flex-wrap:wrap}.form input{flex:1 1 100%;height:52px}.form input.z{border:0;flex:1;width:auto;border-top:2px solid #E1E8F8}.form button{flex:1;height:52px}
-.tabs{position:relative;grid-template-columns:1fr;order:3}.tabs div,.tabs div:first-child{padding:22px 20px;border-right:0;border-bottom:1px solid rgba(156,194,255,.2)}.lower{padding:50px 20px}.lower h2{font-size:48px}.foot{padding:28px 20px}}
-</style></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<section class="hero">
-<div class="ph"><img src="../../assets/stock-portrait.jpg" alt=""><div class="m1"></div><div class="m2"></div><div class="fade"></div></div>
-<header class="nav"><div class="logo">Jonah Ellery<small>for U.S. Senate</small></div><nav class="links" aria-label="Main"><a href="#">Meet Jonah</a><a href="#">Issues</a><a href="#">Events</a><a href="#">News</a></nav><div class="right"><div class="lang" aria-label="Language"><b>EN</b><span>ES</span></div><a class="b w" href="#">Volunteer</a><a class="b r" href="#">Donate</a></div></header>
-<main id="main"><div class="copy"><div class="kick">United States Senate</div>
-<h1>Work should <i>pay.</i></h1>
-<p class="lede">Jonah Ellery has spent his life standing up for people who work for a living. Join him and help take that fight to Washington.</p>
-<form class="form" onsubmit="return false"><input aria-label="Email address" placeholder="Email address"><input class="z" aria-label="ZIP code" placeholder="ZIP"><button>Join us</button></form>
-<div class="give">Chip in <b>$25</b><b>$50</b><b>$100</b><b>Other</b></div>
-<p class="disc">Paid for by Ellery for Senate. Not authorized by any other candidate or committee.</p></div></main>
-<div class="tabs"><div><small>01</small><b>Good jobs</b><span>Fair pay and made-in-America work.</span></div><div><small>02</small><b>Real health care</b><span>Lower costs and care close to home.</span></div><div><small>03</small><b>Retirement with dignity</b><span>Protect what people earned.</span></div></div>
-</section>
-<section class="lower"><h2>Meet the people<br>behind Ben.</h2></section>
-<footer class="foot"><b>Paid for by Ellery for Senate. Not authorized by any other candidate or committee.</b><div>Concept design by DBF Designs. Fictional candidate for illustration. Stock photo from Pexels.</div></footer>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jonah Ellery for U.S. Senate | Work should pay</title>
+<meta name="description" content="Jonah Ellery is running for U.S. Senate on one idea: work should pay. Fictional concept campaign site.">
+<meta name="theme-color" content="#0A2556">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+<script src="../../assets/shared.js" defer></script>
+<link rel="icon" href="data:,">
+</head>
+<body class="home">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="hdr" data-header><div class="hdr-in">
+<a class="logo" href="./" aria-label="Jonah Ellery for U.S. Senate, home"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#2F6BFF"/><rect x="8" y="7" width="14" height="3.4" fill="#fff"/><rect x="8" y="13.3" width="10" height="3.4" fill="#fff"/><rect x="8" y="19.6" width="14" height="3.4" fill="#fff"/></svg><span><b>Jonah Ellery</b><small>for U.S. Senate</small></span></a>
+<nav class="nav" id="nav" data-nav aria-label="Main"><ul><li><a href="meet-jonah/"><span data-i18n="nav_meet">Meet Jonah</span></a></li><li><a href="issues/"><span data-i18n="nav_issues">Issues</span></a></li><li><a href="news/"><span data-i18n="nav_news">News</span></a></li><li><a href="events/"><span data-i18n="nav_events">Events</span></a></li><li><a href="take-action/"><span data-i18n="nav_action">Take action</span></a></li></ul><div class="drawer-tools"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button type="button" class="icon-btn theme-btn" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:theme_label" aria-label="Toggle dark mode"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button></div></nav>
+<div class="tools"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button type="button" class="icon-btn theme-btn" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:theme_label" aria-label="Toggle dark mode"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button><a class="btn btn-red btn-sm" href="donate/"><span data-i18n="donate">Donate</span></a></div>
+<button type="button" class="icon-btn burger" data-nav-toggle aria-controls="nav" aria-expanded="false" data-i18n-attr="aria-label:menu_label" aria-label="Menu"><i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i></button>
+</div></header>
+<main id="main">
+<section class="hero on-navy" aria-labelledby="h1">
+<div class="hero-photo"><!-- PHOTO: replace with campaign portrait; keep duotone treatment -->
+<img src="../../assets/stock-portrait.jpg" alt="Portrait of Jonah Ellery, smiling, in a navy jacket" width="1600" height="2400" fetchpriority="high"><div class="t1"></div><div class="t2"></div><div class="t3"></div></div>
+<div class="hero-copy">
+<h1 id="h1"><span data-i18n="h_h1a">Work should</span><span data-i18n="h_h1b">pay.</span></h1>
+<p class="lede" data-i18n="h_lede">Jonah Ellery has spent his life standing up for people who work for a living.</p>
+<div class="signup"><form data-demo-form novalidate><div class="row">
+<div class="field"><label for="f-email" data-i18n="lbl_email">Email address</label><input id="f-email" name="email" type="email" required autocomplete="email"><p class="field-error" data-error-for="email" hidden></p></div>
+<div class="field"><label for="f-zip" data-i18n="lbl_zip">ZIP code</label><input id="f-zip" name="zip" type="text" required inputmode="numeric" autocomplete="postal-code" maxlength="5"><p class="field-error" data-error-for="zip" hidden></p></div>
+<button class="btn btn-red" type="submit"><span data-i18n="join">Join us</span></button></div></form>
+<div class="form-ok" data-success hidden><h3 data-i18n="ok_h">You're in.</h3><p data-i18n="ok_p">Thanks for joining. This is a demo, so no welcome email was sent.</p></div></div>
+<a class="link hero-more" href="meet-jonah/"><span data-i18n="h_story">Read Jonah's story</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+</div></section><section class="stack" id="issues" aria-labelledby="issues-h">
+<h2 class="sr-only" id="issues-h" data-i18n="i_h2">Where Jonah stands</h2>
+<article class="sc sc-1"><div class="sc-in"><div class="sc-copy"><h3 data-i18n="c1_h">Good jobs that stay here.</h3><p data-i18n="c1_p">Raise the wage floor, back apprenticeships, and keep work in our counties.</p><a class="link" href="issues/#jobs"><span data-i18n="c1_l">See the jobs plan</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+<div class="sc-art"><img src="../../assets/stock/senate-jobsite.jpg" alt="A worker in a hard hat and mask on a steel jobsite" width="2000" height="1333" loading="lazy" decoding="async"></div></div></article>
+<article class="sc sc-2"><div class="sc-in"><div class="sc-art"><img src="../../assets/stock/senate-nurse.jpg" alt="A nurse taking a patient's blood pressure" width="2000" height="1333" loading="lazy" decoding="async"></div><div class="sc-copy"><h3 data-i18n="c2_h">Care close to home.</h3><p data-i18n="c2_p">Lower what families pay and keep rural clinics open, so a doctor visit never means a debt.</p><a class="link" href="issues/#health"><span data-i18n="c2_l">See the health plan</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div></div></article>
+<article class="sc sc-3"><div class="sc-in"><div class="sc-art"><img src="../../assets/stock/senate-older-couple.jpg" alt="An older couple walking together in a park" width="2000" height="1333" loading="lazy" decoding="async"></div><div class="sc-copy"><h3 data-i18n="c3_h">Retire with dignity.</h3><p data-i18n="c3_p">Protect Social Security, secure pensions, and make a lifetime of work add up to stability.</p><a class="link" href="issues/#retirement"><span data-i18n="c3_l">See the retirement plan</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div></div></article>
+</section><section class="sec meet"><div class="wrap meet-grid">
+<figure data-reveal><blockquote><span data-i18n="m_q">I have never met a problem that a fair wage did not make smaller.</span></blockquote><figcaption><cite>Jonah Ellery</cite></figcaption></figure>
+<div data-reveal><p class="lede" data-i18n="m_p">Jonah is a union electrician and county commissioner from Ironvale. He knows what a paycheck has to cover.</p><ul class="facts">
+<li><i class="ph ph-lightning" aria-hidden="true"></i><span data-i18n="m_f1">Union electrician</span></li><li><i class="ph ph-buildings" aria-hidden="true"></i><span data-i18n="m_f2">Marden County commissioner</span></li><li><i class="ph ph-house-line" aria-hidden="true"></i><span data-i18n="m_f3">Son of a machinist and a home health aide</span></li></ul>
+<a class="btn btn-line" href="meet-jonah/"><span data-i18n="m_l">Read his story</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div></div></section><section class="sec news-home"><div class="wrap">
+<h2 data-reveal data-i18n="n_h">Latest from the campaign</h2>
+<div class="news-grid"><article class="feature" data-reveal><p class="src">Statement, Nov 12, 2026</p><h3>Jonah calls for a wage floor that rises with the cost of living</h3><p class="muted">Speaking at the Ironvale Trades Hall, he outlined a proposal tying the state minimum wage to local prices.</p></article>
+<ul class="mini-list" data-stagger>
+<li><time datetime="2026-11-09">Nov 9, 2026</time><a href="news/">Harlow Nurses Association endorses Jonah Ellery</a></li>
+<li><time datetime="2026-11-05">Nov 5, 2026</time><a href="news/">Calder Courier: Ellery sits down with retirees in Marden</a></li>
+<li><time datetime="2026-10-28">Oct 28, 2026</time><a href="news/">Ellery unveils plan to keep rural clinics open</a></li></ul></div>
+<div class="more"><a class="link" href="news/"><span data-i18n="n_all">All news</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div></div></section><section class="sec tour"><div class="tour-art" aria-hidden="true"></div><div class="wrap" style="position:relative">
+<h2 data-reveal data-i18n="t_h">Meet Jonah near you</h2>
+<div class="tour-rows" data-stagger><a class="tour-row" href="events/"><div class="date"><b>21</b><span>Nov</span></div><div><span class="tr-t">Kitchen table conversation</span><span class="tr-p">Calder Falls Public Library, Calder County</span></div><i class="ph ph-arrow-right" aria-hidden="true"></i></a><a class="tour-row" href="events/"><div class="date"><b>22</b><span>Nov</span></div><div><span class="tr-t">Town hall on good jobs</span><span class="tr-p">Ironvale Community College, Ironvale County</span></div><i class="ph ph-arrow-right" aria-hidden="true"></i></a><a class="tour-row" href="events/"><div class="date"><b>28</b><span>Nov</span></div><div><span class="tr-t">Phone bank and potluck</span><span class="tr-p">Harlow Grange Hall, Harlow County</span></div><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+<div class="more"><a class="link" href="events/"><span data-i18n="t_all">All events</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+<p class="note" style="color:#fff;margin-top:8px">Example schedule.</p></div></section><section class="sec give"><div class="wrap">
+<h2 data-reveal data-i18n="g_h">Help us reach every county.</h2>
+<div class="amts" data-reveal><a class="btn btn-line" href="donate/?amount=25">$25</a><a class="btn btn-line" href="donate/?amount=50">$50</a><a class="btn btn-line" href="donate/?amount=100">$100</a><a class="btn btn-line" href="donate/?amount=250">$250</a><a class="btn btn-line" href="donate/"><span data-i18n="g_other">Other</span></a></div>
+<div data-reveal><a class="btn btn-red" href="donate/"><span data-i18n="donate">Donate</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+<p class="disc-line" style="margin-top:18px" data-i18n="g_disc">Demo: no real payment is taken. Contribution limits shown are example data.</p></div></section>
+</main>
+<footer class="ftr"><div class="wrap">
+<div class="ftr-top">
+<div><a class="logo" href="./" aria-label="Jonah Ellery for U.S. Senate, home"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#2F6BFF"/><rect x="8" y="7" width="14" height="3.4" fill="#fff"/><rect x="8" y="13.3" width="10" height="3.4" fill="#fff"/><rect x="8" y="19.6" width="14" height="3.4" fill="#fff"/></svg><span><b>Jonah Ellery</b><small>for U.S. Senate</small></span></a>
+<p class="tag" data-i18n="f_tag">Work should pay. A campaign for every county.</p></div>
+<div><h2 data-i18n="f_campaign">Campaign</h2><ul>
+<li><a href="meet-jonah/"><span data-i18n="nav_meet">Meet Jonah</span></a></li><li><a href="issues/"><span data-i18n="nav_issues">Issues</span></a></li><li><a href="news/"><span data-i18n="nav_news">News</span></a></li></ul></div>
+<div><h2 data-i18n="f_involved">Get involved</h2><ul>
+<li><a href="events/"><span data-i18n="nav_events">Events</span></a></li><li><a href="take-action/"><span data-i18n="nav_action">Take action</span></a></li><li><a href="donate/"><span data-i18n="donate">Donate</span></a></li></ul></div>
+</div>
+<div class="ftr-bot">
+<p class="paid" data-i18n="f_paid">Paid for by Ellery for Senate. Not authorized by any other candidate or committee.</p>
+<p data-i18n="f_fict">Concept design by DBF Designs. Fictional candidate for illustration. Any resemblance to real people or organizations is coincidental.</p>
+<p>Photography: Pexels.</p>
+<div class="ftr-links"><a href="privacy/"><span data-i18n="f_priv">Privacy</span></a><a href="accessibility/"><span data-i18n="f_acc">Accessibility</span></a></div>
+</div></div></footer>
 </body></html>

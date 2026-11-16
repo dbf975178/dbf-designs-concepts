@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neighborhoods | Zuri Taverner for Mayor</title>
+<meta name="description" content="Pick a Riverton neighborhood to see local priorities, a nearby event and a captain you can text.">
+<meta name="theme-color" content="#1B3BFF">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="../styles.css">
+<script src="../site.js" defer></script><script src="../../../assets/shared.js" defer></script>
+</head><body data-page="hoods">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="hdr on-blue" data-header><div class="hdr__in">
+<a class="logo" href="../" aria-label="Zuri for Mayor, home" data-i18n-attr="aria-label:aria.home"><span class="logo__mark" aria-hidden="true">Z</span><span class="logo__txt">Zuri<span class="logo__sub"> <span data-i18n="logo.sub">for Mayor</span></span></span></a>
+<nav id="nav" class="nav" data-nav aria-label="Main" data-i18n-attr="aria-label:aria.main"><ul><li><a href="../"><span data-i18n="nav.home">Home</span></a></li><li><a href="../plan/"><span data-i18n="nav.plan">Plan</span></a></li><li><a href="../neighborhoods/"><span data-i18n="nav.hoods">Neighborhoods</span></a></li><li><a href="../events/"><span data-i18n="nav.events">Events</span></a></li><li><a href="../volunteer/"><span data-i18n="nav.volunteer">Volunteer</span></a></li></ul><div class="nav__tools"><div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch between light and dark" data-i18n-attr="aria-label:aria.theme"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button></div></nav>
+<div class="hdr__act"><div class="lang lang--desk" role="group" aria-label="Language" data-i18n-attr="aria-label:aria.lang"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button class="icon-btn theme-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch between light and dark" data-i18n-attr="aria-label:aria.theme"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button><a class="btn btn--sm" href="../donate/"><span data-i18n="nav.donate">Donate</span></a>
+<button class="icon-btn burger" type="button" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Menu" data-i18n-attr="aria-label:aria.menu"><i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i></button></div>
+</div></header>
+<main id="main">
+<section class="pagehead pagehead--hoods"><div class="wrap"><h1 data-i18n="nh.h1">Find your neighborhood.</h1><p data-i18n="nh.p">Six neighborhoods, six sets of priorities. Pick yours.</p></div><span class="pagehead__shape shape-half" aria-hidden="true"></span></section>
+<section class="sec"><div class="wrap split split--even split--top"><div class="stack-gap"><!-- PHOTO: neighborhood captain portraits could appear in each result panel -->
+<h2 class="h2" data-i18n="nh.pick">Pick a neighborhood.</h2><p class="lead" data-i18n="nh.pick.p">Tap a block on the map. You will see what neighbors asked for, the next event nearby and who to text.</p>
+<div class="map" role="group" aria-label="Riverton neighborhoods" data-i18n-attr="aria-label:nh.aria" style="margin-top:28px"><button class="tile tile--ea" type="button" data-hood="eastgate" aria-pressed="false">Eastgate<i class="ph ph-check-circle" aria-hidden="true"></i></button><button class="tile tile--mb" type="button" data-hood="millbrook" aria-pressed="false">Millbrook Flats<i class="ph ph-check-circle" aria-hidden="true"></i></button><button class="tile tile--lh" type="button" data-hood="larkspur" aria-pressed="false">Larkspur Heights<i class="ph ph-check-circle" aria-hidden="true"></i></button><button class="tile tile--ce" type="button" data-hood="cedar" aria-pressed="false">Cedar Hollow<i class="ph ph-check-circle" aria-hidden="true"></i></button><button class="tile tile--of" type="button" data-hood="foundry" aria-pressed="false">Old Foundry<i class="ph ph-check-circle" aria-hidden="true"></i></button><button class="tile tile--hr" type="button" data-hood="harbor" aria-pressed="false">Harbor Row<i class="ph ph-check-circle" aria-hidden="true"></i></button></div></div>
+<div><p class="sr-only" id="hood-status" aria-live="polite"></p><div class="hood" data-hood-out><div class="hood__empty"><b data-i18n="nh.empty.h">Nothing picked yet.</b><p data-i18n="nh.empty.p">Choose a neighborhood to begin.</p></div></div></div></div></section>
+<section class="sec sec--tint"><div class="wrap"><h2 class="h2" data-i18n="nh.cap.h">What a captain does.</h2>
+<dl class="defs" style="margin-top:clamp(24px,3vw,40px)"><div><dt><i class="ph ph-chat-text" aria-hidden="true"></i><span data-i18n="nh.d1">Answers your texts</span></dt><dd data-i18n="nh.d1d">Questions about rent, buses or child care get a real answer from a neighbor.</dd></div>
+<div><dt><i class="ph ph-door-open" aria-hidden="true"></i><span data-i18n="nh.d2">Runs the weekend canvass</span></dt><dd data-i18n="nh.d2d">Walk lists, water and a buddy for anyone new.</dd></div>
+<div><dt><i class="ph ph-users-three" aria-hidden="true"></i><span data-i18n="nh.d3">Hosts one meeting a month</span></dt><dd data-i18n="nh.d3d">A porch, a library room or a tenants hall. Interpreters on request.</dd></div>
+<div><dt><i class="ph ph-megaphone" aria-hidden="true"></i><span data-i18n="nh.d4">Brings your priorities to Zuri</span></dt><dd data-i18n="nh.d4d">Captains meet the candidate every month and report what neighbors said.</dd></div></dl></div></section>
+<section class="sec"><div class="wrap"><figure class="panel-pull"><blockquote data-i18n="nh.q">Nobody knows which stop is broken like the people who wait at it.</blockquote><figcaption data-i18n="nh.q.c">Example quote from a fictional captain.</figcaption></figure></div></section><section class="sec sec--blue on-blue"><div class="wrap cta-band"><h2 class="h2" style="color:var(--cream)" data-i18n="cta.h">Help make it happen.</h2>
+<div class="cta-band__btns"><a class="btn btn--lg" href="../volunteer/"><span data-i18n="btn.volunteer">Volunteer</span></a><a class="btn btn--lg btn--ghost" href="../donate/"><span data-i18n="nav.donate">Donate</span></a></div></div></section>
+</main>
+<footer class="foot"><div class="wrap"><div class="foot__top"><p class="foot__tag"><span data-i18n="foot.tag">A city we can afford, built by the people who live in it.</span></p>
+<nav class="foot__nav" aria-label="Footer"><ul><li><a href="../"><span data-i18n="nav.home">Home</span></a></li><li><a href="../plan/"><span data-i18n="nav.plan">Plan</span></a></li><li><a href="../neighborhoods/"><span data-i18n="nav.hoods">Neighborhoods</span></a></li><li><a href="../events/"><span data-i18n="nav.events">Events</span></a></li><li><a href="../volunteer/"><span data-i18n="nav.volunteer">Volunteer</span></a></li><li><a href="../donate/"><span data-i18n="nav.donate">Donate</span></a></li></ul></nav></div>
+<div class="foot__legal"><p class="foot__paid"><span data-i18n="foot.paid">Paid for by Taverner for Mayor Committee. Not authorized by any other candidate or committee.</span></p>
+<p><span data-i18n="foot.concept">Concept design by DBF Designs. Fictional candidate for illustration. Any resemblance to real people or organizations is coincidental.</span></p>
+<p class="foot__photo"><span data-i18n="foot.photo">Photography: Pexels.</span></p>
+<p><a href="../privacy/"><span data-i18n="foot.privacy">Privacy</span></a> &nbsp; <a href="../accessibility/"><span data-i18n="foot.a11y">Accessibility</span></a></p></div></div></footer>
+<dialog id="rsvp" aria-labelledby="rsvp-title"><div class="dlg__body">
+<div class="dlg__head"><div><p class="muted small"><span data-i18n="rsvp.for">You are RSVPing to</span></p><h2 id="rsvp-title" data-modal-title></h2></div><button class="icon-btn" type="button" data-close-modal aria-label="Close" data-i18n-attr="aria-label:aria.close"><i class="ph ph-x" aria-hidden="true"></i></button></div>
+<form data-demo-form novalidate>
+<div class="field"><label for="rs-name"><span data-i18n="f.name">Full name</span></label><input id="rs-name" name="name" autocomplete="name" required><p class="field-error" data-error-for="name" aria-live="polite" hidden></p></div>
+<div class="field"><label for="rs-email"><span data-i18n="f.email">Email</span></label><input id="rs-email" name="email" type="email" autocomplete="email" required><p class="field-error" data-error-for="email" aria-live="polite" hidden></p></div>
+<div class="field"><label for="rs-party"><span data-i18n="rsvp.party">How many people are coming?</span></label><select id="rs-party" name="party"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div>
+<button class="btn btn--lg" type="submit"><span data-i18n="rsvp.go">Confirm RSVP</span></button>
+</form>
+<div class="ok" data-success hidden><h3><span data-i18n="rsvp.ok.h">You are on the list.</span></h3><p><span data-i18n="rsvp.ok.p">This is a demo, so nothing was sent. Add the event to your calendar.</span></p>
+<button class="btn" type="button" data-ics-current><i class="ph ph-calendar-plus" aria-hidden="true"></i><span data-i18n="btn.cal">Add to calendar</span></button> <button class="btn btn--ghost" type="button" data-close-modal><span data-i18n="btn.close">Close</span></button></div>
+</div></dialog>
+</body></html>

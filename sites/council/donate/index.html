@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="k262">Donate | Maya Linden for City Council</title>
+<meta name="description" content="A demo donation flow for the fictional Maya Linden for City Council campaign. Pick an amount, enter your information and see a success state. No real payment is taken.">
+<meta name="theme-color" content="#123D2F">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="../site.css">
+<script>try{var t=localStorage.getItem('council:theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="k74">Skip to main content</a>
+<header class="hdr" data-header>
+<div class="hdr-in">
+<a class="brand" href="../" aria-label="Maya Linden for City Council, home" data-i18n-attr="aria-label:k75"><span class="mark" aria-hidden="true">ML</span><span class="brand-t"><b>Maya Linden</b><small data-i18n="k76">for City Council, Ward 4</small></span></a>
+<nav id="nav" class="nav" data-nav aria-label="Main" data-i18n-attr="aria-label:k77">
+<a href="../priorities/"><span data-i18n="k70">Priorities</span></a><a href="../events/"><span data-i18n="k71">Events</span></a><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a>
+<a class="btn btn-accent" href="../donate/" ><span data-i18n="k4">Donate</span></a>
+</nav>
+<div class="tools">
+<div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:k78"><button type="button" data-lang-btn="en" lang="en" aria-pressed="true">EN</button><button type="button" data-lang-btn="es" lang="es" aria-pressed="false">ES</button></div>
+<button type="button" class="tbtn" data-theme-toggle aria-pressed="false" aria-label="Toggle dark theme" data-i18n-attr="aria-label:k79"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button>
+<button type="button" class="tbtn burger" data-nav-toggle aria-controls="nav" aria-expanded="false" aria-label="Menu" data-i18n-attr="aria-label:k80"><i class="ph ph-list" aria-hidden="true"></i></button>
+</div>
+</div>
+</header>
+<main id="main" tabindex="-1">
+<section class="phead"><div class="wrap"><h1 class="h-xl rise" data-i18n="k229">Power a campaign that shows up.</h1><p class="lede rise" style="--d:1" data-i18n="k230">Small gifts from neighbors pay for flyers, coffee and gas. This page is a demo and takes no real payment.</p></div></section><section class="sec-tight"><div class="wrap donate-grid" data-donate><div><ol class="stepper" data-stepper aria-label="Progress" data-i18n-attr="aria-label:k254"><li aria-current="step"><span data-i18n="k255">Amount</span></li><li><span data-i18n="k256">Your info</span></li><li><span data-i18n="k257">Confirm</span></li><li><span data-i18n="k258">Done</span></li></ol><div class="step" data-step="1"><h2 class="h-md" data-i18n="k231">Choose an amount</h2>
+<div data-amounts><input type="hidden" name="amount" value="0"><div class="pick"><button type="button" data-amount="25">$25</button><button type="button" data-amount="50" class="is-default">$50</button><button type="button" data-amount="100">$100</button><button type="button" data-amount="250">$250</button><button type="button" data-amount="500">$500</button><button type="button" data-amount="1000">$1,000</button></div>
+<div class="field" style="margin-top:16px"><label for="don-custom" data-i18n="k232">Other amount</label><div class="money"><span aria-hidden="true">$</span><input id="don-custom" data-custom-amount inputmode="numeric" autocomplete="off" name="custom" aria-describedby="don-help"></div><p class="help" id="don-help" data-i18n="k233">Example limit: $1,100 per person per election.</p></div></div>
+<div><p class="lbl" style="font-weight:700;margin-bottom:8px" id="freq-l" data-i18n="k234">How often</p><div class="seg" role="group" aria-labelledby="freq-l"><button type="button" data-frequency="once" data-i18n="dn.once">One time</button><button type="button" data-frequency="monthly" data-i18n="dn.monthly">Monthly</button></div></div>
+<p class="field-error" data-amount-error hidden></p>
+<div class="btn-row"><button class="btn btn-accent" type="button" data-next-amount><i class="ph ph-arrow-right" aria-hidden="true"></i><span data-i18n="k235">Continue</span></button></div></div><div class="step" data-step="2" hidden><h2 class="h-md" data-i18n="k236">Your information</h2>
+<form id="donor-form" data-demo-form novalidate class="form-grid"><div class="field"><label for="donor-first"><span data-i18n="k237">First name</span></label><input id="donor-first" name="first" type="text" required autocomplete="given-name"><p class="field-error" data-error-for="first" hidden></p></div><div class="field"><label for="donor-last"><span data-i18n="k238">Last name</span></label><input id="donor-last" name="last" type="text" required autocomplete="family-name"><p class="field-error" data-error-for="last" hidden></p></div><div class="field full"><label for="donor-email"><span data-i18n="k47">Email</span></label><input id="donor-email" name="email" type="email" required autocomplete="email"><p class="field-error" data-error-for="email" hidden></p></div><div class="field full"><label for="donor-address"><span data-i18n="k208">Street address</span></label><input id="donor-address" name="address" type="text" required autocomplete="street-address"><p class="field-error" data-error-for="address" hidden></p></div><div class="field"><label for="donor-city"><span data-i18n="k239">City</span></label><input id="donor-city" name="city" type="text" required autocomplete="address-level2"><p class="field-error" data-error-for="city" hidden></p></div><div class="field"><label for="donor-zip"><span data-i18n="k48">ZIP code</span></label><input id="donor-zip" name="zip" type="text" required autocomplete="postal-code" inputmode="numeric" maxlength="5"><p class="field-error" data-error-for="zip" hidden></p></div><div class="field"><label for="donor-employer"><span data-i18n="k240">Employer</span></label><input id="donor-employer" name="employer" type="text" required autocomplete="organization"><p class="field-error" data-error-for="employer" hidden></p></div><div class="field"><label for="donor-occupation"><span data-i18n="k241">Occupation</span></label><input id="donor-occupation" name="occupation" type="text" required autocomplete="organization-title"><p class="field-error" data-error-for="occupation" hidden></p></div>
+<div class="full"><label class="check"><input type="checkbox" name="eligible" required><span data-i18n="k242">I am a U.S. citizen or lawful permanent resident, and this gift comes from my own funds.</span></label><p class="field-error" data-error-for="eligible" hidden></p></div>
+<div class="full btn-row"><button class="btn btn-line" type="button" data-goto="1"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="k243">Back</span></button><button class="btn btn-accent" type="submit"><i class="ph ph-arrow-right" aria-hidden="true"></i><span data-i18n="k235">Continue</span></button></div></form></div><div class="step" data-step="3" hidden><h2 class="h-md" data-i18n="k244">Review and confirm</h2>
+<div class="demo-flag"><i class="ph ph-warning-circle" aria-hidden="true"></i><div><strong data-i18n="k245">Demo: no real payment is taken.</strong><p data-i18n="k246">A secure payment form would appear here on a live campaign. This concept collects nothing and sends nothing.</p></div></div>
+<p><span data-i18n="k247">You are about to give</span> <strong data-amt></strong> <span data-freq-label class="lc"></span>.</p>
+<form id="pay-form" data-demo-form novalidate class="form-grid"><div class="full"><label class="check"><input type="checkbox" name="demo" required><span data-i18n="k248">I understand this is a demo and no money moves.</span></label><p class="field-error" data-error-for="demo" hidden></p></div>
+<div class="full btn-row"><button class="btn btn-line" type="button" data-goto="2"><i class="ph ph-arrow-left" aria-hidden="true"></i><span data-i18n="k243">Back</span></button><button class="btn btn-accent" type="submit"><span data-i18n="k249">Complete demo donation</span></button></div></form></div><div class="step" data-step="4" hidden><div class="success"><i class="ph-fill ph-check-circle" aria-hidden="true"></i><h2 class="h-md" data-i18n="k250">Thank you,</h2><p class="display h-md" data-first style="color:var(--tint-ink)"></p>
+<p><span data-i18n="k251">Demo complete. No payment was taken and nothing was saved. You would have given</span> <strong data-amt></strong> <span data-freq-label class="lc"></span>.</p>
+<div class="btn-row"><button class="btn btn-line" type="button" data-restart><span data-i18n="k252">Start over</span></button><a class="btn btn-solid" href="../"><span data-i18n="k253">Back to home</span></a></div></div></div></div><aside class="give-sum tint-butter" aria-live="polite"><p class="lbl" style="font-weight:700" data-i18n="k259">You give</p><output data-amount-out>$0</output><p data-freq-label style="font-weight:700"></p>
+<dl><dt data-i18n="k260">Total over a year</dt><dd data-month-total></dd><dt data-i18n="k261">Goes to</dt><dd>Maya Linden for City Council</dd></dl></aside></div></section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div><h2>Maya Linden for City Council</h2><p data-i18n="k81">A neighbor first. Ward 4 Eastside.</p></div>
+<div><h3 data-i18n="k82">Explore</h3><ul><li><a href="../priorities/"><span data-i18n="k70">Priorities</span></a></li><li><a href="../events/"><span data-i18n="k71">Events</span></a></li><li><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a></li><li><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a></li><li><a href="../donate/"><span data-i18n="k4">Donate</span></a></li></ul></div>
+<div><h3 data-i18n="k83">Legal</h3><ul><li><a href="../privacy/"><span data-i18n="k84">Privacy</span></a></li><li><a href="../accessibility/"><span data-i18n="k85">Accessibility</span></a></li></ul></div>
+</div>
+<div class="legal">
+<p><strong data-i18n="k86">Paid for by Maya Linden for City Council. Not authorized by any other candidate or committee.</strong></p>
+<p data-i18n="k87">Concept design by DBF Designs. Fictional candidate for illustration. Any resemblance to real people or organizations is coincidental.</p>
+<p data-i18n="k88">Photography: Pexels.</p>
+</div>
+</div>
+</footer>
+<script src="../site.js" defer></script>
+<script src="../../../assets/shared.js" defer></script>
+</body>
+</html>

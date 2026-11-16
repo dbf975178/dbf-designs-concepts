@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donate | Jonah Ellery for U.S. Senate</title>
+<meta name="description" content="A demonstration donation flow for a fictional campaign. No real payment is taken and nothing is sent.">
+<meta name="theme-color" content="#0A2556">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="../site.css">
+<script src="../site.js" defer></script>
+<script src="../../../assets/shared.js" defer></script>
+<link rel="icon" href="data:,">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="hdr" data-header><div class="hdr-in">
+<a class="logo" href="../" aria-label="Jonah Ellery for U.S. Senate, home"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#2F6BFF"/><rect x="8" y="7" width="14" height="3.4" fill="#fff"/><rect x="8" y="13.3" width="10" height="3.4" fill="#fff"/><rect x="8" y="19.6" width="14" height="3.4" fill="#fff"/></svg><span><b>Jonah Ellery</b><small>for U.S. Senate</small></span></a>
+<nav class="nav" id="nav" data-nav aria-label="Main"><ul><li><a href="../meet-jonah/"><span data-i18n="nav_meet">Meet Jonah</span></a></li><li><a href="../issues/"><span data-i18n="nav_issues">Issues</span></a></li><li><a href="../news/"><span data-i18n="nav_news">News</span></a></li><li><a href="../events/"><span data-i18n="nav_events">Events</span></a></li><li><a href="../take-action/"><span data-i18n="nav_action">Take action</span></a></li></ul><div class="drawer-tools"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button type="button" class="icon-btn theme-btn" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:theme_label" aria-label="Toggle dark mode"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button></div></nav>
+<div class="tools"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang-btn="en" aria-pressed="true" lang="en">EN</button><button type="button" data-lang-btn="es" aria-pressed="false" lang="es">ES</button></div><button type="button" class="icon-btn theme-btn" data-theme-toggle aria-pressed="false" data-i18n-attr="aria-label:theme_label" aria-label="Toggle dark mode"><i class="ph ph-moon" aria-hidden="true"></i><i class="ph ph-sun" aria-hidden="true"></i></button><a class="btn btn-red btn-sm" href="../donate/"><span data-i18n="donate">Donate</span></a></div>
+<button type="button" class="icon-btn burger" data-nav-toggle aria-controls="nav" aria-expanded="false" data-i18n-attr="aria-label:menu_label" aria-label="Menu"><i class="ph ph-list" aria-hidden="true"></i><i class="ph ph-x" aria-hidden="true"></i></button>
+</div></header>
+<main id="main">
+<section class="phero on-navy"><div class="wrap"><h1 data-i18n="dn_h">Donate to the campaign.</h1><p class="lede" data-i18n="dn_lede">Grassroots gifts keep this campaign independent and in every county.</p></div></section><section class="sec"><div class="wrap don"><div class="don-side"><h2 data-i18n="ds_h">What a gift covers</h2><ul class="eg"><li><span data-i18n="ds_1">Printing for a canvass kit</span><b>$25</b></li><li><span data-i18n="ds_2">Gas for volunteer drivers</span><b>$50</b></li><li><span data-i18n="ds_3">A phone bank night</span><b>$100</b></li></ul>
+<p class="note" style="margin-top:16px" data-i18n="ds_note">Example figures for illustration. This is a demo and no real payment is taken.</p></div><div class="wiz" data-donate data-wizard>
+<ol class="marks" style="list-style:none"><li data-mark><span data-i18n="mk_1">Amount</span></li><li data-mark><span data-i18n="mk_2">Details</span></li><li data-mark><span data-i18n="mk_3">Confirm</span></li></ol>
+<input type="hidden" name="amount" value="0"><input type="hidden" name="frequency" value="once">
+<section data-step><h2 data-i18n="w1_h">Choose an amount</h2>
+<div class="freq" role="group" aria-label="Frequency"><button type="button" data-frequency="once"><span data-i18n="fq_once">One time</span></button><button type="button" data-frequency="monthly"><span data-i18n="fq_m">Monthly</span></button></div>
+<div data-amounts><div class="amt-grid"><button type="button" class="amt" data-amount="25">$25</button><button type="button" class="amt is-default" data-amount="50">$50</button><button type="button" class="amt" data-amount="100">$100</button><button type="button" class="amt" data-amount="250">$250</button><button type="button" class="amt" data-amount="500">$500</button></div>
+<div class="field" style="margin-top:14px"><label for="d-other" data-i18n="w_other">Other amount</label><div class="money"><span aria-hidden="true">$</span><input id="d-other" data-custom-amount type="text" inputmode="numeric" autocomplete="off"></div><p class="field-error" data-error-for="amount" hidden></p></div></div>
+<p class="sum" data-sum aria-live="polite"></p>
+<div class="wiz-act"><button type="button" class="btn btn-red" data-next><span data-i18n="w_next">Continue</span><i class="ph ph-arrow-right" aria-hidden="true"></i></button></div></section>
+<section data-step hidden><h2 data-i18n="w2_h">Your details</h2><div class="stack-form">
+<div class="form-row"><div class="field"><label for="f-first" data-i18n="w_first">First name</label><input id="f-first" name="first" type="text" required autocomplete="given-name"><p class="field-error" data-error-for="first" hidden></p></div><div class="field"><label for="f-last" data-i18n="w_last">Last name</label><input id="f-last" name="last" type="text" required autocomplete="family-name"><p class="field-error" data-error-for="last" hidden></p></div></div>
+<div class="field"><label for="f-email" data-i18n="lbl_email">Email address</label><input id="f-email" name="email" type="email" required autocomplete="email"><p class="field-error" data-error-for="email" hidden></p></div><div class="field"><label for="f-zip" data-i18n="lbl_zip">ZIP code</label><input id="f-zip" name="zip" type="text" required inputmode="numeric" maxlength="5" autocomplete="postal-code"><p class="field-error" data-error-for="zip" hidden></p></div>
+<div><label class="check"><input type="checkbox" name="eligible" required><span data-i18n="w_elig">I am a U.S. citizen or lawful permanent resident, and this gift is from my own funds.</span></label><p class="field-error" data-error-for="eligible" hidden></p></div></div>
+<p class="sum" data-sum></p>
+<div class="wiz-act"><button type="button" class="btn btn-line" data-back><span data-i18n="w_back">Back</span></button><button type="button" class="btn btn-red" data-next><span data-i18n="w_next">Continue</span><i class="ph ph-arrow-right" aria-hidden="true"></i></button></div></section>
+<section data-step hidden><h2 data-i18n="w3_h">Review and confirm</h2>
+<div class="demo-banner"><i class="ph ph-info" aria-hidden="true"></i><span data-i18n="w3_banner">Demo: no real payment is taken.</span></div>
+<dl class="review"><div><dt data-i18n="rv_a">Amount</dt><dd data-r="amount"></dd></div><div><dt data-i18n="rv_f">Frequency</dt><dd data-r="freq"></dd></div><div><dt data-i18n="rv_n">Name</dt><dd data-r="name"></dd></div><div><dt data-i18n="rv_e">Email</dt><dd data-r="email"></dd></div></dl>
+<div class="wiz-act"><button type="button" class="btn btn-line" data-back><span data-i18n="w_back">Back</span></button><button type="button" class="btn btn-red" data-finish><span data-i18n="w_fin">Complete demo donation</span></button></div></section>
+<section data-step hidden aria-live="polite"><i class="ph ph-check-circle ok-mark" aria-hidden="true"></i><h2 data-i18n="w4_h">Thank you.</h2>
+<p class="lede"><span data-done-name></span>, <span data-done-amt></span></p><p class="muted" style="margin:10px 0 14px" data-i18n="w4_p">This was a demonstration. No payment was taken and nothing was sent.</p>
+<p class="note"><span data-i18n="w4_re">Demo reference</span>: <b data-done-ref></b></p>
+<div class="wiz-act"><button type="button" class="btn btn-line" data-restart><span data-i18n="w4_again">Start over</span></button><a class="btn btn-red" href="../"><span data-i18n="w4_home">Back to home</span></a></div></section>
+</div></div></section>
+</main>
+<footer class="ftr"><div class="wrap">
+<div class="ftr-top">
+<div><a class="logo" href="../" aria-label="Jonah Ellery for U.S. Senate, home"><svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" rx="6" fill="#2F6BFF"/><rect x="8" y="7" width="14" height="3.4" fill="#fff"/><rect x="8" y="13.3" width="10" height="3.4" fill="#fff"/><rect x="8" y="19.6" width="14" height="3.4" fill="#fff"/></svg><span><b>Jonah Ellery</b><small>for U.S. Senate</small></span></a>
+<p class="tag" data-i18n="f_tag">Work should pay. A campaign for every county.</p></div>
+<div><h2 data-i18n="f_campaign">Campaign</h2><ul>
+<li><a href="../meet-jonah/"><span data-i18n="nav_meet">Meet Jonah</span></a></li><li><a href="../issues/"><span data-i18n="nav_issues">Issues</span></a></li><li><a href="../news/"><span data-i18n="nav_news">News</span></a></li></ul></div>
+<div><h2 data-i18n="f_involved">Get involved</h2><ul>
+<li><a href="../events/"><span data-i18n="nav_events">Events</span></a></li><li><a href="../take-action/"><span data-i18n="nav_action">Take action</span></a></li><li><a href="../donate/"><span data-i18n="donate">Donate</span></a></li></ul></div>
+</div>
+<div class="ftr-bot">
+<p class="paid" data-i18n="f_paid">Paid for by Ellery for Senate. Not authorized by any other candidate or committee.</p>
+<p data-i18n="f_fict">Concept design by DBF Designs. Fictional candidate for illustration. Any resemblance to real people or organizations is coincidental.</p>
+<p>Photography: Pexels.</p>
+<div class="ftr-links"><a href="../privacy/"><span data-i18n="f_priv">Privacy</span></a><a href="../accessibility/"><span data-i18n="f_acc">Accessibility</span></a></div>
+</div></div></footer>
+</body></html>
