@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zuri Taverner for Mayor (concept)</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1B3BFF;--cream:#FFF4DC;--tang:#FF6A13;--pink:#FF4FA3;--yel:#FFD23F;--ink:#121212}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Bricolage Grotesque',sans-serif;background:var(--blue);color:var(--cream);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:10px 16px;z-index:9}.skip:focus{left:8px}
+.page{position:relative;height:900px;overflow:hidden;background:var(--blue)}
+.dots{position:absolute;right:-40px;top:70px;width:620px;height:620px;background-image:radial-gradient(circle,rgba(255,255,255,.28) 3px,transparent 3.5px);background-size:26px 26px;transform:rotate(8deg)}
+.nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:26px 52px}
+.logo{display:flex;align-items:center;gap:14px;font-weight:800;font-size:28px;letter-spacing:-.02em}
+.logo i{width:54px;height:54px;border-radius:50%;background:var(--yel);color:var(--ink);display:grid;place-items:center;font-style:normal;font-size:30px;transform:rotate(-8deg)}
+.links{display:flex;gap:6px;background:rgba(255,244,220,.12);padding:6px;border-radius:999px;font-weight:600;font-size:17px}
+.links a{padding:11px 22px;border-radius:999px}.links a.on{background:var(--cream);color:var(--blue)}
+.btns{display:flex;gap:10px;align-items:center}
+.langs{display:flex;gap:6px;font-weight:700;font-size:15px}.langs b{background:var(--cream);color:var(--blue);padding:8px 12px;border-radius:999px}.langs span{padding:8px 10px;border-radius:999px;box-shadow:inset 0 0 0 2px rgba(255,244,220,.6)}
+.b{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;font-size:17px}
+.b.y{background:var(--yel);color:var(--ink)}.b.o{box-shadow:inset 0 0 0 2.5px var(--cream)}
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:790px 1fr;gap:20px;padding:20px 52px 0}
+.chip{display:inline-block;background:var(--pink);color:var(--ink);padding:9px 20px;border-radius:999px;font-weight:700;font-size:17px;transform:rotate(-2deg)}
+h1{font-size:136px;line-height:.88;font-weight:800;letter-spacing:-.055em;margin:20px 0 20px}
+h1 span{display:inline-block;background:var(--yel);color:var(--ink);padding:0 .1em .04em;border-radius:.12em;transform:rotate(-2deg);margin-left:-.04em}
+.lede{font-size:22px;line-height:1.35;max-width:600px;color:#EAE7FF;font-weight:500}
+.ctas{display:flex;gap:12px;margin-top:24px}
+.sub{margin-top:18px;display:flex;gap:8px;align-items:center;font-weight:600;font-size:15px;color:#EAE7FF}.sub b{background:rgba(255,244,220,.14);border-radius:999px;padding:7px 14px;font-weight:700}
+.col{position:relative;height:640px;margin-top:-6px}
+.card{position:absolute;border-radius:34px;padding:26px 30px;color:var(--ink);box-shadow:8px 10px 0 rgba(0,0,0,.28)}
+.card svg{width:50px;height:50px;margin-bottom:8px}
+.card b{display:block;font-size:44px;line-height:.95;font-weight:800;letter-spacing:-.04em}
+.c1{left:70px;top:0;width:420px;background:var(--tang);transform:rotate(-6deg)}
+.c2{left:150px;top:228px;width:420px;background:var(--pink);transform:rotate(4deg)}
+.c3{left:30px;top:430px;width:440px;background:var(--cream);transform:rotate(-3deg)}
+.stk{position:absolute;right:20px;top:-20px;width:140px;height:140px;border-radius:50%;background:var(--yel);color:var(--ink);display:grid;place-items:center;text-align:center;font-weight:800;font-size:23px;line-height:1;transform:rotate(12deg);z-index:4;box-shadow:6px 8px 0 rgba(0,0,0,.28)}
+.mq{position:absolute;left:-20px;right:-20px;bottom:14px;background:var(--yel);color:var(--ink);height:96px;transform:rotate(-1.4deg);display:flex;align-items:center;gap:34px;white-space:nowrap;font-size:52px;font-weight:800;letter-spacing:-.02em;overflow:hidden;z-index:5;box-shadow:0 -6px 0 var(--ink)}
+.mq i{font-style:normal;color:var(--blue)}
+.more{background:var(--cream);color:var(--ink);padding:90px 52px}
+.more h2{font-size:110px;line-height:.9;font-weight:800;letter-spacing:-.05em;color:var(--blue)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.g3 div{border-radius:30px;padding:30px;background:var(--yel);font-size:20px;font-weight:600}.g3 b{display:block;font-size:40px;line-height:1;letter-spacing:-.03em;margin-bottom:10px;font-weight:800}
+.foot{background:var(--ink);color:#c6c6c6;padding:30px 52px;font-size:14px}.foot b{color:#fff;border:1.5px solid #bbb;padding:8px 12px;border-radius:6px;font-weight:600;display:inline-block;margin-bottom:10px}
+@media(max-width:760px){.page{height:auto;padding-bottom:140px}.nav{padding:16px 18px}.links,.b.o,.langs span{display:none}.logo{font-size:21px}.logo i{width:42px;height:42px;font-size:23px}.b{padding:12px 20px;font-size:15px}
+.hero{grid-template-columns:1fr;padding:12px 18px 0}.dots{display:none}h1{font-size:92px;margin:16px 0 18px}.lede{font-size:20px}.ctas{flex-wrap:wrap}.col{height:560px;margin-top:20px}
+.card{padding:20px 22px;border-radius:26px}.card b{font-size:34px}.card svg{width:48px;height:48px}.c1{left:6px;width:300px}.c2{left:60px;top:200px;width:300px}.c3{left:0;top:390px;width:310px}.stk{right:6px;top:-10px;width:104px;height:104px;font-size:17px}.mq{font-size:36px;height:72px;bottom:30px}
+.more{padding:50px 18px}.more h2{font-size:60px}.g3{grid-template-columns:1fr}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page"><div class="dots"></div>
+<header class="nav"><a class="logo" href="#"><i>Z</i>Zuri for Mayor</a><nav class="links" aria-label="Main"><a class="on" href="#">Home</a><a href="#">Our plan</a><a href="#">Events</a><a href="#">Get involved</a></nav><div class="btns"><div class="langs" aria-label="Language"><b>EN</b><span>ES</span><span>中文</span></div><a class="b y" href="#">Chip in</a></div></header>
+<main id="main"><section class="hero"><div>
+<span class="chip">Zuri Taverner · for Mayor of Riverton</span>
+<h1>A city<br>we can<br><span>afford.</span></h1>
+<p class="lede">Rent you can pay. Buses that show up. Child care every family can use. Chip in, knock a door, and build it with us.</p>
+<div class="ctas"><a class="b y" href="#">Join the movement</a><a class="b o" href="#">Find an event</a></div>
+<div class="sub">Paid for by Taverner for Mayor <b>Chip in $10</b><b>$25</b><b>$50</b></div></div>
+<div class="col"><div class="stk">Vote<br>early!</div>
+<div class="card c1"><svg viewBox="0 0 64 64"><path d="M8 30 32 8l24 22v26H8z" fill="#121212"/><rect x="26" y="36" width="12" height="20" fill="#FF6A13"/></svg><b>Rent you<br>can pay</b></div>
+<div class="card c2"><svg viewBox="0 0 64 64"><rect x="6" y="10" width="52" height="38" rx="9" fill="#121212"/><rect x="12" y="16" width="18" height="14" rx="3" fill="#FF4FA3"/><rect x="34" y="16" width="18" height="14" rx="3" fill="#FF4FA3"/><circle cx="19" cy="52" r="7" fill="#121212"/><circle cx="45" cy="52" r="7" fill="#121212"/></svg><b>Buses that<br>show up</b></div>
+<div class="card c3"><svg viewBox="0 0 64 64"><path d="M32 56S6 40 6 22a13 13 0 0 1 26-3 13 13 0 0 1 26 3c0 18-26 34-26 34z" fill="#1B3BFF"/></svg><b>Child care for<br>every family</b></div></div></section></main>
+<div class="mq"><span>VOTE</span><i>★</i><span>VOTA</span><i>★</i><span>投票</span><i>★</i><span>VOTE</span><i>★</i><span>VOTA</span><i>★</i><span>投票</span><i>★</i><span>VOTE</span></div></div>
+<section class="more"><h2>Our plan, in plain words.</h2><div class="g3"><div><b>Affordable homes</b>Cap rent hikes and build near transit.</div><div><b>Reliable transit</b>Frequent buses and safer stops.</div><div><b>Care that works</b>Child care and senior care you can count on.</div></div></section>
+<footer class="foot"><b>Paid for by Taverner for Mayor. Not authorized by any other candidate or committee.</b><div>Concept design by DBF Designs. Fictional candidate for illustration.</div></footer>
+</body></html>

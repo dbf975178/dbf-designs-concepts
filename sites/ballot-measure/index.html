@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yes on 12 (concept)</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFD60A;--ink:#0E0E10;--w:#fff;--blue:#1F4FFF}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Archivo',sans-serif;background:var(--y);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;padding:10px 16px;z-index:9}.skip:focus{left:8px}
+.page{position:relative;min-height:900px;overflow:hidden}
+.nav{position:relative;z-index:3;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.logo{display:flex;align-items:center;gap:12px;font:400 34px 'Anton';letter-spacing:.02em;text-transform:uppercase}
+.logo i{width:46px;height:46px;border-radius:12px;background:var(--ink);color:var(--y);display:grid;place-items:center;font:400 26px 'Anton';font-style:normal}
+.links{display:flex;gap:30px;font-weight:700;font-size:16px}
+.right{display:flex;gap:12px;align-items:center}
+.lang{display:flex;border:2.5px solid var(--ink);border-radius:999px;overflow:hidden;font-weight:800;font-size:14px}.lang b,.lang span{padding:8px 13px}.lang b{background:var(--ink);color:var(--y)}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:800;font-size:16px}.btn.k{background:var(--ink);color:var(--y)}.btn.w{background:var(--w);box-shadow:inset 0 0 0 2px var(--ink)}
+.stripes{position:absolute;left:-40px;right:-40px;bottom:84px;height:210px;transform:rotate(-2deg);display:flex;gap:34px;z-index:1}
+.stripes b{flex:none;width:58px;background:var(--ink);border-radius:4px}
+.hero{position:relative;z-index:2;display:grid;grid-template-columns:1.4fr .6fr;gap:40px;padding:34px 56px 0;align-items:start}
+.badge{display:inline-block;background:var(--ink);color:var(--y);font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding:9px 18px;border-radius:999px}
+h1{font:400 232px/.86 'Anton';text-transform:uppercase;letter-spacing:-.01em;margin:22px 0 14px;white-space:nowrap}
+h1 span{color:var(--w);-webkit-text-stroke:5px var(--ink);paint-order:stroke fill}
+.sub{font:800 38px/1.05 'Archivo';letter-spacing:-.02em;max-width:640px;margin-bottom:24px}
+.ctas{display:flex;gap:14px}
+.mini{margin-top:18px;font-size:14px;font-weight:700}.mini span{display:inline-block;background:var(--ink);color:var(--y);border-radius:6px;padding:4px 10px;margin-right:8px}
+.card{background:var(--w);border-radius:30px;padding:28px;box-shadow:12px 12px 0 var(--ink);border:3px solid var(--ink);margin-top:34px;transform:rotate(1.5deg)}
+.card h3{font:400 40px/1 'Anton';text-transform:uppercase;margin-bottom:8px}.card p{font-size:16px;color:#3b3b40;margin-bottom:14px}
+.card input{width:100%;height:52px;border:2.5px solid var(--ink);border-radius:14px;padding:0 16px;font:600 16px 'Archivo';margin-bottom:10px}
+.card .go{display:block;text-align:center;background:var(--blue);color:#fff;padding:16px;border-radius:14px;font-weight:800;font-size:18px;margin-top:6px}
+.card small{display:block;margin-top:12px;font-size:12.5px;color:#55555c}
+.ticker{position:absolute;left:0;right:0;bottom:0;z-index:3;background:var(--ink);color:var(--y);height:84px;display:flex;align-items:center;gap:38px;font:400 38px 'Anton';text-transform:uppercase;white-space:nowrap;overflow:hidden;letter-spacing:.02em}
+.ticker b{color:var(--w)}
+.why{padding:84px 56px;background:var(--w)}
+.why h2{font:400 100px/.9 'Anton';text-transform:uppercase}.why .g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.why .g div{border:3px solid var(--ink);border-radius:26px;padding:28px;background:var(--y)}.why h3{font:400 38px/1 'Anton';text-transform:uppercase;margin-bottom:10px}.why p{font-size:18px;font-weight:500}
+.foot{background:var(--ink);color:#d3d3d8;padding:34px 56px;font-size:14px;display:flex;justify-content:space-between;gap:30px}.foot b{color:var(--w);border:1.5px solid #d3d3d8;padding:8px 12px;border-radius:6px;font-weight:700}
+@media(max-width:760px){.page{min-height:0;padding-bottom:84px}.nav{height:68px;padding:0 20px}.links,.btn.w{display:none}.logo{font-size:26px}.logo i{width:38px;height:38px;font-size:21px}.btn{padding:12px 20px}.lang{font-size:12px}
+.hero{grid-template-columns:1fr;padding:22px 20px 0;gap:6px}h1{font-size:128px;margin:14px 0 8px;white-space:normal;line-height:.88}h1 span{-webkit-text-stroke:3px var(--ink)}.sub{font-size:26px;margin-bottom:18px}.ctas{flex-wrap:wrap}.card{margin:26px 6px 0;padding:22px;box-shadow:8px 8px 0 var(--ink)}
+.stripes{bottom:68px;height:150px;opacity:.28}.ticker{font-size:28px;height:68px}.why{padding:48px 20px}.why h2{font-size:64px}.why .g{grid-template-columns:1fr}.foot{padding:28px 20px;flex-direction:column}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<header class="nav"><div class="logo"><i>12</i>Yes on 12</div><nav class="links" aria-label="Main"><a href="#">Why Yes</a><a href="#">Who backs it</a><a href="#">Events</a><a href="#">Polling place</a></nav><div class="right"><div class="lang" aria-label="Language"><b>EN</b><span>ES</span></div><a class="btn k" href="#">Sign the pledge</a></div></header>
+<div class="stripes"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+<main id="main"><section class="hero"><div><span class="badge">Measure 12 · Safe Streets</span>
+<h1>Yes <span>on 12</span></h1>
+<p class="sub">Safe crosswalks for every kid in our city.</p>
+<div class="ctas"><a class="btn k" href="#">Add your name</a><a class="btn w" href="#">Share this page</a></div>
+<p class="mini"><span>Endorsed</span>Parents Network · Teachers Council · Walk Safe Coalition</p></div>
+<aside class="card"><h3>Pledge your vote</h3><p>Join neighbors, parents and teachers backing Measure 12.</p><input aria-label="Full name" placeholder="Full name"><input aria-label="ZIP code" placeholder="ZIP code"><a class="go" href="#">I’m voting Yes</a><small>By signing up you agree to receive campaign updates. Message and data rates may apply. Paid for by Citizens for Safe Streets.</small></aside></section></main>
+<div class="ticker"><span>Vote Yes on 12</span><b>★</b><span>Safe crosswalks</span><b>★</b><span>Safe kids</span><b>★</b><span>Vote Yes on 12</span><b>★</b><span>Safe crosswalks</span></div>
+</div>
+<section class="why"><h2>Why vote yes?</h2><div class="g"><div><h3>It protects kids</h3><p>Funds crosswalks, signals and signs near every school.</p></div><div><h3>It is paid for</h3><p>A clear, audited plan with a public report each year.</p></div><div><h3>It works</h3><p>Cities that did this saw fewer close calls on school routes.</p></div></div></section>
+<footer class="foot"><div>Concept design by DBF Designs. Fictional campaign for illustration.</div><b>Paid for by Citizens for Safe Streets, Yes on 12. Not authorized by any candidate.</b></footer>
+</body></html>
