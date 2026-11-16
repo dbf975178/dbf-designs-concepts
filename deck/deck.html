@@ -1,313 +1,253 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<title>DBF Designs: Capabilities</title>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;560;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
-<style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>DBF Designs: Capabilities</title><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;560;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet"><style>
 @page{size:1920px 1080px;margin:0}
 :root{--silver:#F1F2F4;--ink:#0C0D10;--dark:#0B0C0F;--co:#2447FF;--coral:#FF7A59;--butter:#FFD84D;--mint:#7EE0B8;--sky:#9CCBFF;--pink:#FFB4D2;--mute:#555A63}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#888}
-body{font-family:'Geist',Arial,sans-serif;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.s{position:relative;width:1920px;height:1080px;overflow:hidden;padding:96px 112px;display:flex;flex-direction:column;gap:36px;page-break-after:always;break-after:page}
-.light{background:var(--silver);color:var(--ink)}
-.dark{background:var(--dark);color:#ECEEF2}
-.cobalt{background:var(--co);color:#fff}
-.butter{background:var(--butter);color:var(--ink)}
-.eb{align-self:flex-start;padding:9px 22px;border-radius:999px;background:var(--mint);color:var(--ink);font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;transform:rotate(-2deg)}
-.eb.co{background:var(--coral)}.eb.bu{background:var(--butter)}.eb.sk{background:var(--sky)}.eb.pk{background:var(--pink)}
+html,body{background:#777}
+body{font-family:'Geist',Arial,sans-serif;-webkit-font-smoothing:antialiased;-webkit-print-color-adjust:exact;print-color-adjust:exact;counter-reset:pgn}
+a{color:inherit;text-decoration:none}
+.s{position:relative;width:1920px;height:1080px;overflow:hidden;padding:96px 112px;display:flex;flex-direction:column;gap:34px;break-after:page;page-break-after:always;counter-increment:pgn}
+.light{background:var(--silver);color:var(--ink)}.dark{background:var(--dark);color:#ECEEF2}.cobalt{background:var(--co);color:#fff}.butter{background:var(--butter);color:var(--ink)}
+.eb{display:inline-block;width:fit-content;align-self:flex-start;padding:9px 22px;border-radius:999px;background:var(--mint);color:var(--ink);font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;transform:rotate(-2deg)}
+.eb.co{background:var(--coral)}.eb.bu{background:var(--butter)}.eb.sk{background:var(--sky)}.eb.pk{background:var(--pink)}.eb.ink{background:var(--ink);color:var(--butter)}
 h2{font-size:92px;font-weight:560;line-height:1;letter-spacing:-4px}
-h2.m{font-size:80px;letter-spacing:-3.5px}
 .lead{font-size:34px;line-height:1.4;color:var(--mute);max-width:1100px}
 .dark .lead{color:#9AA1AD}.cobalt .lead{color:#E6EAFF}.butter .lead{color:#2B2F38}
 .acc{color:var(--co)}.dark .acc{color:#8EA6FF}
-.foot{position:absolute;left:112px;bottom:44px;font:500 20px 'Geist Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#7A808B}
-.s{counter-increment:pgn}.pg::after{content:counter(pgn,decimal-leading-zero)}
-.br .bar span{font:500 14px 'Geist Mono',monospace;color:#5B606A;margin-left:10px;letter-spacing:.5px}
 .pg{position:absolute;right:112px;bottom:44px;font:500 20px 'Geist Mono',monospace;color:#7A808B}
-.dark .foot,.dark .pg{color:#6F7682}.cobalt .foot,.cobalt .pg{color:#C9D3FF}.butter .foot,.butter .pg{color:#4A4630}
-/* bezel card */
+.pg::after{content:counter(pgn,decimal-leading-zero)}
+.mk{position:absolute;left:112px;bottom:44px;font:500 20px 'Geist Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:#7A808B}
+.dark .pg,.dark .mk{color:#6F7682}.cobalt .pg,.cobalt .mk{color:#C9D3FF}.butter .pg,.butter .mk{color:#4A4630}
 .sh{padding:8px;border-radius:36px;background:rgba(12,13,16,.05);box-shadow:inset 0 0 0 1px rgba(12,13,16,.1);display:flex}
 .dark .sh{background:rgba(236,238,242,.06);box-shadow:inset 0 0 0 1px rgba(236,238,242,.12)}
-.cr{flex:1;border-radius:28px;padding:40px;display:flex;flex-direction:column;gap:16px;background:#FAFAFB;color:var(--ink);box-shadow:inset 0 1px 0 #fff}
+.cr{flex:1;border-radius:28px;padding:40px;display:flex;flex-direction:column;gap:14px;background:#FAFAFB;color:var(--ink);box-shadow:inset 0 1px 0 #fff}
 .dark .cr{background:#14161B;color:#ECEEF2;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
-.cr.coral{background:var(--coral)}.cr.butter{background:var(--butter)}.cr.mint{background:var(--mint)}.cr.sky{background:var(--sky)}.cr.pink{background:var(--pink)}.cr.ink{background:var(--ink);color:#F1F2F4}.cr.co{background:var(--co);color:#fff}
+.cr.coral,.dark .cr.coral{background:var(--coral);color:var(--ink)}.cr.butter,.dark .cr.butter{background:var(--butter);color:var(--ink)}.cr.mint,.dark .cr.mint{background:var(--mint);color:var(--ink)}.cr.sky,.dark .cr.sky{background:var(--sky);color:var(--ink)}.cr.pink,.dark .cr.pink{background:var(--pink);color:var(--ink)}.cr.ink{background:var(--ink);color:#F1F2F4}.cr.co{background:var(--co);color:#fff}
 .ct{font-size:44px;font-weight:560;line-height:1.05;letter-spacing:-1.6px}
 .cp{font-size:27px;line-height:1.42;color:var(--mute)}
-.dark .cr.coral,.dark .cr.butter,.dark .cr.mint,.dark .cr.sky,.dark .cr.pink{background:inherit;color:var(--ink)}
-.dark .cr.coral{background:var(--coral)}.dark .cr.butter{background:var(--butter)}.dark .cr.mint{background:var(--mint)}.dark .cr.sky{background:var(--sky)}.dark .cr.pink{background:var(--pink)}
-.dark .cp{color:#9AA1AD}.dark .cr.coral .cp,.dark .cr.butter .cp,.dark .cr.mint .cp,.dark .cr.sky .cp,.dark .cr.pink .cp,.cr.coral .cp,.cr.butter .cp,.cr.mint .cp,.cr.sky .cp,.cr.pink .cp{color:#2B2F38}.cr.ink .cp{color:#A5ABB6}.cr.co .cp{color:#E6EAFF}
+.dark .cp{color:#9AA1AD}.cr.coral .cp,.cr.butter .cp,.cr.mint .cp,.cr.sky .cp,.cr.pink .cp,.dark .cr.coral .cp,.dark .cr.butter .cp,.dark .cr.mint .cp,.dark .cr.sky .cp,.dark .cr.pink .cp{color:#2B2F38}.cr.ink .cp{color:#A5ABB6}.cr.co .cp{color:#E6EAFF}
 .num{font:500 22px 'Geist Mono',monospace;letter-spacing:3px;opacity:.7}
-.chip{width:84px;height:84px;border-radius:42px;display:grid;place-items:center;font:560 34px 'Geist';letter-spacing:-1px;background:var(--ink);color:var(--silver)}
 .row{display:flex;gap:24px}.col{display:flex;flex-direction:column}.fx{flex:1}
 .pill{display:inline-flex;align-items:center;gap:20px;padding:10px 10px 10px 36px;border-radius:999px;background:var(--ink);color:var(--silver);font-size:30px;font-weight:560;letter-spacing:-1px;align-self:flex-start}
 .pill i{width:64px;height:64px;border-radius:32px;background:var(--butter);display:grid;place-items:center;font-style:normal;color:var(--ink);font-size:30px}
-/* browser + phone */
-.br{border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 40px 80px -30px rgba(12,13,16,.45),0 0 0 1px rgba(12,13,16,.12)}
+.pill.lt{background:var(--silver);color:var(--ink)}
+/* devices */
+.br{display:block;border-radius:22px;background:#fff;overflow:hidden;box-shadow:0 40px 80px -30px rgba(12,13,16,.45),0 0 0 1px rgba(12,13,16,.12)}
 .br .bar{height:34px;background:#E4E6EA;display:flex;align-items:center;gap:8px;padding:0 16px}
 .br .bar b{width:11px;height:11px;border-radius:50%;background:#C4C8CF}
+.br .bar span{font:500 14px 'Geist Mono',monospace;color:#5B606A;margin-left:10px;letter-spacing:.5px}
 .br img{display:block;width:100%}
-.ph{border-radius:46px;background:#0C0D10;padding:9px;box-shadow:0 40px 70px -24px rgba(12,13,16,.6)}
+.ph{display:block;border-radius:46px;background:#0C0D10;padding:9px;box-shadow:0 40px 70px -24px rgba(12,13,16,.6)}
 .ph img{display:block;width:100%;border-radius:38px}
 .dark .br{box-shadow:0 40px 80px -30px #000,0 0 0 1px rgba(255,255,255,.12)}
-.gal .cap{padding-right:230px}
-.cap b{display:block;font-size:40px;font-weight:560;letter-spacing:-1.4px}
-.cap span{font-size:25px;line-height:1.4;opacity:.7}
-</style></head><body>
-
-<!-- 1 COVER -->
-<section class="s light" style="flex-direction:row;align-items:center;gap:30px">
- <div class="col" style="gap:40px;width:900px;position:relative;z-index:3">
+.rule{height:2px;background:currentColor;opacity:.18}
+.li{padding:22px 0;border-top:2px solid rgba(12,13,16,.14);font-size:34px;font-weight:560;letter-spacing:-1px;line-height:1.15}
+.li small{display:block;font-size:24px;font-weight:400;letter-spacing:0;opacity:.7;margin-top:6px}
+.on-dark .li{border-color:rgba(255,255,255,.2)}
+</style></head><body><section class="s light" style="flex-direction:row;align-items:center;gap:20px">
+ <div class="col" style="gap:38px;width:860px;position:relative;z-index:4">
   <p class="eb">Web design for campaigns</p>
-  <h1 style="font-size:200px;font-weight:560;line-height:.9;letter-spacing:-11px">DBF<br>Designs</h1>
-  <p class="lead" style="max-width:760px">Custom websites for Democratic and progressive candidates, parties and causes. Live in one week. Never a template.</p>
-  <div class="pill">Capabilities<i>→</i></div>
+  <h1 style="font-size:206px;font-weight:560;line-height:.9;letter-spacing:-11px">DBF<br>Designs</h1>
+  <p class="lead" style="max-width:740px">Custom websites for Democratic and progressive candidates, parties and causes. Live in one week. Never a template.</p>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/">See the live work<i>&#8599;</i></a>
  </div>
- <div style="position:relative;flex:1;height:880px">
-  <div style="position:absolute;left:90px;top:70px;width:760px;height:700px;border-radius:44px;background:var(--coral);transform:rotate(-5deg)"></div>
-  <div class="br" style="position:absolute;left:10px;top:110px;width:860px;transform:rotate(2deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/mayor-d.png"></div>
-  <div class="ph" style="position:absolute;left:-40px;top:330px;width:230px;transform:rotate(-4deg)"><img src="img/ballot-measure-m.png"></div>
-  <svg style="position:absolute;left:740px;top:20px" width="150" height="150" viewBox="0 0 140 140"><path d="M70 0 L85.4 54.6 L140 70 L85.4 85.4 L70 140 L54.6 85.4 L0 70 L54.6 54.6Z" fill="#FFD84D"/></svg>
+ <div style="position:relative;flex:1;height:900px">
+  <div style="position:absolute;left:120px;top:60px;width:760px;height:720px;border-radius:44px;background:var(--coral);transform:rotate(-5deg)"></div>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/" style="position:absolute;left:30px;top:90px;width:870px;transform:rotate(2deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/mayor-d.png"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/" style="position:absolute;left:150px;top:520px;width:640px;transform:rotate(-3deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/senate-d.png"></a>
+  <a class="ph" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/" style="position:absolute;left:-60px;top:330px;width:230px;transform:rotate(-5deg)"><img src="img/ballot-measure-m.png"></a>
+  <svg style="position:absolute;left:760px;top:10px" width="150" height="150" viewBox="0 0 140 140"><path d="M70 0 L85.4 54.6 L140 70 L85.4 85.4 L70 140 L54.6 85.4 L0 70 L54.6 54.6Z" fill="#FFD84D"/></svg>
  </div>
- <div style="position:absolute;left:0;right:0;bottom:0;height:64px;background:var(--ink);display:flex;align-items:center;justify-content:center;gap:40px;font:500 20px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:var(--butter)">One week<i style="width:12px;height:12px;border-radius:6px;background:var(--coral)"></i>No templates<i style="width:12px;height:12px;border-radius:6px;background:var(--coral)"></i>Secure<i style="width:12px;height:12px;border-radius:6px;background:var(--coral)"></i>Quality</div>
 </section>
-
-<!-- 2 PROMISE -->
-<section class="s dark">
- <p class="eb co">The promise</p>
- <h2>Fast, custom, secure.<br><span class="acc">And built to raise money.</span></h2>
- <div class="row fx" style="margin-top:12px">
-  <div class="sh fx"><div class="cr coral"><span class="num">01</span><p class="ct" style="font-size:64px">One week</p><p class="cp">From kickoff to launch. Your clock starts the day content and assets arrive.</p></div></div>
-  <div class="sh fx"><div class="cr butter"><span class="num">02</span><p class="ct" style="font-size:64px">No templates</p><p class="cp">Every layout, color and line of code is made for your race, not reskinned.</p></div></div>
-  <div class="sh fx"><div class="cr mint"><span class="num">03</span><p class="ct" style="font-size:64px">Secure</p><p class="cp">Hardened hosting, HTTPS, form protection and no plugin pile-ups to patch.</p></div></div>
-  <div class="sh fx"><div class="cr sky"><span class="num">04</span><p class="ct" style="font-size:64px">Quality</p><p class="cp">Fast, accessible, mobile-first, with the donate button exactly where people tap.</p></div></div>
- </div>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
+<section class="s butter" style="justify-content:center;gap:40px">
+ <p class="eb ink">The idea</p>
+ <h2 style="font-size:176px;letter-spacing:-9px;line-height:.93">Built for your race.<br>Live in a week.</h2>
+ <p class="lead" style="font-size:38px;max-width:1150px">A campaign site should look like your campaign and work like a field organizer. Ours do both.</p>
+ <p class="mk">DBF Designs</p><p class="pg"></p>
 </section>
-
-<!-- 3 RESEARCH -->
-<section class="s light">
- <p class="eb sk">What we studied</p>
- <h2 class="m">We read the homepage code of<br><span class="acc">461 Democratic campaign sites.</span></h2>
- <p class="lead" style="max-width:1300px">Federal, state, county party and legislative sites from the 2026 cycle. Figures are minimums, detected from homepage code.</p>
- <div class="row fx">
-  <div class="sh fx"><div class="cr"><p class="num">DONATE LINK</p><p style="font-size:140px;font-weight:560;letter-spacing:-7px;line-height:1">95%</p><p class="cp">Fundraising is the job of the homepage. ActBlue appears on 84%.</p></div></div>
-  <div class="sh fx"><div class="cr co"><p class="num">BUILT ON WORDPRESS</p><p style="font-size:140px;font-weight:560;letter-spacing:-7px;line-height:1">50%</p><p class="cp">Half run on WordPress, and 36% on the Elementor page builder. Builder-driven and plugin-heavy.</p></div></div>
-  <div class="sh fx"><div class="cr butter"><p class="num">SPANISH OPTION</p><p style="font-size:140px;font-weight:560;letter-spacing:-7px;line-height:1">8%</p><p class="cp">Only 8% show a Spanish option on the homepage. A big open lane.</p></div></div>
-  <div class="sh fx"><div class="cr mint"><p class="num">SKIP LINK</p><p style="font-size:140px;font-weight:560;letter-spacing:-7px;line-height:1">49%</p><p class="cp">Fewer than half include a basic accessibility skip link.</p></div></div>
- </div>
- <p class="foot">Source: DBF Designs scan of 461 Democratic campaign homepages, Nov 2026</p><p class="pg"></p>
-</section>
-
-<!-- 4 WHERE WE WIN -->
-<section class="s cobalt">
- <p class="eb bu">Where custom wins</p>
- <h2>Most campaign sites look alike.<br>Yours shouldn't.</h2>
- <div class="row fx" style="margin-top:8px">
-  <div class="sh fx" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr" style="background:#1C39D9;color:#fff"><span class="num">WHAT WE SAW</span><p class="ct">Reskinned templates and plugin stacks</p><p class="cp" style="color:#C9D3FF">Same hero, same slider, same slow load. Builders do the design for you.</p></div></div>
-  <div class="sh fx" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr butter"><span class="num">WHAT WE BUILD</span><p class="ct">One-off layouts with a clean, fast codebase</p><p class="cp">Designed around your message, your donors and your voters.</p></div></div>
- </div>
- <div class="row" style="height:240px">
-  <div class="sh fx" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr" style="background:#fff;color:var(--ink);padding:30px 36px"><p class="ct" style="font-size:36px">Bilingual by default</p><p class="cp" style="font-size:24px">Spanish and other languages ready on day one.</p></div></div>
-  <div class="sh fx" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr" style="background:#fff;color:var(--ink);padding:30px 36px"><p class="ct" style="font-size:36px">Accessible, tested</p><p class="cp" style="font-size:24px">Skip links, contrast, keyboard use and screen readers.</p></div></div>
-  <div class="sh fx" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr" style="background:#fff;color:var(--ink);padding:30px 36px"><p class="ct" style="font-size:36px">Events up front</p><p class="cp" style="font-size:24px">Only 35% surface events on the homepage. We make RSVPs obvious.</p></div></div>
- </div>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
-</section>
-
-<!-- 5 EVERY SITE -->
-<section class="s light">
- <p class="eb">Included</p>
- <h2 class="m">Every site we build comes with the essentials.</h2>
- <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:24px;flex:1;margin-top:8px">
-  <div class="sh"><div class="cr coral" style="padding:34px"><span class="num">01</span><p class="ct" style="font-size:40px">Donate</p><p class="cp" style="font-size:25px">Preset amounts, recurring option, one-tap on mobile.</p></div></div>
-  <div class="sh"><div class="cr" style="padding:34px"><span class="num">02</span><p class="ct" style="font-size:40px">Volunteer and events</p><p class="cp" style="font-size:25px">Sign-up flows and RSVP lists that feed your tools.</p></div></div>
-  <div class="sh"><div class="cr butter" style="padding:34px"><span class="num">03</span><p class="ct" style="font-size:40px">Email signup</p><p class="cp" style="font-size:25px">Email plus ZIP capture, synced to your list.</p></div></div>
-  <div class="sh"><div class="cr mint" style="padding:34px"><span class="num">04</span><p class="ct" style="font-size:40px">Bilingual toggle</p><p class="cp" style="font-size:25px">Spanish and more, with a clean language switch.</p></div></div>
-  <div class="sh"><div class="cr" style="padding:34px"><span class="num">05</span><p class="ct" style="font-size:40px">Paid-for disclaimer</p><p class="cp" style="font-size:25px">Correct committee language in every footer and form.</p></div></div>
-  <div class="sh"><div class="cr sky" style="padding:34px"><span class="num">06</span><p class="ct" style="font-size:40px">Mobile-first</p><p class="cp" style="font-size:25px">Designed on a phone first, because that is where voters are.</p></div></div>
-  <div class="sh"><div class="cr pink" style="padding:34px"><span class="num">07</span><p class="ct" style="font-size:40px">Accessible</p><p class="cp" style="font-size:25px">Keyboard, contrast and screen-reader friendly.</p></div></div>
-  <div class="sh"><div class="cr ink" style="padding:34px"><span class="num">08</span><p class="ct" style="font-size:40px">Secure and fast</p><p class="cp" style="font-size:25px">HTTPS, form protection, lean code, quick to load.</p></div></div>
- </div>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
-</section>
-
-<!-- 6 INTEGRATIONS -->
-<section class="s dark">
- <p class="eb sk">Plugs into your stack</p>
- <h2 class="m">Built to work with the tools<br>Democratic campaigns <span class="acc">already use.</span></h2>
- <div class="row fx" style="margin-top:8px">
-  <div class="sh fx"><div class="cr"><p class="num">FUNDRAISING</p><p class="ct" style="font-size:72px">ActBlue</p><p class="cp">Found on 84% of the sites we scanned. Embedded forms, contribution links and preset amounts.</p></div></div>
-  <div class="sh fx"><div class="cr"><p class="num">VOTER FILE AND CRM</p><p class="ct" style="font-size:72px">NGP VAN / EveryAction</p><p class="cp">On 39%. Forms that write straight to your CRM.</p></div></div>
-  <div class="sh fx"><div class="cr"><p class="num">EVENTS AND SHIFTS</p><p class="ct" style="font-size:72px">Mobilize</p><p class="cp">On 21%. Event feeds and sign-up flows embedded in the site.</p></div></div>
-  <div class="sh fx"><div class="cr"><p class="num">EMAIL AND ACTION</p><p class="ct" style="font-size:72px">Action Network</p><p class="cp">On 4%. Petitions, pledges and list growth for causes.</p></div></div>
- </div>
- <p class="lead" style="font-size:28px">Plus analytics, SMS opt-in and email tools to match what your team already runs.</p>
- <p class="foot">Source: DBF Designs scan of 461 Democratic campaign homepages</p><p class="pg"></p>
-</section>
-
-<!-- 7 GALLERY INTRO -->
-<section class="s butter" style="justify-content:center">
- <p class="eb">The work</p>
- <h2 style="font-size:150px;letter-spacing:-7px;line-height:.95">Seven concept sites.<br>Seven different races.</h2>
- <p class="lead" style="max-width:1100px;font-size:38px">From a city council seat to a state party. Every design is fictional, fully coded and live to click through online.</p>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
-</section>
-
-<!-- 8 GALLERY 1 -->
-<section class="s light">
- <p class="eb co">Down-ballot and ballot measures</p>
- <div class="row fx gal" style="gap:70px;align-items:flex-start;margin-top:10px">
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/council-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/council-m.png"></div>
-   <div class="cap"><b>City council</b><span>Warm, local, neighbor-first. Built to turn porch chats into volunteers.</span></div>
-  </div>
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/ballot-measure-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/ballot-measure-m.png"></div>
-   <div class="cap"><b>Ballot measure</b><span>One bold pledge form above the fold. Loud, simple and shareable.</span></div>
+<section class="s dark" style="flex-direction:row;gap:0;padding:0">
+ <div class="col" style="flex:1;padding:120px 90px 120px 112px;gap:34px;background:#14161B;justify-content:center">
+  <p class="eb" style="background:#2B2F38;color:#C7CBD3">What most campaigns get</p>
+  <div style="font-size:60px;font-weight:560;letter-spacing:-2px;line-height:1.12;color:#6F7682">
+   <p>A template with a new logo.</p><p style="margin-top:26px">Pages that load slowly on a phone.</p><p style="margin-top:26px">English only.</p><p style="margin-top:26px">A donate button you have to hunt for.</p>
   </div>
  </div>
- <p class="foot">Concept sites · fictional · DBF Designs</p><p class="pg"></p>
-</section>
-
-<!-- 9 GALLERY 2 -->
-<section class="s dark">
- <p class="eb sk">Movements and statewide</p>
- <div class="row fx gal" style="gap:70px;align-items:flex-start;margin-top:10px">
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/mayor-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/mayor-m.png"></div>
-   <div class="cap"><b>Mayoral movement</b><span>Progressive, playful and multilingual, built for energy and small donors.</span></div>
-  </div>
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/senate-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/senate-m.png"></div>
-   <div class="cap"><b>U.S. Senate</b><span>Photo-led and serious, with a clear message and three-part case.</span></div>
+ <div class="col" style="flex:1.1;padding:120px 112px 120px 90px;gap:34px;justify-content:center;background:var(--co);color:#fff">
+  <p class="eb bu">What you get</p>
+  <div style="font-size:60px;font-weight:560;letter-spacing:-2px;line-height:1.12">
+   <p>A layout built around your message.</p><p style="margin-top:26px">Lean code that loads fast.</p><p style="margin-top:26px">Spanish and more, from day one.</p><p style="margin-top:26px">Donate and volunteer one tap away.</p>
   </div>
  </div>
- <p class="foot">Concept sites · fictional · stock photo from Pexels</p><p class="pg"></p>
+ <p class="mk" style="color:#6F7682">DBF Designs</p><p class="pg" style="color:#C9D3FF"></p>
 </section>
-
-<!-- 10 GALLERY 3 -->
-<section class="s light">
- <p class="eb mint" style="background:var(--mint)">Parties</p>
- <div class="row fx gal" style="gap:70px;align-items:flex-start;margin-top:10px">
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/county-party-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/county-party-m.png"></div>
-   <div class="cap"><b>County party</b><span>Find your precinct, meet the slate and RSVP to the next meeting.</span></div>
-  </div>
-  <div class="col fx" style="gap:26px;position:relative">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/state-party-d.png"></div>
-   <div class="ph" style="position:absolute;right:-24px;top:300px;width:180px;transform:rotate(3deg)"><img src="img/state-party-m.png"></div>
-   <div class="cap"><b>State party</b><span>Voter tools up front, with a county finder that routes people to local teams.</span></div>
-  </div>
+<section class="s dark" style="padding:0;gap:0">
+ <div style="padding:96px 112px 54px"><p class="eb co">The promise</p><h2 style="margin-top:28px">Four things we do every time.</h2></div>
+ <div class="row fx" style="gap:0">
+  <div class="col" style="flex:1;padding:70px 44px;background:#FF7A59;color:#0C0D10;gap:20px;justify-content:space-between"><span class="num">01</span><div><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:.98">One week</p><p style="font-size:28px;line-height:1.4;margin-top:22px;opacity:.82">From kickoff to launch. Your clock starts when content and assets arrive.</p></div></div>
+  <div class="col" style="flex:1;padding:70px 44px;background:#FFD84D;color:#0C0D10;gap:20px;justify-content:space-between"><span class="num">02</span><div><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:.98">No templates</p><p style="font-size:28px;line-height:1.4;margin-top:22px;opacity:.82">Every layout, color and line of code is made for your race.</p></div></div>
+  <div class="col" style="flex:1;padding:70px 44px;background:#7EE0B8;color:#0C0D10;gap:20px;justify-content:space-between"><span class="num">03</span><div><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:.98">Secure</p><p style="font-size:28px;line-height:1.4;margin-top:22px;opacity:.82">Hardened hosting, HTTPS and form protection, with no plugin pile-ups to patch.</p></div></div>
+  <div class="col" style="flex:1;padding:70px 44px;background:#9CCBFF;color:#0C0D10;gap:20px;justify-content:space-between"><span class="num">04</span><div><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:.98">Quality</p><p style="font-size:28px;line-height:1.4;margin-top:22px;opacity:.82">Fast, accessible and phone-first, with the donate button where people tap.</p></div></div>
  </div>
- <p class="foot">Concept sites · fictional · DBF Designs</p><p class="pg"></p>
+ <p class="pg" style="color:#0C0D10;opacity:.6"></p>
 </section>
-
-<!-- 11 GALLERY 4 -->
-<section class="s cobalt">
- <p class="eb bu">Governor</p>
- <div class="row fx" style="gap:70px;align-items:center;margin-top:10px">
-  <div class="col" style="gap:26px;position:relative;width:1060px">
-   <div class="br"><div class="bar"><b></b><b></b><b></b></div><img src="img/governor-d.png"></div>
-   <div class="ph" style="position:absolute;right:-30px;top:380px;width:200px;transform:rotate(3deg)"><img src="img/governor-m.png"></div>
-  </div>
-  <div class="col fx" style="gap:24px">
-   <div class="cap"><b style="font-size:54px">Grassroots poster energy</b><span style="font-size:28px;opacity:.9">Hand-cut type, a yard-sign hero and a one-line promise.</span></div>
-   <div class="sh" style="background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)"><div class="cr butter" style="padding:30px 34px"><p class="ct" style="font-size:36px">See them live</p><p class="cp" style="font-size:24px">All seven concepts run as real websites on GitHub. Click, resize and try the forms.</p></div></div>
-  </div>
+<section class="s light" style="gap:28px;padding-bottom:108px">
+ <p class="eb">Included on every site</p>
+ <h2 style="font-size:78px">The essentials come standard.</h2>
+ <div style="display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr 0.8fr;grid-template-areas:'a a b b c c' 'a a d d e f' 'g g g h h h';gap:22px;flex:1">
+  <div class="sh" style="grid-area:a"><div class="cr coral" style="padding:32px"><p class="ct" style="font-size:68px;letter-spacing:-3px">Donate</p><p class="cp" style="font-size:30px">Preset amounts, a monthly option and one-tap checkout on mobile.</p></div></div>
+  <div class="sh" style="grid-area:b"><div class="cr " style="padding:32px"><p class="ct" style="">Volunteer and events</p><p class="cp" style="font-size:24px">Shift sign-ups and RSVP lists that feed your tools.</p></div></div>
+  <div class="sh" style="grid-area:c"><div class="cr butter" style="padding:32px"><p class="ct" style="">Email signup</p><p class="cp" style="font-size:24px">Email and ZIP capture synced to your list.</p></div></div>
+  <div class="sh" style="grid-area:d"><div class="cr mint" style="padding:32px"><p class="ct" style="">Spanish and more</p><p class="cp" style="font-size:24px">A clean language switch across every page.</p></div></div>
+  <div class="sh" style="grid-area:e"><div class="cr sky" style="padding:32px"><p class="ct" style="">Phone-first</p><p class="cp" style="font-size:24px">Designed on a phone first.</p></div></div>
+  <div class="sh" style="grid-area:f"><div class="cr pink" style="padding:32px"><p class="ct" style="">Accessible</p><p class="cp" style="font-size:24px">Keyboard and screen reader ready.</p></div></div>
+  <div class="sh" style="grid-area:g"><div class="cr ink" style="padding:32px"><p class="ct" style="">Secure and fast</p><p class="cp" style="font-size:24px">HTTPS, form protection, lean code that loads quickly.</p></div></div>
+  <div class="sh" style="grid-area:h"><div class="cr " style="padding:32px"><p class="ct" style="">Compliant footer</p><p class="cp" style="font-size:24px">Correct paid-for language on every page and form.</p></div></div>
  </div>
- <p class="foot">Concept sites · fictional · DBF Designs</p><p class="pg"></p>
+ <p class="pg"></p>
 </section>
-
-<!-- 11b IN ACTION -->
+<section class="s cobalt" style="justify-content:center;gap:30px">
+ <p class="eb bu">Your stack, connected</p>
+ <h2 style="font-size:84px;margin-bottom:10px">Works with the tools you already run.</h2>
+ <div><div style="display:flex;align-items:baseline;justify-content:space-between;gap:60px;padding:26px 0;border-top:2px solid rgba(255,255,255,.28)"><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1">ActBlue</p><p style="font-size:28px;line-height:1.35;max-width:560px;color:#DCE3FF">Embedded forms, contribution links and preset amounts.</p></div><div style="display:flex;align-items:baseline;justify-content:space-between;gap:60px;padding:26px 0;border-top:2px solid rgba(255,255,255,.28)"><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1">NGP VAN and EveryAction</p><p style="font-size:28px;line-height:1.35;max-width:560px;color:#DCE3FF">Forms that write straight to your CRM.</p></div><div style="display:flex;align-items:baseline;justify-content:space-between;gap:60px;padding:26px 0;border-top:2px solid rgba(255,255,255,.28)"><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1">Mobilize</p><p style="font-size:28px;line-height:1.35;max-width:560px;color:#DCE3FF">Event feeds and shift sign-ups inside your site.</p></div><div style="display:flex;align-items:baseline;justify-content:space-between;gap:60px;padding:26px 0;border-top:2px solid rgba(255,255,255,.28)"><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1">Action Network</p><p style="font-size:28px;line-height:1.35;max-width:560px;color:#DCE3FF">Petitions, pledges and list growth for causes.</p></div></div>
+ <p class="lead" style="font-size:28px">Plus analytics, SMS opt-in and email tools to match your team.</p>
+ <p class="mk">DBF Designs</p><p class="pg"></p>
+</section>
+<section class="s dark" style="padding:70px 80px 80px;gap:26px">
+ <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb" style="margin-bottom:22px">The work</p><h2 style="font-size:96px">Seven races. Click any.</h2></div><p class="lead" style="font-size:28px;max-width:560px">Every design is fictional and fully built. Each one opens the live site.</p></div>
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/council-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">City council</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/ballot-measure-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">Ballot measure</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/mayor-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">Mayoral movement</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/senate-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">U.S. Senate</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/county-party-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">County party</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/state-party-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">State party</span></a><a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/governor-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">Governor</span></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/" class="sh" style="display:flex"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:44px">Browse the full gallery</p><p class="cp" style="font-size:24px">&#8599; davidbenjaminfriedman.com/dbf-designs-concepts/</p></div></a>
+ </div>
+ <p class="pg"></p>
+</section>
+<section class="s" style="background:#1E4D3A;color:#F6EFE0;flex-direction:row;align-items:center;gap:60px"><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#FFD84D;color:#0C0D10">City council</p>
+  <h2 style="font-size:86px;color:#F6EFE0">Maya Linden for City Council</h2>
+  <p class="lead" style="color:#F6EFE0;opacity:.8;font-size:32px">A warm, neighbor-first campaign for one ward.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(255,255,255,.22)">Interactive ward map<small>Hover a block to see its priority and next porch chat</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Porch chat RSVPs<small>Calendar downloads and yard sign requests</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Light and dark<small>Spanish, too</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/" style="background:#FFD84D;color:#0C0D10">Open the live site<i>&#8599;</i></a>
+ </div><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/" class="br" style="position:absolute;left:40px;top:90px;width:930px;transform:rotate(1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/</span></div><img src="img/council-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/" class="ph" style="position:absolute;right:-10px;top:430px;width:250px;transform:rotate(4.5deg)"><img src="img/council-m.png"></a>
+ </div><p class="pg" style="color:#F6EFE0;opacity:.5"></p></section>
+<section class="s" style="background:#FFD21F;color:#0C0D10;flex-direction:row;align-items:center;gap:60px"><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/" class="br" style="position:absolute;left:10px;top:90px;width:930px;transform:rotate(-1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/</span></div><img src="img/ballot-measure-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/" class="ph" style="position:absolute;left:-70px;top:470px;width:250px;transform:rotate(-4.5deg)"><img src="img/ballot-measure-m.png"></a>
+ </div><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#0C0D10;color:#FFD21F">Ballot measure</p>
+  <h2 style="font-size:86px;color:#0C0D10">Yes on 12</h2>
+  <p class="lead" style="color:#0C0D10;opacity:.8;font-size:32px">A loud, simple case for a city safe-streets measure.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(12,13,16,.16)">Live pledge counter<small>Every pledge rolls the numbers</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Street explainer<small>Toggle crosswalks, signals and curb extensions</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Share kit<small>Copy-ready texts and posts, plus yard signs</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/" style="background:#0C0D10;color:#FFD21F">Open the live site<i>&#8599;</i></a>
+ </div><p class="pg" style="color:#0C0D10;opacity:.5"></p></section>
+<section class="s" style="background:#1B3BFF;color:#FFFFFF;flex-direction:row;align-items:center;gap:60px"><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#FFD23F;color:#0C0D10">Mayoral movement</p>
+  <h2 style="font-size:86px;color:#FFFFFF">Zuri Taverner for Mayor</h2>
+  <p class="lead" style="color:#FFFFFF;opacity:.8;font-size:32px">A playful, multilingual campaign built for small donors.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(255,255,255,.22)">Tilting card stack<small>Responds to your pointer</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Neighborhood picker<small>Local priorities, nearby event, a captain to text</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Policy cards<small>Stack as you scroll</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/" style="background:#FFD23F;color:#0C0D10">Open the live site<i>&#8599;</i></a>
+ </div><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/" class="br" style="position:absolute;left:40px;top:90px;width:930px;transform:rotate(1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/</span></div><img src="img/mayor-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/" class="ph" style="position:absolute;right:-10px;top:430px;width:250px;transform:rotate(4.5deg)"><img src="img/mayor-m.png"></a>
+ </div><p class="pg" style="color:#FFFFFF;opacity:.5"></p></section>
+<section class="s" style="background:#0A2556;color:#EAF0FF;flex-direction:row;align-items:center;gap:60px"><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/" class="br" style="position:absolute;left:10px;top:90px;width:930px;transform:rotate(-1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/</span></div><img src="img/senate-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/" class="ph" style="position:absolute;left:-70px;top:470px;width:250px;transform:rotate(-4.5deg)"><img src="img/senate-m.png"></a>
+ </div><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#9CC2FF;color:#0A2556">Statewide</p>
+  <h2 style="font-size:86px;color:#EAF0FF">Jonah Ellery for U.S. Senate</h2>
+  <p class="lead" style="color:#EAF0FF;opacity:.8;font-size:32px">Photo-led, serious and clear about who it is for.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(255,255,255,.22)">Sticky issue stack<small>Three full-screen stories that pin and layer</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Scroll-driven timeline<small>A career drawn as you read</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Statewide tour map<small>Filter stops by county</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/senate/" style="background:#D7263D;color:#FFFFFF">Open the live site<i>&#8599;</i></a>
+ </div><p class="pg" style="color:#EAF0FF;opacity:.5"></p></section>
+<section class="s" style="background:#EEF3FF;color:#10285C;flex-direction:row;align-items:center;gap:60px"><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#F6B51E;color:#0E1B3A">County party</p>
+  <h2 style="font-size:86px;color:#10285C">Cedar County Democrats</h2>
+  <p class="lead" style="color:#10285C;opacity:.8;font-size:32px">A useful, welcoming home for a local committee.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(12,13,16,.16)">Precinct finder<small>ZIP and street number, with an animated map</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Month calendar<small>Event dialogs, RSVPs, calendar downloads</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Candidate profiles<small>Filter the slate by office</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/" style="background:#2F6BFF;color:#FFFFFF">Open the live site<i>&#8599;</i></a>
+ </div><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/" class="br" style="position:absolute;left:40px;top:90px;width:930px;transform:rotate(1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/</span></div><img src="img/county-party-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/" class="ph" style="position:absolute;right:-10px;top:430px;width:250px;transform:rotate(4.5deg)"><img src="img/county-party-m.png"></a>
+ </div><p class="pg" style="color:#10285C;opacity:.5"></p></section>
+<section class="s" style="background:#0F1B33;color:#EEF2FA;flex-direction:row;align-items:center;gap:60px"><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/" class="br" style="position:absolute;left:10px;top:90px;width:930px;transform:rotate(-1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/</span></div><img src="img/state-party-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/" class="ph" style="position:absolute;left:-70px;top:470px;width:250px;transform:rotate(-4.5deg)"><img src="img/state-party-m.png"></a>
+ </div><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#E8B84A;color:#0F1B33">State party</p>
+  <h2 style="font-size:86px;color:#EEF2FA">Prairie State Democratic Party</h2>
+  <p class="lead" style="color:#EEF2FA;opacity:.8;font-size:32px">Voter tools first, with a county map that routes people to local teams.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(255,255,255,.22)">24-county tile map<small>Hover or tab to meet your county chair</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Voter tools<small>Register, check status, find your polling place</small></div><div class="li" style="border-color:rgba(255,255,255,.22)">Ticket and press<small>Candidate profiles and a filterable newsroom</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/" style="background:#E8B84A;color:#0F1B33">Open the live site<i>&#8599;</i></a>
+ </div><p class="pg" style="color:#EEF2FA;opacity:.5"></p></section>
+<section class="s" style="background:#F2EFE6;color:#0C0D10;flex-direction:row;align-items:center;gap:60px"><div class="col" style="width:620px;gap:28px;justify-content:center;position:relative;z-index:3">
+  <p class="eb" style="background:#D93A24;color:#FFFFFF">Governor</p>
+  <h2 style="font-size:86px;color:#0C0D10">Wren Ashcombe for Governor</h2>
+  <p class="lead" style="color:#0C0D10;opacity:.8;font-size:32px">Grassroots print energy with a message that fits on a yard sign.</p>
+  <div style="margin-top:6px"><div class="li" style="border-color:rgba(12,13,16,.16)">Yard sign maker<small>Type a name, pick a color, download a print-ready PNG</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Cut-paper transitions<small>Pages reveal like layered paper</small></div><div class="li" style="border-color:rgba(12,13,16,.16)">Rallies and shifts<small>Regional filters, RSVPs and live spot counts</small></div></div>
+  <a class="pill" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/" style="background:#D93A24;color:#FFFFFF">Open the live site<i>&#8599;</i></a>
+ </div><div style="position:relative;flex:1;height:880px">
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/" class="br" style="position:absolute;left:40px;top:90px;width:930px;transform:rotate(1.5deg)"><div class="bar"><b></b><b></b><b></b><span>davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/</span></div><img src="img/governor-d.png"></a>
+  <a href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/" class="ph" style="position:absolute;right:-10px;top:430px;width:250px;transform:rotate(4.5deg)"><img src="img/governor-m.png"></a>
+ </div><p class="pg" style="color:#0C0D10;opacity:.5"></p></section>
 <section class="s light" style="padding-top:72px;padding-bottom:84px;gap:26px">
  <p class="eb sk">Built to work</p>
- <h2 class="m" style="font-size:72px">Every site runs like the real thing.</h2>
+ <h2 style="font-size:72px">Every site runs like the real thing.</h2>
  <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:26px;flex:1">
-  <div class="br"><div class="bar"><b></b><b></b><b></b><span>Precinct finder</span></div><img src="img/in-county-finder.jpg"></div>
-  <div class="br"><div class="bar"><b></b><b></b><b></b><span>Yard sign maker, downloads a PNG</span></div><img src="img/in-gov-yardsign.jpg"></div>
-  <div class="br"><div class="bar"><b></b><b></b><b></b><span>24-county tile map</span></div><img src="img/in-state-counties.jpg"></div>
-  <div class="br"><div class="bar"><b></b><b></b><b></b><span>Street explainer, toggle the fixes</span></div><img src="img/in-ballot-explainer.jpg"></div>
-  <div class="br"><div class="bar"><b></b><b></b><b></b><span>Neighborhood picker</span></div><img src="img/in-mayor-hoods.jpg"></div>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/county-party/find-your-precinct/" style="display:block"><div class="bar"><b></b><b></b><b></b><span>Precinct finder</span></div><img src="img/in-county-finder.jpg"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/yard-sign/" style="display:block"><div class="bar"><b></b><b></b><b></b><span>Yard sign maker</span></div><img src="img/in-gov-yardsign.jpg"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/state-party/counties/" style="display:block"><div class="bar"><b></b><b></b><b></b><span>24-county tile map</span></div><img src="img/in-state-counties.jpg"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/ballot-measure/what-it-does/" style="display:block"><div class="bar"><b></b><b></b><b></b><span>Street explainer</span></div><img src="img/in-ballot-explainer.jpg"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/mayor/neighborhoods/" style="display:block"><div class="bar"><b></b><b></b><b></b><span>Neighborhood picker</span></div><img src="img/in-mayor-hoods.jpg"></a>
   <div class="sh"><div class="cr coral" style="justify-content:center;padding:40px"><p class="ct" style="font-size:46px">Forms validate. RSVPs confirm. Calendars download.</p><p class="cp" style="font-size:28px">Spanish switches the whole site, and every page has a light and dark mode.</p></div></div>
  </div>
  <p class="pg"></p>
 </section>
-
-<!-- 12 PROCESS -->
-<section class="s dark">
+<section class="s dark" style="justify-content:center;gap:50px">
  <p class="eb co">How a week works</p>
- <h2 class="m">Kickoff to launch in seven days.</h2>
- <div class="row fx" style="margin-top:12px">
-  <div class="sh fx"><div class="cr"><p class="num">DAY 0</p><p class="ct">Kickoff</p><p class="cp">30-minute call. You send logo, photos, copy and tool links. The 7-day clock starts.</p></div></div>
-  <div class="sh fx"><div class="cr coral"><p class="num">DAYS 1–2</p><p class="ct">Design</p><p class="cp">A custom homepage and mobile layout for approval.</p></div></div>
-  <div class="sh fx"><div class="cr butter"><p class="num">DAYS 3–5</p><p class="ct">Build</p><p class="cp">Pages, forms and ActBlue, Mobilize or CRM connections.</p></div></div>
-  <div class="sh fx"><div class="cr mint"><p class="num">DAY 6</p><p class="ct">Review</p><p class="cp">Two rounds of edits. Speed, security and accessibility checks.</p></div></div>
-  <div class="sh fx"><div class="cr sky"><p class="num">DAY 7</p><p class="ct">Launch</p><p class="cp">Live on your domain, with handoff notes and a care option.</p></div></div>
+ <h2 style="font-size:104px;letter-spacing:-5px">Kickoff to launch<br>in seven days.</h2>
+ <div style="position:relative;display:flex;gap:30px;margin-top:20px"><div style="position:absolute;left:0;right:0;top:55px;height:4px;background:linear-gradient(90deg,#FF7A59,#FFD84D,#7EE0B8,#9CCBFF)"></div>
+  <div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:#FF7A59"></div><p class="num" style="font-size:24px;opacity:.8">DAY 0</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">Kickoff</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">A 30-minute call. You send logo, photos, copy and tool links. The clock starts.</p></div>
+  <div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:#FF9A5B"></div><p class="num" style="font-size:24px;opacity:.8">DAYS 1 TO 2</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">Design</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">A custom homepage and phone layout for your approval.</p></div>
+  <div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:#FFD84D"></div><p class="num" style="font-size:24px;opacity:.8">DAYS 3 TO 5</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">Build</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">Pages, forms and connections to ActBlue, Mobilize or your CRM.</p></div>
+  <div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:#7EE0B8"></div><p class="num" style="font-size:24px;opacity:.8">DAY 6</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">Review</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">Two rounds of edits, plus speed, security and accessibility checks.</p></div>
+  <div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:#9CCBFF"></div><p class="num" style="font-size:24px;opacity:.8">DAY 7</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">Launch</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">Live on your domain, with handoff notes and a care option.</p></div>
  </div>
- <p class="foot">The clock starts when content and assets arrive</p><p class="pg"></p>
+ <p class="mk">The clock starts when content and assets arrive</p><p class="pg"></p>
 </section>
-
-<!-- 13 PRICING -->
-<section class="s light">
- <p class="eb bu">Pricing</p>
- <h2 class="m">Clear flat fees. Never more than $3,000.</h2>
- <div class="row fx" style="margin-top:6px">
-  <div class="sh fx"><div class="cr"><p class="num">LAUNCH</p><p style="font-size:100px;font-weight:560;letter-spacing:-5px;line-height:1">$1,200</p><p class="cp">Down-ballot and local races. Up to 3 pages with donate, volunteer and email signup.</p></div></div>
-  <div class="sh fx"><div class="cr co"><p class="num">CAMPAIGN</p><p style="font-size:100px;font-weight:560;letter-spacing:-5px;line-height:1">$1,950</p><p class="cp">Full candidate site: issues, events, bio, press, bilingual toggle and integrations.</p></div></div>
-  <div class="sh fx"><div class="cr butter"><p class="num">FLAGSHIP</p><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1.2">to $3,000</p><p class="cp">Statewide and federal: custom sections, photo-led design and extra tools.</p></div></div>
-  <div class="sh fx"><div class="cr ink"><p class="num">PARTIES AND ORGS</p><p style="font-size:100px;font-weight:560;letter-spacing:-5px;line-height:1">Quote</p><p class="cp">Larger builds scoped to your exact needs.</p></div></div>
- </div>
- <div class="row" style="gap:16px;flex-wrap:wrap;font-size:26px">
-  <span style="padding:14px 26px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(12,13,16,.12)"><b>Brand</b> $500 with a logo, $1,000 with neither</span>
-  <span style="padding:14px 26px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(12,13,16,.12)"><b>CMS setup</b> $250</span>
-  <span style="padding:14px 26px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(12,13,16,.12)"><b>Ongoing care</b> $75/hr, 1-hour minimum</span>
-  <span style="padding:14px 26px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px rgba(12,13,16,.12)">Hosting and domain are paid by the campaign</span>
- </div>
- <p class="foot">Prices exclude hosting and domain</p><p class="pg"></p>
-</section>
-
-<!-- 14 CONSULTANTS -->
-<section class="s butter">
- <p class="eb" style="background:var(--ink);color:var(--butter)">For consultants</p>
- <h2>Running several campaigns?<br>We'll keep up.</h2>
- <div class="row" style="margin-top:8px;height:420px">
-  <div class="sh" style="flex:1;background:rgba(12,13,16,.08)"><div class="cr"><p class="num">PARTNER RATE</p><p class="ct" style="font-size:54px">Volume pricing</p><p class="cp" style="font-size:28px">Preferred rates when you bring three or more sites in a cycle.</p></div></div>
-  <div class="sh" style="flex:1;background:rgba(12,13,16,.08)"><div class="cr"><p class="num">PRIORITY</p><p class="ct" style="font-size:54px">Reserved slots</p><p class="cp" style="font-size:28px">Your clients go to the front of the queue, still in one week.</p></div></div>
-  <div class="sh" style="flex:1;background:rgba(12,13,16,.08)"><div class="cr"><p class="num">ONE CONTACT</p><p class="ct" style="font-size:54px">White-glove handoff</p><p class="cp" style="font-size:28px">One point of contact, clean files and notes your team can run with.</p></div></div>
- </div>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
-</section>
-
-<!-- 15 ABOUT -->
-<section class="s light" style="flex-direction:row;align-items:center;gap:80px">
- <div class="col fx" style="gap:34px">
-  <p class="eb pk">About</p>
-  <h2>One designer.<br>Start to finish.</h2>
-  <p class="lead">DBF Designs is David Friedman, a web designer who designs, builds and launches every site himself, so you talk to the person doing the work.</p>
-  <div class="row" style="gap:14px;flex-wrap:wrap;font-size:26px;font-weight:560">
-   <span style="padding:14px 26px;border-radius:999px;background:var(--mint)">Design</span><span style="padding:14px 26px;border-radius:999px;background:var(--butter)">Development</span><span style="padding:14px 26px;border-radius:999px;background:var(--sky)">Security</span><span style="padding:14px 26px;border-radius:999px;background:var(--pink)">Launch and care</span>
+<section class="s light" style="gap:30px">
+ <div class="row" style="justify-content:space-between;align-items:flex-end"><div><p class="eb bu" style="margin-bottom:22px">Pricing</p><h2 style="font-size:84px">Flat fees. Never more<br>than $3,000.</h2></div><p class="lead" style="font-size:28px;max-width:520px">Hosting and domain are paid by the campaign. Brand and care are optional.</p></div>
+ <div class="row fx" style="gap:22px;align-items:flex-end">
+  <div class="sh" style="flex:1;height:430px;align-self:flex-end"><div class="cr " style="justify-content:space-between"><div><span class="num">LAUNCH</span><p style="font-size:92px;font-weight:560;letter-spacing:-5px;line-height:1.05;margin-top:12px">$1,200</p></div><p class="cp" style="font-size:25px">Down-ballot and local races. Up to 3 pages with donate, volunteer and email signup.</p></div></div>
+  <div class="sh" style="flex:1;height:540px;align-self:flex-end"><div class="cr co" style="justify-content:space-between"><div><span class="num">CAMPAIGN</span><p style="font-size:92px;font-weight:560;letter-spacing:-5px;line-height:1.05;margin-top:12px">$1,950</p></div><p class="cp" style="font-size:25px">A full candidate site: issues, events, bio, press, Spanish toggle and integrations.</p></div></div>
+  <div class="sh" style="flex:1;height:650px;align-self:flex-end"><div class="cr butter" style="justify-content:space-between"><div><span class="num">FLAGSHIP</span><p style="font-size:92px;font-weight:560;letter-spacing:-5px;line-height:1.05;margin-top:12px">to $3,000</p></div><p class="cp" style="font-size:25px">Statewide and federal: custom sections, photo-led design and extra tools.</p></div></div>
+  <div class="col" style="width:470px;gap:18px;align-self:stretch;justify-content:flex-end">
+   <div class="sh"><div class="cr ink" style="padding:30px 36px"><span class="num">PARTIES AND ORGS</span><p class="ct" style="font-size:60px;letter-spacing:-3px">Quote</p><p class="cp" style="font-size:23px">Larger builds scoped to your needs.</p></div></div>
+   <div class="li" style="font-size:28px;padding:16px 0">Brand<small style="font-size:22px">$500 with a logo, $1,000 with neither</small></div>
+   <div class="li" style="font-size:28px;padding:16px 0">CMS setup<small style="font-size:22px">$250</small></div>
+   <div class="li" style="font-size:28px;padding:16px 0">Ongoing care<small style="font-size:22px">$75 per hour, one-hour minimum</small></div>
   </div>
  </div>
- <div style="position:relative;width:760px;height:760px;flex:none">
-  <div style="position:absolute;inset:40px 40px 0 60px;border-radius:44px;background:var(--co);transform:rotate(4deg)"></div>
-  <div class="br" style="position:absolute;left:0;top:120px;width:640px;transform:rotate(-2deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/council-d.png"></div>
-  <div class="ph" style="position:absolute;right:20px;top:240px;width:230px;transform:rotate(4deg)"><img src="img/senate-m.png"></div>
+ <p class="pg"></p>
+</section>
+<section class="s butter" style="flex-direction:row;gap:100px;align-items:center">
+ <div class="col" style="flex:1.1;gap:34px"><p class="eb ink">For consultants</p><h2 style="font-size:130px;letter-spacing:-7px;line-height:.95">Running several campaigns? We keep up.</h2></div>
+ <div class="col" style="flex:1"><div style="padding:30px 0;border-top:3px solid #0C0D10"><p style="font-size:56px;font-weight:560;letter-spacing:-2px">Volume pricing</p><p style="font-size:28px;line-height:1.4;margin-top:8px;color:#2B2F38">Preferred rates when you bring three or more sites in a cycle.</p></div><div style="padding:30px 0;border-top:3px solid #0C0D10"><p style="font-size:56px;font-weight:560;letter-spacing:-2px">Reserved slots</p><p style="font-size:28px;line-height:1.4;margin-top:8px;color:#2B2F38">Your clients go to the front of the queue, still in one week.</p></div><div style="padding:30px 0;border-top:3px solid #0C0D10"><p style="font-size:56px;font-weight:560;letter-spacing:-2px">One contact</p><p style="font-size:28px;line-height:1.4;margin-top:8px;color:#2B2F38">Clean files and notes your team can run with.</p></div></div>
+ <p class="mk">DBF Designs</p><p class="pg"></p>
+</section>
+<section class="s light" style="flex-direction:row;align-items:center;gap:80px">
+ <div class="col fx" style="gap:34px"><p class="eb pk">About</p><h2 style="font-size:112px;letter-spacing:-6px">One designer.<br>Start to finish.</h2><p class="lead">DBF Designs is David Friedman, a web designer who designs, builds and launches every site himself, so you talk to the person doing the work.</p>
+ <div class="row" style="gap:14px;flex-wrap:wrap;font-size:26px;font-weight:560"><span style="padding:14px 26px;border-radius:999px;background:var(--mint)">Design</span><span style="padding:14px 26px;border-radius:999px;background:var(--butter)">Development</span><span style="padding:14px 26px;border-radius:999px;background:var(--sky)">Security</span><span style="padding:14px 26px;border-radius:999px;background:var(--pink)">Launch and care</span></div></div>
+ <div style="position:relative;width:820px;height:800px;flex:none">
+  <div style="position:absolute;inset:50px 20px 20px 60px;border-radius:44px;background:var(--co);transform:rotate(4deg)"></div>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/council/" style="position:absolute;left:0;top:120px;width:640px;transform:rotate(-2deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/council-d.png"></a>
+  <a class="br" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/sites/governor/" style="position:absolute;left:190px;top:440px;width:560px;transform:rotate(3deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/governor-d.png"></a>
  </div>
- <p class="foot">DBF Designs · Capabilities</p><p class="pg"></p>
+ <p class="mk">DBF Designs</p><p class="pg"></p>
 </section>
-
-<!-- 16 CTA -->
-<section class="s dark" style="justify-content:center">
+<section class="s dark" style="justify-content:center;gap:40px">
  <p class="eb bu">Next step</p>
- <h2 style="font-size:170px;letter-spacing:-9px;line-height:.92">Let's build<br><span class="acc">your site.</span></h2>
+ <h2 style="font-size:184px;letter-spacing:-10px;line-height:.92">Let's build<br><span class="acc">your site.</span></h2>
  <p class="lead" style="max-width:1100px;font-size:38px">Reply to this email to book a 30-minute kickoff. Your site can be live in one week.</p>
- <div class="pill" style="background:var(--silver);color:var(--ink)">davidbenjaminfriedman.com<i>→</i></div>
- <p class="foot">DBF Designs · Custom campaign websites</p><p class="pg"></p>
-</section>
-
-</body></html>
+ <div class="row"><a class="pill lt" href="https://davidbenjaminfriedman.com/dbf-designs-concepts/">See the live work<i>&#8599;</i></a><a class="pill lt" href="https://davidbenjaminfriedman.com">davidbenjaminfriedman.com<i>&#8599;</i></a></div>
+ <p class="mk">DBF Designs · Custom campaign websites</p><p class="pg"></p>
+</section></body></html>
