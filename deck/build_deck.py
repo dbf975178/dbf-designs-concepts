@@ -224,10 +224,11 @@ A(f'''<section class="s light" style="gap:30px">
   {tier(430,'LAUNCH','$1,200','Down-ballot and local races. Up to 3 pages with donate, volunteer and email signup.','')}
   {tier(540,'CAMPAIGN','$1,950','A full candidate site: issues, events, bio, press, Spanish toggle and integrations.','co')}
   {tier(650,'FLAGSHIP','to $3,000','Statewide and federal: custom sections, photo-led design and extra tools.','butter')}
-  <div class="col" style="width:470px;gap:18px;align-self:stretch;justify-content:flex-end">
-   <div class="sh"><div class="cr ink" style="padding:30px 36px"><span class="num">PARTIES AND ORGS</span><p class="ct" style="font-size:60px;letter-spacing:-3px">Quote</p><p class="cp" style="font-size:23px">Larger builds scoped to your needs.</p></div></div>
+  <div class="col" style="width:470px;gap:10px;align-self:stretch;justify-content:flex-end">
+   <div class="sh"><div class="cr ink" style="padding:26px 36px"><span class="num">PARTIES AND ORGS</span><p class="ct" style="font-size:54px;letter-spacing:-3px">Quote</p><p class="cp" style="font-size:22px">Larger builds scoped to your needs.</p></div></div>
    <div class="li" style="font-size:28px;padding:16px 0">Brand<small style="font-size:22px">$500 with a logo, $1,000 with neither</small></div>
    <div class="li" style="font-size:28px;padding:16px 0">CMS setup<small style="font-size:22px">$250</small></div>
+   <div class="li" style="font-size:28px;padding:16px 0">Analytics setup<small style="font-size:22px">$100 one time</small></div>
    <div class="li" style="font-size:28px;padding:16px 0">Ongoing care<small style="font-size:22px">$75 per hour, one-hour minimum</small></div>
   </div>
  </div>
