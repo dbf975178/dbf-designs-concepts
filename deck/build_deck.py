@@ -49,6 +49,8 @@ h2{font-size:92px;font-weight:560;line-height:1;letter-spacing:-4px}
 .on-dark .li{border-color:rgba(255,255,255,.2)}
 """
 
+DOMAINS={"council":"mayalinden.com","ballot-measure":"yeson12.org","mayor":"zuriformayor.com","senate":"jonahellery.com","county-party":"cedarcountydems.org","state-party":"prairiestatedems.org","governor":"ashcombeforgovernor.com"}
+
 def site_slide(slug, name, kind, who, feats, bg, fg, chipbg, chipfg, flip, pillbg, pillfg, tone="light", rot=1.5):
     url = BASE + "sites/%s/" % slug
     li = "".join('<div class="li" style="border-color:%s">%s<small>%s</small></div>' % ("rgba(255,255,255,.22)" if tone == "dark" else "rgba(12,13,16,.16)", t, d) for t, d in feats)
@@ -60,7 +62,7 @@ def site_slide(slug, name, kind, who, feats, bg, fg, chipbg, chipfg, flip, pillb
   <a class="pill" href="{url}" style="background:{pillbg};color:{pillfg}">Open the live site<i>&#8599;</i></a>
  </div>'''
     art = f'''<div style="position:relative;flex:1;height:880px">
-  <a href="{url}" class="br" style="position:absolute;left:{'40px' if not flip else '10px'};top:90px;width:930px;transform:rotate({-rot if flip else rot}deg)"><div class="bar"><b></b><b></b><b></b><span>{url.replace('https://','')}</span></div><img src="img/{slug}-d.png"></a>
+  <a href="{url}" class="br" style="position:absolute;left:{'40px' if not flip else '10px'};top:90px;width:930px;transform:rotate({-rot if flip else rot}deg)"><div class="bar"><b></b><b></b><b></b><span>{DOMAINS[slug]}</span></div><img src="img/{slug}-d.png"></a>
   <a href="{url}" class="ph" style="position:absolute;{'right:-10px' if not flip else 'left:-70px'};top:{'430px' if not flip else '470px'};width:250px;transform:rotate({rot*3 if not flip else -rot*3}deg)"><img src="img/{slug}-m.png"></a>
  </div>'''
     inner = (art + text) if flip else (text + art)
@@ -117,7 +119,7 @@ def prom(n, t, d, bg, fg):
 A(f'''<section class="s dark" style="padding:0;gap:0">
  <div style="padding:96px 112px 54px"><p class="eb co">The promise</p><h2 style="margin-top:28px">Four things we do every time.</h2></div>
  <div class="row fx" style="gap:0">
-  {prom('01','One week','From kickoff to launch. Your clock starts when content and assets arrive.','#FF7A59','#0C0D10')}
+  {prom('01','One week','From kickoff to launch, with your copy and content or ours.','#FF7A59','#0C0D10')}
   {prom('02','No templates','Every layout, color and line of code is made for your race.','#FFD84D','#0C0D10')}
   {prom('03','Secure','Hardened hosting, HTTPS and form protection, with no plugin pile-ups to patch.','#7EE0B8','#0C0D10')}
   {prom('04','Quality','Fast, accessible and phone-first, with the donate button where people tap.','#9CCBFF','#0C0D10')}
@@ -164,7 +166,7 @@ A(f'''<section class="s dark" style="padding:70px 80px 80px;gap:26px">
  <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb" style="margin-bottom:22px">The work</p><h2 style="font-size:96px">Seven races. Click any.</h2></div><p class="lead" style="font-size:28px;max-width:560px">Every design is fictional and fully built. Each one opens the live site.</p></div>
  <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
   {tile('council','City council')}{tile('ballot-measure','Ballot measure')}{tile('mayor','Mayoral movement')}{tile('senate','U.S. Senate')}{tile('county-party','County party')}{tile('state-party','State party')}{tile('governor','Governor')}
-  <a href="{BASE}" class="sh" style="display:flex"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:44px">Browse the full gallery</p><p class="cp" style="font-size:24px">&#8599; {BASE.replace('https://','')}</p></div></a>
+  <a href="{BASE}" class="sh" style="display:flex"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:44px">Browse the full gallery</p><p class="cp" style="font-size:24px">Open the full gallery &#8599;</p></div></a>
  </div>
  <p class="pg"></p>
 </section>''')
@@ -202,17 +204,17 @@ A(f'''<section class="s light" style="padding-top:72px;padding-bottom:84px;gap:2
 # 16 PROCESS (timeline)
 def node(day, t, d, c):
     return f'<div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:{c}"></div><p class="num" style="font-size:24px;opacity:.8">{day}</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">{t}</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">{d}</p></div>'
-A(f'''<section class="s dark" style="justify-content:center;gap:50px">
+A(f'''<section class="s dark" style="justify-content:flex-start;gap:36px;padding-top:80px">
  <p class="eb co">How a week works</p>
- <h2 style="font-size:104px;letter-spacing:-5px">Kickoff to launch<br>in seven days.</h2>
+ <h2 style="font-size:96px;letter-spacing:-5px">Kickoff to launch<br>in seven days.</h2>
  <div style="position:relative;display:flex;gap:30px;margin-top:20px"><div style="position:absolute;left:0;right:0;top:55px;height:4px;background:linear-gradient(90deg,#FF7A59,#FFD84D,#7EE0B8,#9CCBFF)"></div>
-  {node('DAY 0','Kickoff','A 30-minute call. You send logo, photos, copy and tool links. The clock starts.','#FF7A59')}
+  {node('DAY 0','Kickoff','A 30-minute call. Send what you have: logo, photos, copy, tool links. We fill the gaps.','#FF7A59')}
   {node('DAYS 1 TO 2','Design','A custom homepage and phone layout for your approval.','#FF9A5B')}
   {node('DAYS 3 TO 5','Build','Pages, forms and connections to ActBlue, Mobilize or your CRM.','#FFD84D')}
   {node('DAY 6','Review','Two rounds of edits, plus speed, security and accessibility checks.','#7EE0B8')}
   {node('DAY 7','Launch','Live on your domain, with handoff notes and a care option.','#9CCBFF')}
  </div>
- <p class="mk">The clock starts when content and assets arrive</p><p class="pg"></p>
+ <div style="position:absolute;left:112px;right:112px;bottom:70px;display:flex;align-items:center;gap:24px;padding:26px 36px;border-radius:999px;background:rgba(255,216,77,.12);box-shadow:inset 0 0 0 2px rgba(255,216,77,.5)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">With or without content</span><span style="font-size:28px;color:#ECEEF2">Have copy and photos? Send them. Don't? We write the copy and source the images. Either way, one week.</span></div><p class="pg"></p>
 </section>''')
 
 # 17 PRICING (staircase)
@@ -260,7 +262,7 @@ A(f'''<section class="s light" style="flex-direction:row;align-items:center;gap:
 A(f'''<section class="s dark" style="justify-content:center;gap:40px">
  <p class="eb bu">Next step</p>
  <h2 style="font-size:184px;letter-spacing:-10px;line-height:.92">Let's build<br><span class="acc">your site.</span></h2>
- <p class="lead" style="max-width:1100px;font-size:38px">Reply to this email to book a 30-minute kickoff. Your site can be live in one week.</p>
+ <p class="lead" style="max-width:1100px;font-size:38px">Reply to this email to book a 30-minute kickoff. With your content or without it, your site can be live in one week.</p>
  <div class="row"><a class="pill lt" href="{BASE}">See the live work<i>&#8599;</i></a><a class="pill lt" href="https://davidbenjaminfriedman.com">davidbenjaminfriedman.com<i>&#8599;</i></a></div>
  <p class="mk">DBF Designs · Custom campaign websites</p><p class="pg"></p>
 </section>''')
