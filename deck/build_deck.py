@@ -147,15 +147,51 @@ A(f'''<section class="s light" style="gap:28px;padding-bottom:108px">
  <p class="pg"></p>
 </section>''')
 
-# 6 INTEGRATIONS (typographic list)
-def tool(n, d):
-    return f'<div style="display:flex;align-items:baseline;justify-content:space-between;gap:60px;padding:26px 0;border-top:2px solid rgba(255,255,255,.28)"><p style="font-size:84px;font-weight:560;letter-spacing:-4px;line-height:1">{n}</p><p style="font-size:28px;line-height:1.35;max-width:560px;color:#DCE3FF">{d}</p></div>'
-A(f'''<section class="s cobalt" style="justify-content:center;gap:30px">
+# 6 INTEGRATIONS (grouped platform wall)
+def grp(label, items, accent):
+    chips="".join(f'<span style="padding:14px 30px;border-radius:999px;background:#fff;color:#0C0D10;font-size:36px;font-weight:560;letter-spacing:-1px">{i}</span>' for i in items)
+    return f'<div style="display:flex;align-items:center;gap:40px;padding:22px 0;border-top:2px solid rgba(255,255,255,.28)"><span style="width:330px;flex:none;font:500 22px \'Geist Mono\',monospace;letter-spacing:3px;text-transform:uppercase;color:{accent}">{label}</span><div style="display:flex;flex-wrap:wrap;gap:14px">{chips}</div></div>'
+A(f'''<section class="s cobalt" style="justify-content:center;gap:26px">
  <p class="eb bu">Your stack, connected</p>
- <h2 style="font-size:84px;margin-bottom:10px">Works with the tools you already run.</h2>
- <div>{tool('ActBlue','Embedded forms, contribution links and preset amounts.')}{tool('NGP VAN and EveryAction','Forms that write straight to your CRM.')}{tool('Mobilize','Event feeds and shift sign-ups inside your site.')}{tool('Action Network','Petitions, pledges and list growth for causes.')}</div>
- <p class="lead" style="font-size:28px">Plus analytics, SMS opt-in and email tools to match your team.</p>
+ <h2 style="font-size:84px">Every platform your campaign already uses.</h2>
+ <p class="lead" style="font-size:30px;max-width:1300px">Donation embeds, event feeds, list sync and live social feeds are designed into the site, not bolted on.</p>
+ <div style="margin-top:6px">
+  {grp('Fundraising',['ActBlue'],'#FFD84D')}
+  {grp('Voter and volunteer',['NGP VAN','EveryAction','Mobilize','Action Network'],'#FFD84D')}
+  {grp('Email and text',['Mailchimp','MailerLite','Constant Contact','Switchboard'],'#FFD84D')}
+  {grp('Social feeds',['Instagram','Facebook','X','Bluesky','YouTube','TikTok'],'#FFD84D')}
+  {grp('Calendar',['Google Calendar','Apple and Outlook (.ics)'],'#FFD84D')}
+ </div>
  <p class="mk">DBF Designs</p><p class="pg"></p>
+</section>''')
+
+# 6b CUSTOMIZATION + ONGOING HELP
+def cc(area, cls, t, d):
+    return f'<div class="sh" style="grid-area:{area}"><div class="cr {cls}" style="padding:34px"><p class="ct" style="font-size:46px">{t}</p><p class="cp" style="font-size:26px">{d}</p></div></div>'
+A(f'''<section class="s light" style="gap:26px;padding-bottom:100px">
+ <p class="eb pk">Custom, then cared for</p>
+ <h2 style="font-size:84px">Made for your race.<br>Kept running after launch.</h2>
+ <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:1fr 1fr;grid-template-areas:'a b c' 'a d e';gap:22px;flex:1">
+  {cc('a','coral','Fully custom, never a template','Layout, features, color and code are built around your message. A ward map, a yard sign maker or a pledge counter, whatever your race needs.')}
+  {cc('b','butter','Your brand','A logo system and press kit for every site.')}
+  {cc('c','mint','Your tools','Any platform on the previous slide, plus others on request.')}
+  {cc('d','ink','Help when you need it','Edits, new pages and event updates at $75 an hour.')}
+  {cc('e','sky','Room to grow','Add languages, integrations and sections as the race changes.')}
+ </div>
+ <p class="pg"></p>
+</section>''')
+
+# 6c BRAND SYSTEM
+def lg(s, bg):
+    return f'<div class="sh"><div class="cr" style="background:{bg};align-items:center;justify-content:center;padding:28px"><img src="img/logo-{s}.png" style="width:92%;max-height:150px;object-fit:contain"></div></div>'
+A(f'''<section class="s dark" style="gap:28px;padding-top:80px">
+ <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb sk" style="margin-bottom:22px">Identity included</p><h2 style="font-size:84px">Every race gets its own logo.</h2></div><p class="lead" style="font-size:28px;max-width:600px">Wordmark, mark, favicon, reversed version and a downloadable press kit, built for each site.</p></div>
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
+  {lg('council','#FAF5E8')}{lg('ballot-measure','#FFD21F')}{lg('mayor','#F4F6FF')}{lg('senate','#EAF0FF')}
+  {lg('county-party','#EEF3FF')}{lg('state-party','#F2F2F0')}{lg('governor','#F2EFE6')}
+  <div class="sh"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:42px">Plus endorser logos, press kit and social feeds</p></div></div>
+ </div>
+ <p class="pg"></p>
 </section>''')
 
 # 7 PORTFOLIO MOSAIC
@@ -196,7 +232,7 @@ A(f'''<section class="s light" style="padding-top:72px;padding-bottom:84px;gap:2
   {ia('state-counties','24-county tile map','state-party/counties/')}
   {ia('ballot-explainer','Street explainer','ballot-measure/what-it-does/')}
   {ia('mayor-hoods','Neighborhood picker','mayor/neighborhoods/')}
-  <div class="sh"><div class="cr coral" style="justify-content:center;padding:40px"><p class="ct" style="font-size:46px">Forms validate. RSVPs confirm. Calendars download.</p><p class="cp" style="font-size:28px">Spanish switches the whole site, and every page has a light and dark mode.</p></div></div>
+  <div class="sh"><div class="cr coral" style="justify-content:center;padding:40px"><p class="ct" style="font-size:46px">Forms validate. RSVPs confirm. Calendars download.</p><p class="cp" style="font-size:28px">Spanish switches the whole site. Social feeds, press kits and signup bars come with it.</p></div></div>
  </div>
  <p class="pg"></p>
 </section>''')
