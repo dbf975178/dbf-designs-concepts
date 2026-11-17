@@ -428,7 +428,7 @@ window.I18N={"en": {"logo.sub": "Democratic Party", "a11y.skip": "Skip to conten
     var now = new Date(), z = function (n) { return (n < 10 ? "0" : "") + n; };
     var stamp = now.getUTCFullYear() + z(now.getUTCMonth() + 1) + z(now.getUTCDate()) + "T" + z(now.getUTCHours()) + z(now.getUTCMinutes()) + z(now.getUTCSeconds()) + "Z";
     var lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Prairie State Democratic Party//Concept//EN", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
-      "UID:" + icsStamp(o.start) + "-" + Math.random().toString(36).slice(2, 8) + "@prairiestatedems.example", "DTSTAMP:" + stamp,
+      "UID:" + icsStamp(o.start) + "-" + Math.random().toString(36).slice(2, 8) + "@prairiestatedems.org", "DTSTAMP:" + stamp,
       "DTSTART:" + icsStamp(o.start), "DTEND:" + icsStamp(o.end), "SUMMARY:" + icsEsc(o.title), "LOCATION:" + icsEsc(o.loc),
       "DESCRIPTION:" + icsEsc("Example event from the Prairie State Democratic Party concept site. Fictional."), "END:VEVENT", "END:VCALENDAR"];
     var blob = new Blob([lines.join("\r\n")], { type: "text/calendar;charset=utf-8" });

@@ -1,0 +1,88 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DBF Designs//Ashcombe Concept//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ashcombe for Governor events (example)
+BEGIN:VEVENT
+UID:event-1@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261121T110000
+DTEND:20261121T130000
+SUMMARY:Costs Down Rally
+LOCATION:Pier 9 Lot\, Quay Street\, Port Alder
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261201T183000
+DTEND:20261201T200000
+SUMMARY:Care You Can Afford Town Hall
+LOCATION:Millbrook Public Library\, Hall B\, Millbrook Falls
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-3@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261205T093000
+DTEND:20261205T123000
+SUMMARY:Saturday Canvass Launch
+LOCATION:Dunmore Fire Hall\, Dunmore
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-4@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261213T090000
+DTEND:20261213T103000
+SUMMARY:Wages Up Breakfast Rally
+LOCATION:Saltmarsh Diner\, Saltmarsh
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-5@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261217T190000
+DTEND:20261217T203000
+SUMMARY:Rural Clinics Town Hall
+LOCATION:Cedar Ford Grange Hall\, Cedar Ford
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-6@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270111T190000
+DTEND:20270111T200000
+SUMMARY:Ask Wren: Statewide Online Town Hall
+LOCATION:Online. The link arrives after you RSVP.
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-7@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270123T140000
+DTEND:20270123T160000
+SUMMARY:Trades Hall Rally
+LOCATION:Millbrook Trades Hall\, Millbrook Falls
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-8@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270204T180000
+DTEND:20270204T193000
+SUMMARY:Housing and Rent Town Hall
+LOCATION:Dunmore Community Center\, Dunmore
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-9@ashcombeforgovernor.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270220T100000
+DTEND:20270220T140000
+SUMMARY:River Counties Weekend of Action
+LOCATION:Cedar Ford Library lawn\, Cedar Ford
+DESCRIPTION:Example event from the Ashcombe for Governor concept site. Details are placeholders.
+END:VEVENT
+END:VCALENDAR

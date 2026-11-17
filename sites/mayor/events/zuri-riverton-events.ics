@@ -1,0 +1,88 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DBF Designs//Zuri Taverner for Mayor concept//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Zuri Taverner for Mayor events (concept)
+BEGIN:VEVENT
+UID:event-1@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261121T100000
+DTEND:20261121T123000
+SUMMARY:Eastgate Saturday canvass launch
+LOCATION:Eastgate Library steps\, 410 Alder Street
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-2@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261124T180000
+DTEND:20261124T200000
+SUMMARY:Tuesday phone bank in English and Spanish
+LOCATION:Campaign office\, 88 Mill Street
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-3@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261205T140000
+DTEND:20261205T160000
+SUMMARY:Child care town hall
+LOCATION:Cedar Hollow Community Center
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-4@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261206T110000
+DTEND:20261206T130000
+SUMMARY:Harbor Row door knock and brunch
+LOCATION:Harbor Row Tenants Hall
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-5@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261209T183000
+DTEND:20261209T200000
+SUMMARY:Rider roundtable on the 14 bus
+LOCATION:Old Foundry Station mezzanine
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-6@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261212T170000
+DTEND:20261212T193000
+SUMMARY:Winter rally for rent relief
+LOCATION:Millbrook Fieldhouse
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-7@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20261217T180000
+DTEND:20261217T200000
+SUMMARY:Thursday phone bank for first-timers
+LOCATION:Campaign office\, 88 Mill Street
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-8@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20270109T100000
+DTEND:20270109T120000
+SUMMARY:Larkspur Heights new-year canvass
+LOCATION:Larkspur Heights Branch Library
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+BEGIN:VEVENT
+UID:event-9@zuriformayor.com
+DTSTAMP:20261116T120000Z
+DTSTART:20270117T150000
+DTEND:20270117T170000
+SUMMARY:Riverton block party for Zuri
+LOCATION:Riverside Commons
+DESCRIPTION:Concept event for illustration.
+END:VEVENT
+END:VCALENDAR

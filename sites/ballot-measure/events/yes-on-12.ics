@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Yes on 12 concept//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Yes on 12 events
+BEGIN:VEVENT
+UID:delaney-walk@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261121T100000
+DTEND:20261121T120000
+SUMMARY:Delaney Street walk audit
+LOCATION:Delaney Elementary front steps
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:tuesday-calls-1@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261124T180000
+DTEND:20261124T200000
+SUMMARY:Tuesday phone bank
+LOCATION:Eastside Library\, meeting room B
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:bayview-knock@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261205T093000
+DTEND:20261205T123000
+SUMMARY:Bayview door knock
+LOCATION:Alder Row Cafe\, Harbor Street
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:town-hall-central@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261209T190000
+DTEND:20261209T203000
+SUMMARY:Measure 12 town hall
+LOCATION:Port Ellery Central Library auditorium
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:hollis-block@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261212T110000
+DTEND:20261212T140000
+SUMMARY:Hollis Park block canvass
+LOCATION:Hollis Park pavilion
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:tuesday-calls-2@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261215T180000
+DTEND:20261215T200000
+SUMMARY:Tuesday phone bank
+LOCATION:Eastside Library\, meeting room B
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:marlowe-walk@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270109T100000
+DTEND:20270109T120000
+SUMMARY:Marlowe Street walk audit
+LOCATION:Marlowe Street Walking School Bus meeting point
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:parents-teachers@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270114T190000
+DTEND:20270114T203000
+SUMMARY:Parents and teachers town hall
+LOCATION:Bayview Middle School cafeteria
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:kickoff@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270206T090000
+DTEND:20270206T170000
+SUMMARY:Final weekend canvass kickoff
+LOCATION:Union Hall\, Dockside
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+BEGIN:VEVENT
+UID:gotv@yeson12.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270207T120000
+DTEND:20270207T180000
+SUMMARY:Get out the vote phone bank
+LOCATION:Eastside Library\, meeting room B
+DESCRIPTION:Yes on 12 concept event. Fictional.
+END:VEVENT
+END:VCALENDAR

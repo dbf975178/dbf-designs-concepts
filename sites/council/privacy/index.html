@@ -6,22 +6,24 @@
 <title data-i18n="k271">Privacy | Maya Linden for City Council</title>
 <meta name="description" content="How this concept site handles your information. Short answer: it does not collect any.">
 <meta name="theme-color" content="#123D2F">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="../brand/mark.svg">
+<link rel="apple-touch-icon" href="../brand/mark-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 <link rel="stylesheet" href="../site.css">
-<script>try{var t=localStorage.getItem('council:theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem('council:theme');if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('council:nbar')==='1')document.documentElement.classList.add('no-bar')}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="k74">Skip to main content</a>
 <header class="hdr" data-header>
+<div class="nbar" data-nbar role="region" aria-label="Announcement" data-i18n-attr="aria-label:x.bar.label"><p><i class="ph ph-megaphone-simple" aria-hidden="true"></i><span data-i18n="x.bar.text">Next porch chat: Saturday, Nov 21, on Linden Avenue.</span> <a href="../events/"><span data-i18n="k40">See all events</span></a></p><button type="button" class="nbar-x" data-nbar-close aria-label="Dismiss announcement" data-i18n-attr="aria-label:x.bar.close"><i class="ph ph-x" aria-hidden="true"></i></button></div>
 <div class="hdr-in">
-<a class="brand" href="../" aria-label="Maya Linden for City Council, home" data-i18n-attr="aria-label:k75"><span class="mark" aria-hidden="true">ML</span><span class="brand-t"><b>Maya Linden</b><small data-i18n="k76">for City Council, Ward 4</small></span></a>
+<a class="brand" href="../" aria-label="Maya Linden for City Council, home" data-i18n-attr="aria-label:k75"><span class="mark" aria-hidden="true"><svg class="lm " viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="lm-d" cx="60" cy="60" r="60"/><path class="lm-l" d="M34 86A56 56 0 0 1 88 32A56 56 0 0 1 34 86Z"/><path class="lm-r" d="M42 78L80 40"/><path class="lm-s" d="M34 86L24 96"/><circle class="lm-p" cx="88" cy="88" r="11"/></svg></span><span class="brand-t"><b>Maya Linden</b><small data-i18n="k76">for City Council, Ward 4</small></span></a>
 <nav id="nav" class="nav" data-nav aria-label="Main" data-i18n-attr="aria-label:k77">
-<a href="../priorities/"><span data-i18n="k70">Priorities</span></a><a href="../events/"><span data-i18n="k71">Events</span></a><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a>
+<a href="../priorities/"><span data-i18n="k70">Priorities</span></a><a href="../events/"><span data-i18n="k71">Events</span></a><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a><a href="../updates/"><span data-i18n="x.nav.updates">Updates</span></a>
 <a class="btn btn-accent" href="../donate/" ><span data-i18n="k4">Donate</span></a>
 </nav>
 <div class="tools">
@@ -32,14 +34,15 @@
 </div>
 </header>
 <main id="main" tabindex="-1">
-<section class="phead"><div class="wrap"><h1 class="h-xl" data-i18n="k84">Privacy</h1></div></section><section class="sec-tight"><div class="wrap prose"><h2 data-i18n="k263">What this site collects</h2><p data-i18n="k264">Nothing. Every form on this site is a demonstration that runs in your browser. No name, email, address or payment detail is sent to a server or saved.</p><h2 data-i18n="k265">What stays in your browser</h2><p data-i18n="k266">Your theme and language choices are saved in local storage on your device so the site remembers them. You can clear them in your browser settings.</p><h2 data-i18n="k267">Third-party files</h2><p data-i18n="k268">Fonts load from Google Fonts and icons from unpkg. Those services can see your IP address when your browser requests the files. There are no analytics, ad trackers or cookies.</p><h2 data-i18n="k269">A fictional campaign</h2><p data-i18n="k270">Maya Linden, Ward 4 and every group named here are invented for a design concept by DBF Designs. A live campaign would publish its own privacy policy.</p></div></section>
+<section class="phead"><div class="wrap"><h1 class="h-xl" data-i18n="k84">Privacy</h1></div></section><section class="sec-tight"><div class="wrap prose"><h2 data-i18n="k263">What this site collects</h2><p data-i18n="k264">Nothing. Every form on this site is a demonstration that runs in your browser. No name, email, address or payment detail is sent to a server or saved.</p><h2 data-i18n="k265">What stays in your browser</h2><p data-i18n="k266">Your theme and language choices are saved in local storage on your device so the site remembers them. You can clear them in your browser settings.</p><h2><span data-i18n="x.pv.h">Announcement and pop-up choices</span></h2><p><span data-i18n="x.pv.p">If you close the announcement bar or the email pop-up, the site remembers that choice in local storage on your device so it does not ask again. Nothing about the choice leaves your browser.</span></p><h2 data-i18n="k267">Third-party files</h2><p data-i18n="k268">Fonts load from Google Fonts and icons from unpkg. Those services can see your IP address when your browser requests the files. There are no analytics, ad trackers or cookies.</p><h2 data-i18n="k269">A fictional campaign</h2><p data-i18n="k270">Maya Linden, Ward 4 and every group named here are invented for a design concept by DBF Designs. A live campaign would publish its own privacy policy.</p></div></section>
 </main>
 <footer class="foot">
 <div class="wrap">
 <div class="foot-grid">
-<div><h2>Maya Linden for City Council</h2><p data-i18n="k81">A neighbor first. Ward 4 Eastside.</p></div>
-<div><h3 data-i18n="k82">Explore</h3><ul><li><a href="../priorities/"><span data-i18n="k70">Priorities</span></a></li><li><a href="../events/"><span data-i18n="k71">Events</span></a></li><li><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a></li><li><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a></li><li><a href="../donate/"><span data-i18n="k4">Donate</span></a></li></ul></div>
+<div class="foot-brand"><a class="brand brand-rev" href="../" aria-label="Maya Linden for City Council, home" data-i18n-attr="aria-label:k75"><span class="mark" aria-hidden="true"><svg class="lm lm-rev " viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="lm-d" cx="60" cy="60" r="60"/><path class="lm-l" d="M34 86A56 56 0 0 1 88 32A56 56 0 0 1 34 86Z"/><path class="lm-r" d="M42 78L80 40"/><path class="lm-s" d="M34 86L24 96"/><circle class="lm-p" cx="88" cy="88" r="11"/></svg></span><span class="brand-t"><b>Maya Linden</b><small data-i18n="k76">for City Council, Ward 4</small></span></a><p data-i18n="k81">A neighbor first. Ward 4 Eastside.</p><h3><span data-i18n="x.foot.news.h">Weekly email</span></h3><div class="mini-form"><form data-demo-form novalidate data-newsletter><div class="field"><label for="foot-email"><span data-i18n="k47">Email</span></label><input id="foot-email" name="email" type="email" required autocomplete="email"><p class="field-error" data-error-for="email" hidden></p></div><button class="btn btn-accent btn-sm" type="submit"><span data-i18n="k49">Join Maya</span></button></form><div class="success" data-success hidden><i class="ph-fill ph-check-circle" aria-hidden="true"></i><h3 class="h-sm" data-i18n="k50">You are on the list.</h3><p data-i18n="k51">Look for the first porch chat invite this week. This is a demo, so nothing was sent.</p></div></div></div>
+<div><h3 data-i18n="k82">Explore</h3><ul><li><a href="../priorities/"><span data-i18n="k70">Priorities</span></a></li><li><a href="../events/"><span data-i18n="k71">Events</span></a></li><li><a href="../meet-maya/"><span data-i18n="k72">Meet Maya</span></a></li><li><a href="../get-involved/"><span data-i18n="k73">Get involved</span></a></li><li><a href="../updates/"><span data-i18n="x.nav.updates">Updates</span></a></li><li><a href="../donate/"><span data-i18n="k4">Donate</span></a></li><li><a href="../press-kit/"><span data-i18n="x.nav.press">Press kit</span></a></li></ul></div>
 <div><h3 data-i18n="k83">Legal</h3><ul><li><a href="../privacy/"><span data-i18n="k84">Privacy</span></a></li><li><a href="../accessibility/"><span data-i18n="k85">Accessibility</span></a></li></ul></div>
+<div class="foot-sms"><h3><span data-i18n="x.foot.sms.h">Text updates</span></h3><div class="mini-form"><form data-demo-form novalidate data-sms><div class="field"><label for="foot-phone"><span data-i18n="x.lbl.mobile">Mobile number</span></label><input id="foot-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"><p class="field-error" data-error-for="phone" hidden></p></div><button class="btn btn-accent btn-sm" type="submit"><span data-i18n="x.btn.sms">Join by text</span></button></form><div class="success" data-success hidden><i class="ph-fill ph-check-circle" aria-hidden="true"></i><h3 class="h-sm"><span data-i18n="x.sms.ok.h">You are on the text list.</span></h3><p><span data-i18n="x.sms.ok.p">A welcome text would arrive within a minute. This is a demo, so nothing was sent.</span></p></div></div><p class="help tcpa"><span data-i18n="x.tcpa">By texting JOIN you agree to receive recurring campaign texts. Msg and data rates may apply. Reply STOP to end, HELP for help.</span></p></div>
 </div>
 <div class="legal">
 <p><strong data-i18n="k86">Paid for by Maya Linden for City Council. Not authorized by any other candidate or committee.</strong></p>
@@ -48,7 +51,15 @@
 </div>
 </div>
 </footer>
+<dialog id="pop" aria-labelledby="pop-h" data-pop>
+<div class="dlg-in">
+<button type="button" class="dlg-x" data-close-modal aria-label="Close" data-i18n-attr="aria-label:k55"><i class="ph ph-x" aria-hidden="true"></i></button>
+<div><h2 id="pop-h" class="h-md" data-i18n="k45">Get the porch chat invite.</h2><p class="mute" style="margin-top:8px" data-i18n="k46">Email and ZIP. One message a week, and you can leave any time.</p></div>
+<div><form data-demo-form novalidate class="form-grid" data-newsletter><div class="field"><label for="pop-email"><span data-i18n="k47">Email</span></label><input id="pop-email" name="email" type="email" required autocomplete="email"><p class="field-error" data-error-for="email" hidden></p></div><div class="field"><label for="pop-zip"><span data-i18n="k48">ZIP code</span></label><input id="pop-zip" name="zip" type="text" required autocomplete="postal-code" inputmode="numeric" maxlength="5"><p class="field-error" data-error-for="zip" hidden></p></div><div class="full btn-row"><button class="btn btn-accent" type="submit"><span data-i18n="k49">Join Maya</span></button><button class="btn btn-line" type="button" data-close-modal><span data-i18n="x.pop.no">No thanks</span></button></div></form><div class="success" data-success hidden><i class="ph-fill ph-check-circle" aria-hidden="true"></i><h3 class="h-sm" data-i18n="k50">You are on the list.</h3><p data-i18n="k51">Look for the first porch chat invite this week. This is a demo, so nothing was sent.</p><button class="btn btn-solid btn-sm" type="button" data-close-modal><span data-i18n="k55">Close</span></button></div></div>
+</div>
+</dialog>
 <script src="../site.js" defer></script>
+<script src="../extras.js" defer></script>
 <script src="../../../assets/shared.js" defer></script>
 </body>
 </html>

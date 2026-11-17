@@ -1,0 +1,78 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DBF Designs//Maya Linden concept//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Maya Linden porch chats and walks
+BEGIN:VEVENT
+UID:e1@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261121T100000
+DTEND:20261121T110000
+SUMMARY:Porch chat on Linden Avenue
+LOCATION:Linden Heights\, address sent after RSVP
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e2@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261202T180000
+DTEND:20261202T193000
+SUMMARY:Small business roundtable
+LOCATION:Main Street Library\, community room
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e3@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261205T093000
+DTEND:20261205T104500
+SUMMARY:School route walk to Hollis Elementary
+LOCATION:Meet at the Hollis Park gazebo
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e4@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261206T140000
+DTEND:20261206T150000
+SUMMARY:Porch chat\, in Spanish
+LOCATION:Alder Flats\, address sent after RSVP
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e5@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261212T100000
+DTEND:20261212T113000
+SUMMARY:Route 12 stop-by-stop walk
+LOCATION:Meet at the Alder Flats bus stop
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e6@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20261215T183000
+DTEND:20261215T200000
+SUMMARY:Housing near transit forum
+LOCATION:Rivergate Community Room\, Spanish interpretation
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e7@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270109T100000
+DTEND:20270109T110000
+SUMMARY:Porch chat on Orchard Row
+LOCATION:Orchard Row\, address sent after RSVP
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+BEGIN:VEVENT
+UID:e8@lindenward4.example
+DTSTAMP:20261116T120000Z
+DTSTART:20270116T100000
+DTEND:20270116T111500
+SUMMARY:Main Street storefront walk
+LOCATION:Meet outside the Main Street Library
+DESCRIPTION:Example event from a fictional concept campaign.
+END:VEVENT
+END:VCALENDAR
