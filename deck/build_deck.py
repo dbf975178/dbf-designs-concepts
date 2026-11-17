@@ -298,8 +298,8 @@ A(f'''<section class="s light" style="flex-direction:row;align-items:center;gap:
 A(f'''<section class="s dark" style="justify-content:center;gap:40px">
  <p class="eb bu">Next step</p>
  <h2 style="font-size:184px;letter-spacing:-10px;line-height:.92">Let's build<br><span class="acc">your site.</span></h2>
- <p class="lead" style="max-width:1100px;font-size:38px">Reply to this email to book a 30-minute kickoff. With your content or without it, your site can be live in one week.</p>
- <div class="row"><a class="pill lt" href="{BASE}">See the live work<i>&#8599;</i></a><a class="pill lt" href="https://davidbenjaminfriedman.com">davidbenjaminfriedman.com<i>&#8599;</i></a></div>
+ <p class="lead" style="max-width:1100px;font-size:38px">Email me to book a 30-minute kickoff. With your content or without it, your site can be live in one week.</p>
+ <div class="row"><a class="pill lt" href="mailto:dbfriedman22@gmail.com">dbfriedman22@gmail.com<i>&#8599;</i></a><a class="pill lt" href="{BASE}">See the live work<i>&#8599;</i></a><a class="pill lt" href="https://davidbenjaminfriedman.com">davidbenjaminfriedman.com<i>&#8599;</i></a></div>
  <p class="mk">DBF Designs · Custom campaign websites</p><p class="pg"></p>
 </section>''')
 
