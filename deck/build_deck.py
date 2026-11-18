@@ -49,7 +49,7 @@ h2{font-size:92px;font-weight:560;line-height:1;letter-spacing:-4px}
 .on-dark .li{border-color:rgba(255,255,255,.2)}
 """
 
-DOMAINS={"council":"mayalinden.com","ballot-measure":"yeson12.org","mayor":"zuriformayor.com","senate":"jonahellery.com","county-party":"cedarcountydems.org","state-party":"prairiestatedems.org","governor":"ashcombeforgovernor.com"}
+DOMAINS={"council":"yourcampaign.com","ballot-measure":"yourmeasure.org","mayor":"yourcandidate.com","senate":"yourcampaign.org","county-party":"yourcounty.org","state-party":"yourstateparty.org","governor":"yourcampaign.com"}
 
 def site_slide(slug, name, kind, who, feats, bg, fg, chipbg, chipfg, flip, pillbg, pillfg, tone="light", rot=1.5):
     url = BASE + "sites/%s/" % slug
@@ -59,7 +59,8 @@ def site_slide(slug, name, kind, who, feats, bg, fg, chipbg, chipfg, flip, pillb
   <h2 style="font-size:86px;color:{fg}">{name}</h2>
   <p class="lead" style="color:{fg};opacity:.8;font-size:32px">{who}</p>
   <div style="margin-top:6px">{li}</div>
-  <a class="pill" href="{url}" style="background:{pillbg};color:{pillfg}">Open the live site<i>&#8599;</i></a>
+  <a class="pill" href="{url}" style="background:{pillbg};color:{pillfg}">Open the sample site<i>&#8599;</i></a>
+  <p style="font-size:22px;opacity:.6">Fictional sample for illustration.</p>
  </div>'''
     art = f'''<div style="position:relative;flex:1;height:880px">
   <a href="{url}" class="br" style="position:absolute;left:{'40px' if not flip else '10px'};top:90px;width:930px;transform:rotate({-rot if flip else rot}deg)"><div class="bar"><b></b><b></b><b></b><span>{DOMAINS[slug]}</span></div><img src="img/{slug}-d.png"></a>
@@ -76,7 +77,7 @@ A(f'''<section class="s light" style="flex-direction:row;align-items:center;gap:
  <div class="col" style="gap:38px;width:860px;position:relative;z-index:4">
   <p class="eb">Web design for campaigns</p>
   <h1 style="font-size:206px;font-weight:560;line-height:.9;letter-spacing:-11px">DBF<br>Designs</h1>
-  <p class="lead" style="max-width:740px">Custom websites for Democratic and progressive candidates, parties and causes. Live in one week. Never a template.</p>
+  <p class="lead" style="max-width:740px">Custom websites for Democratic and progressive candidates, parties and causes. Built around your race, never a template.</p>
   <a class="pill" href="{BASE}">See the live work<i>&#8599;</i></a>
  </div>
  <div style="position:relative;flex:1;height:900px">
@@ -91,26 +92,9 @@ A(f'''<section class="s light" style="flex-direction:row;align-items:center;gap:
 # 2 STATEMENT
 A('''<section class="s butter" style="justify-content:center;gap:40px">
  <p class="eb ink">The idea</p>
- <h2 style="font-size:176px;letter-spacing:-9px;line-height:.93">Built for your race.<br>Live in a week.</h2>
+ <h2 style="font-size:176px;letter-spacing:-9px;line-height:.93">Built for your race.<br>Launched on your timeline.</h2>
  <p class="lead" style="font-size:38px;max-width:1150px">A campaign site should look like your campaign and work like a field organizer. Ours do both.</p>
- <p class="mk">DBF Designs</p><p class="pg"></p>
-</section>''')
-
-# 3 CONTRAST
-A('''<section class="s dark" style="flex-direction:row;gap:0;padding:0">
- <div class="col" style="flex:1;padding:120px 90px 120px 112px;gap:34px;background:#14161B;justify-content:center">
-  <p class="eb" style="background:#2B2F38;color:#C7CBD3">What most campaigns get</p>
-  <div style="font-size:60px;font-weight:560;letter-spacing:-2px;line-height:1.12;color:#6F7682">
-   <p>A template with a new logo.</p><p style="margin-top:26px">Pages that load slowly on a phone.</p><p style="margin-top:26px">English only.</p><p style="margin-top:26px">A donate button you have to hunt for.</p>
-  </div>
- </div>
- <div class="col" style="flex:1.1;padding:120px 112px 120px 90px;gap:34px;justify-content:center;background:var(--co);color:#fff">
-  <p class="eb bu">What you get</p>
-  <div style="font-size:60px;font-weight:560;letter-spacing:-2px;line-height:1.12">
-   <p>A layout built around your message.</p><p style="margin-top:26px">Lean code that loads fast.</p><p style="margin-top:26px">Spanish and more, from day one.</p><p style="margin-top:26px">Donate and volunteer one tap away.</p>
-  </div>
- </div>
- <p class="mk" style="color:#6F7682">DBF Designs</p><p class="pg" style="color:#C9D3FF"></p>
+ <p class="pg"></p>
 </section>''')
 
 # 4 PROMISE
@@ -119,50 +103,58 @@ def prom(n, t, d, bg, fg):
 A(f'''<section class="s dark" style="padding:0;gap:0">
  <div style="padding:96px 112px 54px"><p class="eb co">The promise</p><h2 style="margin-top:28px">Four things we do every time.</h2></div>
  <div class="row fx" style="gap:0">
-  {prom('01','One week','From kickoff to launch, with your copy and content or ours.','#FF7A59','#0C0D10')}
+  {prom('01','Fast','Typically about a week from kickoff, depending on scope and content, with your copy or ours.','#FF7A59','#0C0D10')}
   {prom('02','No templates','Every layout, color and line of code is made for your race.','#FFD84D','#0C0D10')}
-  {prom('03','Secure','Hardened hosting, HTTPS and form protection, with no plugin pile-ups to patch.','#7EE0B8','#0C0D10')}
+  {prom('03','Secure','HTTPS, form protection and clean code that stays easy to maintain.','#7EE0B8','#0C0D10')}
   {prom('04','Quality','Fast, accessible and phone-first, with the donate button where people tap.','#9CCBFF','#0C0D10')}
  </div>
  <p class="pg" style="color:#0C0D10;opacity:.6"></p>
 </section>''')
 
-# 5 INCLUDED (bento, varied)
-def cell(area, cls, t, d, big=False):
-    ts = 'font-size:68px;letter-spacing:-3px' if big else ''
-    return f'<div class="sh" style="grid-area:{area}"><div class="cr {cls}" style="padding:32px"><p class="ct" style="{ts}">{t}</p><p class="cp" style="font-size:{30 if big else 24}px">{d}</p></div></div>'
-A(f'''<section class="s light" style="gap:28px;padding-bottom:108px">
- <p class="eb">Included on every site</p>
- <h2 style="font-size:78px">The essentials come standard.</h2>
- <div style="display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr 0.8fr;grid-template-areas:'a a b b c c' 'a a d d e f' 'g g g h h h';gap:22px;flex:1">
-  {cell('a','coral','Donate','Preset amounts, a monthly option and one-tap checkout on mobile.',True)}
-  {cell('b','','Volunteer and events','Shift sign-ups and RSVP lists that feed your tools.')}
-  {cell('c','butter','Email signup','Email and ZIP capture synced to your list.')}
-  {cell('d','mint','Spanish and more','A clean language switch across every page.')}
-  {cell('e','sky','Phone-first','Designed on a phone first.')}
-  {cell('f','pink','Accessible','Keyboard and screen reader ready.')}
-  {cell('g','ink','Secure and fast','HTTPS, form protection, lean code that loads quickly.')}
-  {cell('h','','Compliant footer','Correct paid-for language on every page and form.')}
+# 4b CAMPAIGN TYPES
+def ctype(cls, t, items):
+    li="".join(f'<p style="font-size:34px;font-weight:560;letter-spacing:-1px;padding:14px 0;border-top:2px solid rgba(12,13,16,.18)">{i}</p>' for i in items)
+    return f'<div class="sh" style="flex:1"><div class="cr {cls}" style="padding:44px;gap:20px"><p class="ct" style="font-size:60px;letter-spacing:-2.5px">{t}</p><div>{li}</div></div></div>'
+A(f'''<section class="s light" style="gap:28px;padding-bottom:84px">
+ <p class="eb sk">Who we build for</p>
+ <h2 style="font-size:84px">Every kind of campaign, one standard of work.</h2>
+ <div class="row fx" style="gap:22px">
+  {ctype('coral','Candidates',['City council and school board','Mayor and county offices','State legislature','Governor, Congress and Senate'])}
+  {ctype('butter','Parties and committees',['County and state parties','Caucuses and clubs','Coordinated campaigns','Volunteer and GOTV hubs'])}
+  {ctype('mint','Causes',['Ballot measures','Advocacy and issue groups','Pledge and petition drives','Allied organizations'])}
  </div>
  <p class="pg"></p>
 </section>''')
 
-# 6 INTEGRATIONS (grouped platform wall)
-def grp(label, items, accent):
-    chips="".join(f'<span style="padding:14px 30px;border-radius:999px;background:#fff;color:#0C0D10;font-size:36px;font-weight:560;letter-spacing:-1px">{i}</span>' for i in items)
-    return f'<div style="display:flex;align-items:center;gap:40px;padding:22px 0;border-top:2px solid rgba(255,255,255,.28)"><span style="width:330px;flex:none;font:500 22px \'Geist Mono\',monospace;letter-spacing:3px;text-transform:uppercase;color:{accent}">{label}</span><div style="display:flex;flex-wrap:wrap;gap:14px">{chips}</div></div>'
-A(f'''<section class="s cobalt" style="justify-content:center;gap:26px">
- <p class="eb bu">Your stack, connected</p>
- <h2 style="font-size:84px">Every platform your campaign already uses.</h2>
- <p class="lead" style="font-size:30px;max-width:1300px">Donation embeds, event feeds, list sync and live social feeds are designed into the site, not bolted on.</p>
- <div style="margin-top:6px">
-  {grp('Fundraising',['ActBlue'],'#FFD84D')}
-  {grp('Voter and volunteer',['NGP VAN','EveryAction','Mobilize','Action Network'],'#FFD84D')}
-  {grp('Email and text',['Mailchimp','MailerLite','Constant Contact','Switchboard'],'#FFD84D')}
-  {grp('Social feeds',['Instagram','Facebook','X','Bluesky','YouTube','TikTok'],'#FFD84D')}
-  {grp('Calendar',['Google Calendar','Apple and Outlook (.ics)'],'#FFD84D')}
+# 5 INCLUDED (grouped columns)
+def grpcol(cls, title, items):
+    li="".join(f'<div style="padding:22px 0;border-top:2px solid rgba(12,13,16,.2)"><p style="font-size:38px;font-weight:600;letter-spacing:-1.2px;line-height:1.1">{t}</p><p style="font-size:25px;line-height:1.35;margin-top:8px;color:#2B2F38">{d}</p></div>' for t,d in items)
+    return f'<div class="sh" style="flex:1"><div class="cr {cls}" style="padding:40px;gap:22px"><p style="font-size:64px;font-weight:600;letter-spacing:-3px;line-height:1">{title}</p><div>{li}</div></div></div>'
+A(f'''<section class="s light" style="gap:26px;padding-bottom:112px">
+ <p class="eb">Included on every site</p>
+ <h2 style="font-size:80px">What every site can do.</h2>
+ <div class="row fx" style="gap:22px">
+  {grpcol('coral','Raise money',[('Donate','Preset amounts, a monthly option and one-tap checkout on a phone.'),('Email and text signup','Lists that sync to the tools you already use.'),('Compliant footer','Correct paid-for language on every page.')])}
+  {grpcol('butter','Mobilize people',[('Volunteer shifts','Sign-ups that go straight to your team.'),('Events and RSVPs','Calendar downloads and live spot counts.'),('Social feeds','Instagram, Facebook, X, Bluesky, YouTube and TikTok.')])}
+  {grpcol('mint','Reach everyone',[('Spanish and more','A clean language switch on every page.'),('Phone-first and accessible','Built for thumbs, keyboards and screen readers.'),('Secure and fast','HTTPS, form protection and lean code.')])}
  </div>
- <p class="mk">DBF Designs</p><p class="pg"></p>
+ <div style="display:flex;align-items:center;gap:24px;padding:22px 36px;border-radius:999px;background:var(--ink);color:var(--silver)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:var(--butter)">Easy to edit</span><span style="font-size:28px">Your team can update events, news and pages itself, without calling a developer.</span></div>
+ <p class="pg"></p>
+</section>''')
+
+# 6 INTEGRATIONS (logotype wall)
+LOGOS=[('ActBlue',"Bricolage Grotesque",800,'-2px','none','#2447FF','#fff'),('NGP VAN',"Barlow Condensed",800,'1px','uppercase','#0C0D10','#FFD84D'),('EveryAction',"Libre Franklin",800,'-2px','none','#FF7A59','#0C0D10'),('Mobilize',"Space Grotesk",700,'-2px','none','#7EE0B8','#0C0D10'),
+('Action Network',"Anton",400,'1px','uppercase','#FFD84D','#0C0D10'),('Mailchimp',"Bricolage Grotesque",700,'-1.5px','none','#FFB4D2','#0C0D10'),('MailerLite',"Space Grotesk",500,'-1px','none','#FAFAFB','#0C0D10'),('Constant Contact',"Libre Franklin",700,'-1.5px','none','#9CCBFF','#0C0D10'),
+('Switchboard',"Geist Mono",500,'-1px','none','#14161B','#ECEEF2'),('Instagram',"Bricolage Grotesque",800,'-2px','none','#FF7A59','#FFF'),('Facebook',"Libre Franklin",800,'-2.5px','none','#2447FF','#fff'),('X',"Anton",400,'0','none','#0C0D10','#ECEEF2'),
+('Bluesky',"Space Grotesk",700,'-2px','none','#9CCBFF','#0C0D10'),('YouTube',"Barlow Condensed",800,'0','none','#FF7A59','#0C0D10'),('TikTok',"Anton",400,'1px','uppercase','#7EE0B8','#0C0D10'),('Google Calendar',"Geist",560,'-1.5px','none','#FAFAFB','#0C0D10')]
+def lw(n,f,w,ls,tt,bg,fg):
+    return f'<div style="display:flex;align-items:center;justify-content:center;border-radius:26px;background:{bg};color:{fg};font-family:\'{f}\',sans-serif;font-weight:{w};letter-spacing:{ls};text-transform:{tt};font-size:54px;text-align:center;padding:0 18px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)">{n}</div>'
+A(f'''<section class="s cobalt" style="gap:24px;padding-bottom:90px">
+ <p class="eb bu">Your stack, connected</p>
+ <h2 style="font-size:80px">Every platform your campaign already uses.</h2>
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:16px;flex:1">{"".join(lw(*l) for l in LOGOS)}</div>
+ <div style="display:flex;align-items:center;gap:24px;padding:20px 34px;border-radius:999px;background:rgba(255,216,77,.16);box-shadow:inset 0 0 0 2px rgba(255,216,77,.55)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">Also</span><span style="font-size:28px">We style your ActBlue page to match your site. Platform names shown as type for illustration.</span></div>
+ <p class="pg"></p>
 </section>''')
 
 # 6b CUSTOMIZATION + ONGOING HELP
@@ -173,10 +165,10 @@ A(f'''<section class="s light" style="gap:26px;padding-bottom:100px">
  <h2 style="font-size:84px">Made for your race.<br>Kept running after launch.</h2>
  <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:1fr 1fr;grid-template-areas:'a b c' 'a d e';gap:22px;flex:1">
   {cc('a','coral','Fully custom, never a template','Layout, features, color and code are built around your message. A ward map, a yard sign maker or a pledge counter, whatever your race needs.')}
-  {cc('b','butter','Your brand','A logo system and press kit for every site.')}
+  {cc('b','butter','Your brand','A logo system, press kit and ActBlue page styled to match.')}
   {cc('c','mint','Your tools','Any platform on the previous slide, plus others on request.')}
   {cc('d','ink','Help when you need it','Edits, new pages and event updates at $75 an hour.')}
-  {cc('e','sky','Room to grow','Add languages, integrations and sections as the race changes.')}
+  {cc('e','sky','Easy for your team','Update events, news and pages yourself. Add languages and sections as the race grows.')}
  </div>
  <p class="pg"></p>
 </section>''')
@@ -199,7 +191,7 @@ tiles = [("council","City council","1/1/2/3"),("ballot-measure","Ballot measure"
 def tile(s, t):
     return f'<a href="{BASE}sites/{s}/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/{s}-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">{t}</span></a>'
 A(f'''<section class="s dark" style="padding:70px 80px 80px;gap:26px">
- <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb" style="margin-bottom:22px">The work</p><h2 style="font-size:96px">Seven races. Click any.</h2></div><p class="lead" style="font-size:28px;max-width:560px">Every design is fictional and fully built. Each one opens the live site.</p></div>
+ <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb" style="margin-bottom:22px">The work</p><h2 style="font-size:96px">Seven sample feels.</h2></div><p class="lead" style="font-size:28px;max-width:560px">These are samples of what we can build. The names and races are fictional; the point is the feel. Each one opens a working sample site.</p></div>
  <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
   {tile('council','City council')}{tile('ballot-measure','Ballot measure')}{tile('mayor','Mayoral movement')}{tile('senate','U.S. Senate')}{tile('county-party','County party')}{tile('state-party','State party')}{tile('governor','Governor')}
   <a href="{BASE}" class="sh" style="display:flex"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:44px">Browse the full gallery</p><p class="cp" style="font-size:24px">Open the full gallery &#8599;</p></div></a>
@@ -209,13 +201,13 @@ A(f'''<section class="s dark" style="padding:70px 80px 80px;gap:26px">
 
 # 8-14 SITE SLIDES
 sites = [
- ("council","Maya Linden for City Council","City council","A warm, neighbor-first campaign for one ward.",[("Interactive ward map","Hover a block to see its priority and next porch chat"),("Porch chat RSVPs","Calendar downloads and yard sign requests"),("Light and dark","Spanish, too")],"#1E4D3A","#F6EFE0","#FFD84D","#0C0D10",False,"#FFD84D","#0C0D10","dark"),
- ("ballot-measure","Yes on 12","Ballot measure","A loud, simple case for a city safe-streets measure.",[("Live pledge counter","Every pledge rolls the numbers"),("Street explainer","Toggle crosswalks, signals and curb extensions"),("Share kit","Copy-ready texts and posts, plus yard signs")],"#FFD21F","#0C0D10","#0C0D10","#FFD21F",True,"#0C0D10","#FFD21F","light"),
- ("mayor","Zuri Taverner for Mayor","Mayoral movement","A playful, multilingual campaign built for small donors.",[("Tilting card stack","Responds to your pointer"),("Neighborhood picker","Local priorities, nearby event, a captain to text"),("Policy cards","Stack as you scroll")],"#1B3BFF","#FFFFFF","#FFD23F","#0C0D10",False,"#FFD23F","#0C0D10","dark"),
- ("senate","Jonah Ellery for U.S. Senate","Statewide","Photo-led, serious and clear about who it is for.",[("Sticky issue stack","Three full-screen stories that pin and layer"),("Scroll-driven timeline","A career drawn as you read"),("Statewide tour map","Filter stops by county")],"#0A2556","#EAF0FF","#9CC2FF","#0A2556",True,"#D7263D","#FFFFFF","dark"),
- ("county-party","Cedar County Democrats","County party","A useful, welcoming home for a local committee.",[("Precinct finder","ZIP and street number, with an animated map"),("Month calendar","Event dialogs, RSVPs, calendar downloads"),("Candidate profiles","Filter the slate by office")],"#EEF3FF","#10285C","#F6B51E","#0E1B3A",False,"#2F6BFF","#FFFFFF","light"),
- ("state-party","Prairie State Democratic Party","State party","Voter tools first, with a county map that routes people to local teams.",[("24-county tile map","Hover or tab to meet your county chair"),("Voter tools","Register, check status, find your polling place"),("Ticket and press","Candidate profiles and a filterable newsroom")],"#0F1B33","#EEF2FA","#E8B84A","#0F1B33",True,"#E8B84A","#0F1B33","dark"),
- ("governor","Wren Ashcombe for Governor","Governor","Grassroots print energy with a message that fits on a yard sign.",[("Yard sign maker","Type a name, pick a color, download a print-ready PNG"),("Cut-paper transitions","Pages reveal like layered paper"),("Rallies and shifts","Regional filters, RSVPs and live spot counts")],"#F2EFE6","#0C0D10","#D93A24","#FFFFFF",False,"#D93A24","#FFFFFF","light"),
+ ("council","Warm and neighborly","Sample: city council","A friendly, neighbor-first feel for one ward.",[("Interactive ward map","Hover a block to see its priority and next porch chat"),("Porch chat RSVPs","Calendar downloads and yard sign requests"),("Light and dark","Spanish, too")],"#1E4D3A","#F6EFE0","#FFD84D","#0C0D10",False,"#FFD84D","#0C0D10","dark"),
+ ("ballot-measure","Loud and simple","Sample: ballot measure","A bold, simple feel for a local measure.",[("Live pledge counter","Every pledge rolls the numbers"),("Street explainer","Toggle crosswalks, signals and curb extensions"),("Share kit","Copy-ready texts and posts, plus yard signs")],"#FFD21F","#0C0D10","#0C0D10","#FFD21F",True,"#0C0D10","#FFD21F","light"),
+ ("mayor","Playful and bold","Sample: mayoral","A bold, multilingual feel built for small donors.",[("Tilting card stack","Responds to your pointer"),("Neighborhood picker","Local priorities, nearby event, a captain to text"),("Policy cards","Stack as you scroll")],"#1B3BFF","#FFFFFF","#FFD23F","#0C0D10",False,"#FFD23F","#0C0D10","dark"),
+ ("senate","Photo-led and serious","Sample: statewide","A photo-led feel that is clear about who it is for.",[("Sticky issue stack","Three full-screen stories that pin and layer"),("Scroll-driven timeline","A career drawn as you read"),("Statewide tour map","Filter stops by county")],"#0A2556","#EAF0FF","#9CC2FF","#0A2556",True,"#D7263D","#FFFFFF","dark"),
+ ("county-party","Welcoming and useful","Sample: county party","A welcoming, practical home for a local committee.",[("Precinct finder","ZIP and street number, with an animated map"),("Month calendar","Event dialogs, RSVPs, calendar downloads"),("Candidate profiles","Filter the slate by office")],"#EEF3FF","#10285C","#F6B51E","#0E1B3A",False,"#2F6BFF","#FFFFFF","light"),
+ ("state-party","Voter tools first","Sample: state party","A tools-first feel, with a map that routes people to local teams.",[("24-county tile map","Hover or tab to meet your county chair"),("Voter tools","Register, check status, find your polling place"),("Ticket and press","Candidate profiles and a filterable newsroom")],"#0F1B33","#EEF2FA","#E8B84A","#0F1B33",True,"#E8B84A","#0F1B33","dark"),
+ ("governor","Grassroots print energy","Sample: governor","Print-poster energy with a message that fits on a yard sign.",[("Yard sign maker","Type a name, pick a color, download a print-ready PNG"),("Cut-paper transitions","Pages reveal like layered paper"),("Rallies and shifts","Regional filters, RSVPs and live spot counts")],"#F2EFE6","#0C0D10","#D93A24","#FFFFFF",False,"#D93A24","#FFFFFF","light"),
 ]
 for s in sites:
     A(site_slide(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8], s[9], s[10], s[11], s[12]))
@@ -237,38 +229,51 @@ A(f'''<section class="s light" style="padding-top:72px;padding-bottom:84px;gap:2
  <p class="pg"></p>
 </section>''')
 
-# 16 PROCESS (timeline)
+# 16 PROCESS (typical process)
 def node(day, t, d, c):
     return f'<div style="flex:1;position:relative;padding-top:92px"><div style="position:absolute;left:0;top:34px;width:44px;height:44px;border-radius:22px;background:{c}"></div><p class="num" style="font-size:24px;opacity:.8">{day}</p><p style="font-size:54px;font-weight:560;letter-spacing:-2px;margin:8px 0 14px">{t}</p><p style="font-size:26px;line-height:1.4;color:#B4BAC6;max-width:290px">{d}</p></div>'
 A(f'''<section class="s dark" style="justify-content:flex-start;gap:36px;padding-top:80px">
- <p class="eb co">How a week works</p>
- <h2 style="font-size:96px;letter-spacing:-5px">Kickoff to launch<br>in seven days.</h2>
+ <p class="eb co">How we work</p>
+ <h2 style="font-size:96px;letter-spacing:-5px">Our typical process.</h2>
  <div style="position:relative;display:flex;gap:30px;margin-top:20px"><div style="position:absolute;left:0;right:0;top:55px;height:4px;background:linear-gradient(90deg,#FF7A59,#FFD84D,#7EE0B8,#9CCBFF)"></div>
-  {node('DAY 0','Kickoff','A 30-minute call. Send what you have: logo, photos, copy, tool links. We fill the gaps.','#FF7A59')}
-  {node('DAYS 1 TO 2','Design','A custom homepage and phone layout for your approval.','#FF9A5B')}
-  {node('DAYS 3 TO 5','Build','Pages, forms and connections to ActBlue, Mobilize or your CRM.','#FFD84D')}
-  {node('DAY 6','Review','Two rounds of edits, plus speed, security and accessibility checks.','#7EE0B8')}
-  {node('DAY 7','Launch','Live on your domain, with handoff notes and a care option.','#9CCBFF')}
+  {node('KICKOFF','Kickoff','A 30-minute call. Send what you have: logo, photos, copy, tool links. We fill the gaps.','#FF7A59')}
+  {node('DESIGN','Design','A custom homepage and phone layout for your approval.','#FF9A5B')}
+  {node('BUILD','Build','Pages, forms and connections to ActBlue, Mobilize or your CRM.','#FFD84D')}
+  {node('REVIEW','Review','Rounds of edits, plus speed, security and accessibility checks.','#7EE0B8')}
+  {node('LAUNCH','Launch','Live on your domain, with a walkthrough of your back end and a care option.','#9CCBFF')}
  </div>
- <div style="position:absolute;left:112px;right:112px;bottom:70px;display:flex;align-items:center;gap:24px;padding:26px 36px;border-radius:999px;background:rgba(255,216,77,.12);box-shadow:inset 0 0 0 2px rgba(255,216,77,.5)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">With or without content</span><span style="font-size:28px;color:#ECEEF2">Have copy and photos? Send them. Don't? We write the copy and source the images. Either way, one week.</span></div><p class="pg"></p>
+ <div style="position:absolute;left:112px;right:112px;bottom:70px;display:flex;align-items:center;gap:24px;padding:26px 36px;border-radius:999px;background:rgba(255,216,77,.12);box-shadow:inset 0 0 0 2px rgba(255,216,77,.5)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">With or without content</span><span style="font-size:28px;color:#ECEEF2">Have copy and photos? Send them. Don't? We write the copy and source the images. Most builds take about a week, depending on scope.</span></div><p class="pg"></p>
 </section>''')
 
-# 17 PRICING (staircase)
-def tier(h, lab, price, d, cls):
-    return f'<div class="sh" style="flex:1;height:{h}px;align-self:flex-end"><div class="cr {cls}" style="justify-content:space-between"><div><span class="num">{lab}</span><p style="font-size:92px;font-weight:560;letter-spacing:-5px;line-height:1.05;margin-top:12px">{price}</p></div><p class="cp" style="font-size:25px">{d}</p></div></div>'
-A(f'''<section class="s light" style="gap:30px">
- <div class="row" style="justify-content:space-between;align-items:flex-end"><div><p class="eb bu" style="margin-bottom:22px">Pricing</p><h2 style="font-size:84px">Flat fees. Never more<br>than $3,000.</h2></div><p class="lead" style="font-size:28px;max-width:520px">Hosting and domain are paid by the campaign. Brand and care are optional.</p></div>
- <div class="row fx" style="gap:22px;align-items:flex-end">
-  {tier(430,'LAUNCH','$1,200','Down-ballot and local races. Up to 3 pages with donate, volunteer and email signup.','')}
-  {tier(540,'CAMPAIGN','$1,950','A full candidate site: issues, events, bio, press, Spanish toggle and integrations.','co')}
-  {tier(650,'FLAGSHIP','to $3,000','Statewide and federal: custom sections, photo-led design and extra tools.','butter')}
-  <div class="col" style="width:470px;gap:10px;align-self:stretch;justify-content:flex-end">
-   <div class="sh"><div class="cr ink" style="padding:26px 36px"><span class="num">PARTIES AND ORGS</span><p class="ct" style="font-size:54px;letter-spacing:-3px">Quote</p><p class="cp" style="font-size:22px">Larger builds scoped to your needs.</p></div></div>
-   <div class="li" style="font-size:28px;padding:16px 0">Brand<small style="font-size:22px">$500 with a logo, $1,000 with neither</small></div>
-   <div class="li" style="font-size:28px;padding:16px 0">CMS setup<small style="font-size:22px">$250</small></div>
-   <div class="li" style="font-size:28px;padding:16px 0">Analytics setup<small style="font-size:22px">$100 one time</small></div>
-   <div class="li" style="font-size:28px;padding:16px 0">Ongoing care<small style="font-size:22px">$75 per hour, one-hour minimum</small></div>
-  </div>
+# 17 PRICING (comparison grid)
+Y='<span style="display:inline-grid;place-items:center;width:34px;height:34px;border-radius:17px;background:var(--ink);color:var(--butter);font-size:20px">&#10003;</span>'
+N='<span style="opacity:.3;font-size:34px">&ndash;</span>'
+ROWS=[("Best for","Down-ballot and local","A full candidate site","Statewide and federal"),
+("Pages","Up to 3","Up to 8","Custom"),
+("Custom design, never a template",Y,Y,Y),
+("Phone-first and accessible",Y,Y,Y),
+("Donate, email signup and compliant footer",Y,Y,Y),
+("Volunteer shifts and events",N,Y,Y),
+("Spanish language switch",N,Y,Y),
+("Social feeds and press kit",N,Y,Y),
+("Platform connections","1","Up to 3","All"),
+("Custom interactive feature",N,N,Y),
+("Photo-led design",N,N,Y)]
+def rrow(r):
+    cells="".join(f'<div style="flex:1;display:flex;align-items:center;justify-content:center;text-align:center;font-size:25px;font-weight:560;{"background:rgba(36,71,255,.07);" if k==1 else ""}">{c}</div>' for k,c in enumerate(r[1:]))
+    return f'<div style="display:flex;align-items:stretch;min-height:46px;border-top:2px solid rgba(12,13,16,.12)"><div style="width:470px;display:flex;align-items:center;font-size:26px;font-weight:560;letter-spacing:-.5px">{r[0]}</div>{cells}</div>'
+def thead(lab,price,cls):
+    return f'<div style="flex:1;padding:12px 10px;text-align:center;border-radius:22px 22px 0 0;{cls}"><span class="num" style="font-size:20px">{lab}</span><p style="font-size:52px;font-weight:600;letter-spacing:-2.5px;line-height:1.05">{price}</p></div>'
+def addon(t,p,d):
+    return f'<div style="flex:1;padding:12px 20px;border-radius:20px;background:#FAFAFB;box-shadow:inset 0 0 0 2px rgba(12,13,16,.1)"><p style="font-size:24px;font-weight:600;letter-spacing:-.5px">{t}</p><p style="font-size:30px;font-weight:600;letter-spacing:-1px;margin-top:2px">{p}</p><p style="font-size:19px;color:var(--mute);margin-top:2px">{d}</p></div>'
+A(f'''<section class="s light" style="gap:14px;padding-top:50px;padding-bottom:66px">
+ <div class="row" style="justify-content:space-between;align-items:flex-end"><div><p class="eb bu" style="margin-bottom:16px">Pricing</p><h2 style="font-size:72px">Flat fees. Never more than $3,000.</h2></div><p class="lead" style="font-size:24px;max-width:520px">Hosting and domain are paid by the campaign. Parties and orgs: ask for a quote.</p></div>
+ <div>
+  <div style="display:flex"><div style="width:470px"></div>{thead('LAUNCH','$1,200','background:#E4E6EA')}{thead('CAMPAIGN','$1,950','background:var(--co);color:#fff')}{thead('FLAGSHIP','to $3,000','background:var(--butter)')}</div>
+  {"".join(rrow(r) for r in ROWS)}
+ </div>
+ <div class="row" style="gap:14px;margin-top:6px">
+  {addon('Brand','$500 or $1,000','With a logo, or with neither')}{addon('CMS setup','$250','Back end set up for your team')}{addon('Analytics setup','$100','One time')}{addon('ActBlue branding','$150','Your ActBlue page styled to match')}{addon('Ongoing care','$75 / hour','One-hour minimum')}
  </div>
  <p class="pg"></p>
 </section>''')
@@ -278,8 +283,8 @@ def perk(t, d):
     return f'<div style="padding:30px 0;border-top:3px solid #0C0D10"><p style="font-size:56px;font-weight:560;letter-spacing:-2px">{t}</p><p style="font-size:28px;line-height:1.4;margin-top:8px;color:#2B2F38">{d}</p></div>'
 A(f'''<section class="s butter" style="flex-direction:row;gap:100px;align-items:center">
  <div class="col" style="flex:1.1;gap:34px"><p class="eb ink">For consultants</p><h2 style="font-size:130px;letter-spacing:-7px;line-height:.95">Running several campaigns? We keep up.</h2></div>
- <div class="col" style="flex:1">{perk('Volume pricing','Preferred rates when you bring three or more sites in a cycle.')}{perk('Reserved slots','Your clients go to the front of the queue, still in one week.')}{perk('One contact','Clean files and notes your team can run with.')}</div>
- <p class="mk">DBF Designs</p><p class="pg"></p>
+ <div class="col" style="flex:1">{perk('Volume pricing','10% off each site after the second in a cycle.')}{perk('Priority scheduling','Kickoffs for your clients go to the front of the queue.')}{perk('One contact','Clean files and notes your team can run with.')}</div>
+ <p class="pg"></p>
 </section>''')
 
 # 19 ABOUT
@@ -291,20 +296,20 @@ A(f'''<section class="s light" style="flex-direction:row;align-items:center;gap:
   <a class="br" href="{BASE}sites/council/" style="position:absolute;left:0;top:120px;width:640px;transform:rotate(-2deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/council-d.png"></a>
   <a class="br" href="{BASE}sites/governor/" style="position:absolute;left:190px;top:440px;width:560px;transform:rotate(3deg)"><div class="bar"><b></b><b></b><b></b></div><img src="img/governor-d.png"></a>
  </div>
- <p class="mk">DBF Designs</p><p class="pg"></p>
+ <p class="pg"></p>
 </section>''')
 
 # 20 CTA
 A(f'''<section class="s dark" style="justify-content:center;gap:40px">
  <p class="eb bu">Next step</p>
  <h2 style="font-size:184px;letter-spacing:-10px;line-height:.92">Let's build<br><span class="acc">your site.</span></h2>
- <p class="lead" style="max-width:1100px;font-size:38px">Email me to book a 30-minute kickoff. With your content or without it, your site can be live in one week.</p>
+ <p class="lead" style="max-width:1100px;font-size:38px">Email me to book a 30-minute kickoff. With your content or without it, we will scope the timeline on the call.</p>
  <div class="row"><a class="pill lt" href="mailto:dbfriedman22@gmail.com">dbfriedman22@gmail.com<i>&#8599;</i></a><a class="pill lt" href="{BASE}">See the live work<i>&#8599;</i></a><a class="pill lt" href="https://davidbenjaminfriedman.com">davidbenjaminfriedman.com<i>&#8599;</i></a></div>
- <p class="mk">DBF Designs · Custom campaign websites</p><p class="pg"></p>
+ <p class="pg"></p>
 </section>''')
 
 html = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>DBF Designs: Capabilities</title>'
-        '<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;560;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">'
+        '<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;560;600&family=Geist+Mono:wght@500&family=Bricolage+Grotesque:wght@600;700;800&family=Anton&family=Barlow+Condensed:wght@800&family=Libre+Franklin:wght@600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">'
         '<style>' + CSS + '</style></head><body>' + "\n".join(parts) + '</body></html>')
 open("deck.html", "w").write(html)
 print("slides:", len(parts))
