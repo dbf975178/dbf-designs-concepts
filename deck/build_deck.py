@@ -173,28 +173,15 @@ A(f'''<section class="s light" style="gap:26px;padding-bottom:100px">
  <p class="pg"></p>
 </section>''')
 
-# 6c BRAND SYSTEM
-def lg(s, bg):
-    return f'<div class="sh"><div class="cr" style="background:{bg};align-items:center;justify-content:center;padding:28px"><img src="img/logo-{s}.png" style="width:92%;max-height:150px;object-fit:contain"></div></div>'
-A(f'''<section class="s dark" style="gap:28px;padding-top:80px">
- <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb sk" style="margin-bottom:22px">Identity included</p><h2 style="font-size:84px">Every race gets its own logo.</h2></div><p class="lead" style="font-size:28px;max-width:600px">Wordmark, mark, favicon, reversed version and a downloadable press kit, built for each site.</p></div>
- <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
-  {lg('council','#FAF5E8')}{lg('ballot-measure','#FFD21F')}{lg('mayor','#F4F6FF')}{lg('senate','#EAF0FF')}
-  {lg('county-party','#EEF3FF')}{lg('state-party','#F2F2F0')}{lg('governor','#F2EFE6')}
-  <div class="sh"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:42px">Plus endorser logos, press kit and social feeds</p></div></div>
- </div>
- <p class="pg"></p>
-</section>''')
-
 # 7 PORTFOLIO MOSAIC
-tiles = [("council","City council","1/1/2/3"),("ballot-measure","Ballot measure","1/3/2/4"),("mayor","Mayoral movement","1/4/3/6"),("senate","U.S. Senate","2/1/3/3"),("county-party","County party","2/3/3/4"),("state-party","State party","3/1/4/3"),("governor","Governor","3/3/4/6")]
-def tile(s, t):
-    return f'<a href="{BASE}sites/{s}/" class="br" style="display:flex;flex-direction:column;position:relative;border-radius:18px"><img src="img/{s}-d.png" style="flex:1;object-fit:cover;object-position:left top"><span style="position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;background:linear-gradient(0deg,rgba(11,12,15,.85),rgba(11,12,15,0));color:#fff;font-size:26px;font-weight:560;letter-spacing:-.5px">{t}</span></a>'
-A(f'''<section class="s dark" style="padding:70px 80px 80px;gap:26px">
- <div class="row" style="align-items:flex-end;justify-content:space-between"><div><p class="eb" style="margin-bottom:22px">The work</p><h2 style="font-size:96px">Seven sample feels.</h2></div><p class="lead" style="font-size:28px;max-width:560px">These are samples of what we can build. The names and races are fictional; the point is the feel. Each one opens a working sample site.</p></div>
- <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:22px;flex:1">
-  {tile('council','City council')}{tile('ballot-measure','Ballot measure')}{tile('mayor','Mayoral movement')}{tile('senate','U.S. Senate')}{tile('county-party','County party')}{tile('state-party','State party')}{tile('governor','Governor')}
-  <a href="{BASE}" class="sh" style="display:flex"><div class="cr co" style="justify-content:center"><p class="ct" style="font-size:44px">Browse the full gallery</p><p class="cp" style="font-size:24px">Open the full gallery &#8599;</p></div></a>
+def tile(s, t, k):
+    return f'<a href="{BASE}sites/{s}/" style="display:flex;flex-direction:column;gap:14px;min-height:0"><div style="flex:1;min-height:0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 24px 50px -24px #000,0 0 0 1px rgba(255,255,255,.14)"><img src="img/{s}-d.png" style="display:block;width:100%;height:100%;object-fit:cover;object-position:left top"></div><div><p style="font-size:30px;font-weight:600;letter-spacing:-.8px;line-height:1.1">{t}</p><p style="font-size:22px;color:#9AA1AD;margin-top:4px">{k}</p></div></a>'
+A(f'''<section class="s dark" style="padding:76px 96px 70px;gap:30px">
+ <div style="display:flex;flex-direction:column;gap:20px"><p class="eb">The work</p><h2 style="font-size:88px">Seven sample feels.</h2><p class="lead" style="font-size:28px;max-width:1200px">Samples of what we can build. The names and races are fictional; the point is the feel. Each one opens a working sample site.</p></div>
+ <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;gap:34px 28px;flex:1;min-height:0">
+  {tile('council','Warm and neighborly','City council')}{tile('ballot-measure','Loud and simple','Ballot measure')}{tile('mayor','Playful and bold','Mayoral')}{tile('senate','Photo-led and serious','Statewide')}
+  {tile('county-party','Welcoming and useful','County party')}{tile('state-party','Voter tools first','State party')}{tile('governor','Grassroots print energy','Governor')}
+  <a href="{BASE}" style="display:flex;border-radius:18px;background:var(--co);color:#fff;padding:34px;flex-direction:column;justify-content:center;gap:10px"><p style="font-size:44px;font-weight:600;letter-spacing:-1.5px;line-height:1.05">Browse the full gallery</p><p style="font-size:24px;color:#E6EAFF">Open the gallery &#8599;</p></a>
  </div>
  <p class="pg"></p>
 </section>''')
