@@ -583,3 +583,48 @@ window.I18N_X={copied:"x1",progress:"x2"};
     });
   });
 })();
+
+Object.assign(window.I18N.en,{"sh1": "Share", "sh2": "Copy link", "sh3": "Share on Facebook", "sh4": "Share on X", "sh5": "Share on Bluesky", "sh6": "Share your sign", "sh7": "I made my Ashcombe for Governor yard sign.", "sh8": "Shared. Thank you.", "sh9": "Link copied.", "sh10": "Sharing is not available here. Use one of the buttons below.", "sh11": "My Ashcombe for Governor yard sign"});Object.assign(window.I18N.es,{"sh1": "Compartir", "sh2": "Copiar enlace", "sh3": "Compartir en Facebook", "sh4": "Compartir en X", "sh5": "Compartir en Bluesky", "sh6": "Comparte tu letrero", "sh7": "Hice mi letrero de Ashcombe para Gobernador.", "sh8": "Compartido. Gracias.", "sh9": "Enlace copiado.", "sh10": "Aquí no se puede compartir. Usa uno de los botones de abajo.", "sh11": "Mi letrero de Ashcombe para Gobernador"});
+/* Yard sign share: Web Share with file, fallback share links. Nothing is sent anywhere by this page itself. */
+(function () {
+  var doc = document, root = doc.documentElement;
+  var row = doc.querySelector("[data-share-row]"); if (!row) return;
+  var btn = doc.querySelector("[data-share-btn]"), cv = doc.getElementById("sign-canvas");
+  var st = doc.querySelector("[data-share-status]"), cp = doc.querySelector("[data-copy-link]");
+  function lang() { return root.getAttribute("lang") === "es" ? "es" : "en"; }
+  function tr(k) { var d = window.I18N; return (d[lang()] && d[lang()][k]) || d.en[k] || k; }
+  function pageUrl() { return location.href.split("#")[0]; }
+  function links() {
+    var u = pageUrl(), m = tr("sh7");
+    if (cp) cp.setAttribute("data-copy", u);
+    var f = doc.querySelector('[data-share-net="facebook"]'), x = doc.querySelector('[data-share-net="x"]'), b = doc.querySelector('[data-share-net="bluesky"]');
+    if (f) f.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(u);
+    if (x) x.href = "https://x.com/intent/post?text=" + encodeURIComponent(m) + "&url=" + encodeURIComponent(u);
+    if (b) b.href = "https://bsky.app/intent/compose?text=" + encodeURIComponent(m + " " + u);
+  }
+  links();
+  new MutationObserver(links).observe(root, { attributes: true, attributeFilter: ["lang"] });
+  row.addEventListener("click", function (e) {
+    if (e.target.closest("[data-copy-link]")) { links(); if (st) st.textContent = tr("sh9"); }
+    else if (e.target.closest("[data-share-net]")) links();
+  }, true);
+  if (!navigator.share) return;
+  btn.hidden = false; row.hidden = true;
+  function reveal() { row.hidden = false; if (st) st.textContent = tr("sh10"); }
+  btn.addEventListener("click", function () {
+    var u = pageUrl(), m = tr("sh7"), title = tr("sh11");
+    function textShare() { return navigator.share({ title: title, text: m, url: u }); }
+    function done() { if (st) st.textContent = tr("sh8"); }
+    function fail(err) { if (err && err.name === "AbortError") return; reveal(); }
+    if (!cv || !cv.toBlob) { textShare().then(done, fail); return; }
+    cv.toBlob(function (blob) {
+      try {
+        if (blob && window.File && navigator.canShare) {
+          var file = new File([blob], "ashcombe-yard-sign.png", { type: "image/png" });
+          if (navigator.canShare({ files: [file] })) { navigator.share({ files: [file], title: title, text: m + " " + u }).then(done, fail); return; }
+        }
+        textShare().then(done, fail);
+      } catch (e) { fail(e); }
+    }, "image/png");
+  });
+})();

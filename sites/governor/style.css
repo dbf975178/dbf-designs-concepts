@@ -843,3 +843,14 @@ fieldset.field{padding:0;border:0}
 .fact-r dd{overflow-wrap:anywhere}
 @media (max-width:480px){.fact-r{grid-template-columns:1fr;gap:4px}}
 @media (max-width:360px){.hero-h{font-size:33px}}
+
+/* Yard sign share */
+.share-row{margin-top:22px;padding-top:18px;border-top:var(--bw) dashed var(--line)}
+.share-row[hidden]{display:none}
+.share-lbl{margin:0 0 12px;font:700 13px/1.2 var(--sans);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.share-links{display:flex;flex-wrap:wrap;gap:12px 14px}
+.btn-sm{min-height:44px;padding:0 16px;font-size:13px;box-shadow:4px 4px 0 var(--shadow)}
+.btn-sm:hover{box-shadow:6px 6px 0 var(--shadow)}
+.btn[hidden]{display:none}
+.share-links .btn{white-space:normal;text-align:center}
+@media (prefers-reduced-motion:reduce){.btn-sm,.btn-sm:hover,.btn-sm:active{transition:none}.btn-sm:hover,.btn-sm:active{transform:none}}
