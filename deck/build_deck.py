@@ -153,7 +153,7 @@ A(f'''<section class="s cobalt" style="gap:24px;padding-bottom:90px">
  <p class="eb bu">Your stack, connected</p>
  <h2 style="font-size:80px">Every platform your campaign already uses.</h2>
  <div style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:16px;flex:1">{"".join(lw(*l) for l in LOGOS)}</div>
- <div style="display:flex;align-items:center;gap:24px;padding:20px 34px;border-radius:999px;background:rgba(255,216,77,.16);box-shadow:inset 0 0 0 2px rgba(255,216,77,.55)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">Also</span><span style="font-size:28px">We style your ActBlue page to match your site. Platform names shown as type for illustration.</span></div>
+ <div style="display:flex;align-items:center;gap:24px;padding:20px 34px;border-radius:999px;background:rgba(255,216,77,.16);box-shadow:inset 0 0 0 2px rgba(255,216,77,.55)"><span style="font:500 22px 'Geist Mono',monospace;letter-spacing:3px;text-transform:uppercase;color:#FFD84D">Also</span><span style="font-size:28px">ActBlue page branding is available as a separate service.</span></div>
  <p class="pg"></p>
 </section>''')
 
@@ -165,7 +165,7 @@ A(f'''<section class="s light" style="gap:26px;padding-bottom:100px">
  <h2 style="font-size:84px">Made for your race.<br>Kept running after launch.</h2>
  <div style="display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:1fr 1fr;grid-template-areas:'a b c' 'a d e';gap:22px;flex:1">
   {cc('a','coral','Fully custom, never a template','Layout, features, color and code are built around your message. A ward map, a yard sign maker or a pledge counter, whatever your race needs.')}
-  {cc('b','butter','Your brand','A logo system, press kit and ActBlue page styled to match.')}
+  {cc('b','butter','Your brand','A logo system and press kit for every site.')}
   {cc('c','mint','Your tools','Any platform on the previous slide, plus others on request.')}
   {cc('d','ink','Help when you need it','Edits, new pages and event updates at $75 an hour.')}
   {cc('e','sky','Easy for your team','Update events, news and pages yourself. Add languages and sections as the race grows.')}
